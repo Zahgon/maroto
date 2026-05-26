@@ -18,79 +18,33 @@ type Page struct {
 }
 
 // New is responsible to create a core.Page.
-func New(ps ...props.PageNumber) core.Page {
-	prop := props.PageNumber{}
-	if len(ps) > 0 {
-		prop = ps[0]
-	}
-
-	return &Page{
-		prop: prop,
-	}
-}
+func New(ps ...props.PageNumber) core.Page { _ = "STUB: not implemented"; return *new(core.Page) }
 
 // Render renders a Page into a PDF context.
-func (p *Page) Render(provider core.Provider, cell entity.Cell) {
-	innerCell := cell.Copy()
-
-	prop := &props.Rect{}
-	prop.MakeValid()
-
-	if p.config.BackgroundImage != nil {
-		provider.AddBackgroundImageFromBytes(p.config.BackgroundImage.Bytes, &innerCell, prop, p.config.BackgroundImage.Extension)
-	}
-
-	for _, row := range p.rows {
-		row.Render(provider, innerCell)
-		innerCell.Y += row.GetHeight(provider, &innerCell)
-	}
-
-	if p.prop.Pattern != "" {
-		provider.AddText(p.prop.GetPageString(p.number, p.total), &cell, p.prop.GetNumberTextProp(cell.Height))
-	}
-}
+func (p *Page) Render(provider core.Provider, cell entity.Cell) { _ = "STUB: not implemented"; return }
 
 // SetConfig sets the Page configuration.
-func (p *Page) SetConfig(config *entity.Config) {
-	p.config = config
-	for _, row := range p.rows {
-		row.SetConfig(config)
-	}
-}
+func (p *Page) SetConfig(config *entity.Config) { _ = "STUB: not implemented"; return }
 
 // SetNumber sets the Page number and total.
-func (p *Page) SetNumber(number int, total int) {
-	p.number = number
-	p.total = total
-}
+func (p *Page) SetNumber(number int, total int) { _ = "STUB: not implemented"; return }
 
 // GetNumber returns the Page number.
 func (p *Page) GetNumber() int {
-	return p.number
+	_ = "STUB: not implemented"
+
+	// Add adds one or more rows to the Page.
+	return 0
 }
 
-// Add adds one or more rows to the Page.
-func (p *Page) Add(rows ...core.Row) core.Page {
-	p.rows = append(p.rows, rows...)
-	return p
-}
+func (p *Page) Add(rows ...core.Row) core.Page { _ = "STUB: not implemented"; return *new(core.Page) }
 
 // GetRows returns the rows of the Page.
 func (p *Page) GetRows() []core.Row {
-	return p.rows
+	_ = "STUB: not implemented"
+
+	// GetStructure returns the Structure of a Page.
+	return nil
 }
 
-// GetStructure returns the Structure of a Page.
-func (p *Page) GetStructure() *node.Node[core.Structure] {
-	str := core.Structure{
-		Type: "page",
-	}
-
-	n := node.New(str)
-	for _, r := range p.rows {
-		inner := r.GetStructure()
-		n.AddNext(inner)
-	}
-
-	return n
-}
+func (p *Page) GetStructure() *node.Node[core.Structure] { _ = "STUB: not implemented"; return nil }

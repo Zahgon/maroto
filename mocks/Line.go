@@ -18,14 +18,10 @@ type Line_Expecter struct {
 	mock *mock.Mock
 }
 
-func (_m *Line) EXPECT() *Line_Expecter {
-	return &Line_Expecter{mock: &_m.Mock}
-}
+func (_m *Line) EXPECT() *Line_Expecter { _ = "STUB: not implemented"; return nil }
 
 // Add provides a mock function with given fields: cell, prop
-func (_m *Line) Add(cell *entity.Cell, prop *props.Line) {
-	_m.Called(cell, prop)
-}
+func (_m *Line) Add(cell *entity.Cell, prop *props.Line) { _ = "STUB: not implemented"; return }
 
 // Line_Add_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Add'
 type Line_Add_Call struct {
@@ -36,37 +32,30 @@ type Line_Add_Call struct {
 //   - cell *entity.Cell
 //   - prop *props.Line
 func (_e *Line_Expecter) Add(cell interface{}, prop interface{}) *Line_Add_Call {
-	return &Line_Add_Call{Call: _e.mock.On("Add", cell, prop)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Line_Add_Call) Run(run func(cell *entity.Cell, prop *props.Line)) *Line_Add_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(*entity.Cell), args[1].(*props.Line))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Line_Add_Call) Return() *Line_Add_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Line_Add_Call) Return() *Line_Add_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Line_Add_Call) RunAndReturn(run func(*entity.Cell, *props.Line)) *Line_Add_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// NewLine creates a new instance of Line. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+	// The first argument is typically a *testing.T value.
 }
 
-// NewLine creates a new instance of Line. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
-// The first argument is typically a *testing.T value.
 func NewLine(t interface {
 	mock.TestingT
 	Cleanup(func())
 },
 ) *Line {
-	mock := &Line{}
-	mock.Mock.Test(t)
-
-	t.Cleanup(func() { mock.AssertExpectations(t) })
-
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }

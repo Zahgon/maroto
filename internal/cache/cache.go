@@ -2,8 +2,6 @@ package cache
 
 import (
 	"errors"
-	"fmt"
-	"os"
 
 	"github.com/johnfercher/maroto/v2/pkg/consts/extension"
 	"github.com/johnfercher/maroto/v2/pkg/core/entity"
@@ -27,37 +25,19 @@ type cache struct {
 }
 
 // New is responsible to create a new Cache.
-func New() Cache {
-	return &cache{
-		images: make(map[string]*entity.Image),
-		codes:  make(map[string][]byte),
-	}
-}
+func New() Cache { _ = "STUB: not implemented"; return *new(Cache) }
 
 // LoadImage loads an image from a file.
 func (c *cache) LoadImage(file string, extension extension.Type) error {
-	imageBytes, err := os.ReadFile(file)
-	if err != nil {
-		return fmt.Errorf("%w: %w", ErrCannotReadFile, err)
-	}
-
-	img := &entity.Image{Bytes: imageBytes, Extension: extension}
-	c.images[file+string(extension)] = img
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // AddImage adds an image to the cache.
-func (c *cache) AddImage(value string, image *entity.Image) {
-	c.images[value+string(image.Extension)] = image
-}
+func (c *cache) AddImage(value string, image *entity.Image) { _ = "STUB: not implemented"; return }
 
 // GetImage returns an image from the cache.
 func (c *cache) GetImage(file string, extension extension.Type) (*entity.Image, error) {
-	image, ok := c.images[file+string(extension)]
-	if ok {
-		return image, nil
-	}
-
-	return nil, ErrImageNotFound
+	_ = "STUB: not implemented"
+	return nil, nil
 }

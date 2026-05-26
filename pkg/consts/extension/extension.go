@@ -14,6 +14,4 @@ const (
 )
 
 // IsValid checks if the extension is valid.
-func (t Type) IsValid() bool {
-	return t == Jpg || t == Jpeg || t == Png
-}
+func (t Type) IsValid() bool { _ = "STUB: not implemented"; return false }

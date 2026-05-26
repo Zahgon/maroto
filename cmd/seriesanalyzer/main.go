@@ -37,42 +37,6 @@ func main() {
 	fmt.Printf("min: %f, max: %f, avg: %f", values[0], values[len(values)-1], sum/float64(len(values)))
 }
 
-func MergeFloat64(arr []float64) []float64 {
-	if len(arr) < 2 {
-		return arr
-	}
+func MergeFloat64(arr []float64) []float64 { _ = "STUB: not implemented"; return nil }
 
-	left := arr[:len(arr)/2]
-	right := arr[len(arr)/2:]
-
-	sortedLeft := MergeFloat64(left)
-	sortedRight := MergeFloat64(right)
-
-	return mergeArrays(sortedLeft, sortedRight)
-}
-
-func mergeArrays(a []float64, b []float64) []float64 {
-	var merged []float64
-
-	i := 0
-	j := 0
-	for i < len(a) && j < len(b) {
-		if a[i] < b[j] {
-			merged = append(merged, a[i])
-			i++
-		} else {
-			merged = append(merged, b[j])
-			j++
-		}
-	}
-
-	for ; i < len(a); i++ {
-		merged = append(merged, a[i])
-	}
-
-	for ; j < len(b); j++ {
-		merged = append(merged, b[j])
-	}
-
-	return merged
-}
+func mergeArrays(a []float64, b []float64) []float64 { _ = "STUB: not implemented"; return nil }

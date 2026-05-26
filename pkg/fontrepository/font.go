@@ -9,7 +9,10 @@ type customFont struct {
 	bytes  []byte
 }
 
-func (c *customFont) GetFamily() string        { return c.family }
-func (c *customFont) GetStyle() fontstyle.Type { return c.style }
-func (c *customFont) GetFile() string          { return c.file }
-func (c *customFont) GetBytes() []byte         { return c.bytes }
+func (c *customFont) GetFamily() string { _ = "STUB: not implemented"; return "" }
+func (c *customFont) GetStyle() fontstyle.Type {
+	_ = "STUB: not implemented"
+	return *new(fontstyle.Type)
+}
+func (c *customFont) GetFile() string  { _ = "STUB: not implemented"; return "" }
+func (c *customFont) GetBytes() []byte { _ = "STUB: not implemented"; return nil }

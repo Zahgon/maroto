@@ -189,6 +189,4 @@ type Fpdf interface {
 	WriteLinkString(h float64, displayStr, targetStr string)
 }
 
-func NewCustom(init *gofpdf.InitType) Fpdf {
-	return gofpdf.NewCustom(init)
-}
+func NewCustom(init *gofpdf.InitType) Fpdf { _ = "STUB: not implemented"; return *new(Fpdf) }

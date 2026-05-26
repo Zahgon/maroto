@@ -18,29 +18,10 @@ type Font_Expecter struct {
 	mock *mock.Mock
 }
 
-func (_m *Font) EXPECT() *Font_Expecter {
-	return &Font_Expecter{mock: &_m.Mock}
-}
+func (_m *Font) EXPECT() *Font_Expecter { _ = "STUB: not implemented"; return nil }
 
 // GetColor provides a mock function with no fields
-func (_m *Font) GetColor() *props.Color {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetColor")
-	}
-
-	var r0 *props.Color
-	if rf, ok := ret.Get(0).(func() *props.Color); ok {
-		r0 = rf()
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*props.Color)
-		}
-	}
-
-	return r0
-}
+func (_m *Font) GetColor() *props.Color { _ = "STUB: not implemented"; return nil }
 
 // Font_GetColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetColor'
 type Font_GetColor_Call struct {
@@ -48,44 +29,25 @@ type Font_GetColor_Call struct {
 }
 
 // GetColor is a helper method to define mock.On call
-func (_e *Font_Expecter) GetColor() *Font_GetColor_Call {
-	return &Font_GetColor_Call{Call: _e.mock.On("GetColor")}
-}
+func (_e *Font_Expecter) GetColor() *Font_GetColor_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Font_GetColor_Call) Run(run func()) *Font_GetColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetColor_Call) Return(_a0 *props.Color) *Font_GetColor_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetColor_Call) RunAndReturn(run func() *props.Color) *Font_GetColor_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetFamily provides a mock function with no fields
-func (_m *Font) GetFamily() string {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetFamily")
-	}
-
-	var r0 string
-	if rf, ok := ret.Get(0).(func() string); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(string)
-	}
-
-	return r0
-}
+func (_m *Font) GetFamily() string { _ = "STUB: not implemented"; return "" }
 
 // Font_GetFamily_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetFamily'
 type Font_GetFamily_Call struct {
@@ -93,60 +55,27 @@ type Font_GetFamily_Call struct {
 }
 
 // GetFamily is a helper method to define mock.On call
-func (_e *Font_Expecter) GetFamily() *Font_GetFamily_Call {
-	return &Font_GetFamily_Call{Call: _e.mock.On("GetFamily")}
-}
+func (_e *Font_Expecter) GetFamily() *Font_GetFamily_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Font_GetFamily_Call) Run(run func()) *Font_GetFamily_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetFamily_Call) Return(_a0 string) *Font_GetFamily_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetFamily_Call) RunAndReturn(run func() string) *Font_GetFamily_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetFont provides a mock function with no fields
 func (_m *Font) GetFont() (string, fontstyle.Type, float64) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetFont")
-	}
-
-	var r0 string
-	var r1 fontstyle.Type
-	var r2 float64
-	if rf, ok := ret.Get(0).(func() (string, fontstyle.Type, float64)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() string); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(string)
-	}
-
-	if rf, ok := ret.Get(1).(func() fontstyle.Type); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(fontstyle.Type)
-	}
-
-	if rf, ok := ret.Get(2).(func() float64); ok {
-		r2 = rf()
-	} else {
-		r2 = ret.Get(2).(float64)
-	}
-
-	return r0, r1, r2
+	_ = "STUB: not implemented"
+	return "", *new(fontstyle.Type), 0
 }
 
 // Font_GetFont_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetFont'
@@ -155,43 +84,27 @@ type Font_GetFont_Call struct {
 }
 
 // GetFont is a helper method to define mock.On call
-func (_e *Font_Expecter) GetFont() *Font_GetFont_Call {
-	return &Font_GetFont_Call{Call: _e.mock.On("GetFont")}
-}
+func (_e *Font_Expecter) GetFont() *Font_GetFont_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Font_GetFont_Call) Run(run func()) *Font_GetFont_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetFont_Call) Return(_a0 string, _a1 fontstyle.Type, _a2 float64) *Font_GetFont_Call {
-	_c.Call.Return(_a0, _a1, _a2)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetFont_Call) RunAndReturn(run func() (string, fontstyle.Type, float64)) *Font_GetFont_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetHeight provides a mock function with given fields: family, style, size
 func (_m *Font) GetHeight(family string, style fontstyle.Type, size float64) float64 {
-	ret := _m.Called(family, style, size)
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetHeight")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func(string, fontstyle.Type, float64) float64); ok {
-		r0 = rf(family, style, size)
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // Font_GetHeight_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetHeight'
@@ -204,43 +117,27 @@ type Font_GetHeight_Call struct {
 //   - style fontstyle.Type
 //   - size float64
 func (_e *Font_Expecter) GetHeight(family interface{}, style interface{}, size interface{}) *Font_GetHeight_Call {
-	return &Font_GetHeight_Call{Call: _e.mock.On("GetHeight", family, style, size)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetHeight_Call) Run(run func(family string, style fontstyle.Type, size float64)) *Font_GetHeight_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(fontstyle.Type), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetHeight_Call) Return(_a0 float64) *Font_GetHeight_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetHeight_Call) RunAndReturn(run func(string, fontstyle.Type, float64) float64) *Font_GetHeight_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSize provides a mock function with no fields
-func (_m *Font) GetSize() float64 {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetSize")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
-}
+func (_m *Font) GetSize() float64 { _ = "STUB: not implemented"; return 0 }
 
 // Font_GetSize_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetSize'
 type Font_GetSize_Call struct {
@@ -248,44 +145,25 @@ type Font_GetSize_Call struct {
 }
 
 // GetSize is a helper method to define mock.On call
-func (_e *Font_Expecter) GetSize() *Font_GetSize_Call {
-	return &Font_GetSize_Call{Call: _e.mock.On("GetSize")}
-}
+func (_e *Font_Expecter) GetSize() *Font_GetSize_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Font_GetSize_Call) Run(run func()) *Font_GetSize_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetSize_Call) Return(_a0 float64) *Font_GetSize_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetSize_Call) RunAndReturn(run func() float64) *Font_GetSize_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetStyle provides a mock function with no fields
-func (_m *Font) GetStyle() fontstyle.Type {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetStyle")
-	}
-
-	var r0 fontstyle.Type
-	if rf, ok := ret.Get(0).(func() fontstyle.Type); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(fontstyle.Type)
-	}
-
-	return r0
-}
+func (_m *Font) GetStyle() fontstyle.Type { _ = "STUB: not implemented"; return *new(fontstyle.Type) }
 
 // Font_GetStyle_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetStyle'
 type Font_GetStyle_Call struct {
@@ -293,33 +171,31 @@ type Font_GetStyle_Call struct {
 }
 
 // GetStyle is a helper method to define mock.On call
-func (_e *Font_Expecter) GetStyle() *Font_GetStyle_Call {
-	return &Font_GetStyle_Call{Call: _e.mock.On("GetStyle")}
-}
+func (_e *Font_Expecter) GetStyle() *Font_GetStyle_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Font_GetStyle_Call) Run(run func()) *Font_GetStyle_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetStyle_Call) Return(_a0 fontstyle.Type) *Font_GetStyle_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_GetStyle_Call) RunAndReturn(run func() fontstyle.Type) *Font_GetStyle_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SetColor provides a mock function with given fields: color
 func (_m *Font) SetColor(color *props.Color) {
-	_m.Called(color)
+	_ = "STUB: not implemented"
+
+	// Font_SetColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetColor'
+	return
 }
 
-// Font_SetColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetColor'
 type Font_SetColor_Call struct {
 	*mock.Call
 }
@@ -327,32 +203,31 @@ type Font_SetColor_Call struct {
 // SetColor is a helper method to define mock.On call
 //   - color *props.Color
 func (_e *Font_Expecter) SetColor(color interface{}) *Font_SetColor_Call {
-	return &Font_SetColor_Call{Call: _e.mock.On("SetColor", color)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_SetColor_Call) Run(run func(color *props.Color)) *Font_SetColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(*props.Color))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Font_SetColor_Call) Return() *Font_SetColor_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Font_SetColor_Call) Return() *Font_SetColor_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Font_SetColor_Call) RunAndReturn(run func(*props.Color)) *Font_SetColor_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFamily provides a mock function with given fields: family
 }
 
-// SetFamily provides a mock function with given fields: family
 func (_m *Font) SetFamily(family string) {
-	_m.Called(family)
+	_ = "STUB: not implemented"
+
+	// Font_SetFamily_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFamily'
+	return
 }
 
-// Font_SetFamily_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFamily'
 type Font_SetFamily_Call struct {
 	*mock.Call
 }
@@ -360,29 +235,27 @@ type Font_SetFamily_Call struct {
 // SetFamily is a helper method to define mock.On call
 //   - family string
 func (_e *Font_Expecter) SetFamily(family interface{}) *Font_SetFamily_Call {
-	return &Font_SetFamily_Call{Call: _e.mock.On("SetFamily", family)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_SetFamily_Call) Run(run func(family string)) *Font_SetFamily_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Font_SetFamily_Call) Return() *Font_SetFamily_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Font_SetFamily_Call) Return() *Font_SetFamily_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Font_SetFamily_Call) RunAndReturn(run func(string)) *Font_SetFamily_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFont provides a mock function with given fields: family, style, size
 }
 
-// SetFont provides a mock function with given fields: family, style, size
 func (_m *Font) SetFont(family string, style fontstyle.Type, size float64) {
-	_m.Called(family, style, size)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Font_SetFont_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFont'
@@ -395,32 +268,31 @@ type Font_SetFont_Call struct {
 //   - style fontstyle.Type
 //   - size float64
 func (_e *Font_Expecter) SetFont(family interface{}, style interface{}, size interface{}) *Font_SetFont_Call {
-	return &Font_SetFont_Call{Call: _e.mock.On("SetFont", family, style, size)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_SetFont_Call) Run(run func(family string, style fontstyle.Type, size float64)) *Font_SetFont_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(fontstyle.Type), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Font_SetFont_Call) Return() *Font_SetFont_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Font_SetFont_Call) Return() *Font_SetFont_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Font_SetFont_Call) RunAndReturn(run func(string, fontstyle.Type, float64)) *Font_SetFont_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetSize provides a mock function with given fields: size
 }
 
-// SetSize provides a mock function with given fields: size
 func (_m *Font) SetSize(size float64) {
-	_m.Called(size)
+	_ = "STUB: not implemented"
+
+	// Font_SetSize_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetSize'
+	return
 }
 
-// Font_SetSize_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetSize'
 type Font_SetSize_Call struct {
 	*mock.Call
 }
@@ -428,32 +300,31 @@ type Font_SetSize_Call struct {
 // SetSize is a helper method to define mock.On call
 //   - size float64
 func (_e *Font_Expecter) SetSize(size interface{}) *Font_SetSize_Call {
-	return &Font_SetSize_Call{Call: _e.mock.On("SetSize", size)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_SetSize_Call) Run(run func(size float64)) *Font_SetSize_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Font_SetSize_Call) Return() *Font_SetSize_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Font_SetSize_Call) Return() *Font_SetSize_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Font_SetSize_Call) RunAndReturn(run func(float64)) *Font_SetSize_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetStyle provides a mock function with given fields: style
 }
 
-// SetStyle provides a mock function with given fields: style
 func (_m *Font) SetStyle(style fontstyle.Type) {
-	_m.Called(style)
+	_ = "STUB: not implemented"
+
+	// Font_SetStyle_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetStyle'
+	return
 }
 
-// Font_SetStyle_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetStyle'
 type Font_SetStyle_Call struct {
 	*mock.Call
 }
@@ -461,37 +332,30 @@ type Font_SetStyle_Call struct {
 // SetStyle is a helper method to define mock.On call
 //   - style fontstyle.Type
 func (_e *Font_Expecter) SetStyle(style interface{}) *Font_SetStyle_Call {
-	return &Font_SetStyle_Call{Call: _e.mock.On("SetStyle", style)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Font_SetStyle_Call) Run(run func(style fontstyle.Type)) *Font_SetStyle_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(fontstyle.Type))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Font_SetStyle_Call) Return() *Font_SetStyle_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Font_SetStyle_Call) Return() *Font_SetStyle_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Font_SetStyle_Call) RunAndReturn(run func(fontstyle.Type)) *Font_SetStyle_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// NewFont creates a new instance of Font. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+	// The first argument is typically a *testing.T value.
 }
 
-// NewFont creates a new instance of Font. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
-// The first argument is typically a *testing.T value.
 func NewFont(t interface {
 	mock.TestingT
 	Cleanup(func())
 },
 ) *Font {
-	mock := &Font{}
-	mock.Mock.Test(t)
-
-	t.Cleanup(func() { mock.AssertExpectations(t) })
-
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }

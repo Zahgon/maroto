@@ -3,10 +3,6 @@ package main
 import (
 	"log"
 
-	"github.com/johnfercher/maroto/v2"
-	"github.com/johnfercher/maroto/v2/pkg/components/page"
-	"github.com/johnfercher/maroto/v2/pkg/components/text"
-	"github.com/johnfercher/maroto/v2/pkg/config"
 	"github.com/johnfercher/maroto/v2/pkg/core"
 )
 
@@ -29,34 +25,4 @@ func main() {
 	}
 }
 
-func GetMaroto() core.Maroto {
-	cfg := config.NewBuilder().
-		WithPageNumber().
-		WithDebug(true).
-		Build()
-
-	mrt := maroto.New(cfg)
-	m := maroto.NewMetricsDecorator(mrt)
-
-	m.AddPages(
-		page.New().Add(
-			text.NewRow(30, "page1 row1"),
-			text.NewRow(30, "page1 row2"),
-			text.NewRow(30, "page1 row3"),
-			text.NewRow(30, "page1 row4"),
-			text.NewRow(30, "page1 row5"),
-			text.NewRow(30, "page1 row6"),
-			text.NewRow(30, "page1 row7"),
-			text.NewRow(30, "page1 row8"),
-			text.NewRow(30, "page1 row9"),
-		),
-		page.New().Add(
-			text.NewRow(10, "page2 row1"),
-		),
-		page.New().Add(
-			text.NewRow(10, "page3 row1"),
-		),
-	)
-
-	return m
-}
+func GetMaroto() core.Maroto { _ = "STUB: not implemented"; return *new(core.Maroto) }

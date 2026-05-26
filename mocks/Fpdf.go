@@ -21,13 +21,12 @@ type Fpdf_Expecter struct {
 	mock *mock.Mock
 }
 
-func (_m *Fpdf) EXPECT() *Fpdf_Expecter {
-	return &Fpdf_Expecter{mock: &_m.Mock}
-}
+func (_m *Fpdf) EXPECT() *Fpdf_Expecter { _ = "STUB: not implemented"; return nil }
 
 // AddFont provides a mock function with given fields: familyStr, styleStr, fileStr
 func (_m *Fpdf) AddFont(familyStr string, styleStr string, fileStr string) {
-	_m.Called(familyStr, styleStr, fileStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_AddFont_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AddFont'
@@ -40,29 +39,27 @@ type Fpdf_AddFont_Call struct {
 //   - styleStr string
 //   - fileStr string
 func (_e *Fpdf_Expecter) AddFont(familyStr interface{}, styleStr interface{}, fileStr interface{}) *Fpdf_AddFont_Call {
-	return &Fpdf_AddFont_Call{Call: _e.mock.On("AddFont", familyStr, styleStr, fileStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddFont_Call) Run(run func(familyStr string, styleStr string, fileStr string)) *Fpdf_AddFont_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(string), args[2].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_AddFont_Call) Return() *Fpdf_AddFont_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_AddFont_Call) Return() *Fpdf_AddFont_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_AddFont_Call) RunAndReturn(run func(string, string, string)) *Fpdf_AddFont_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// AddFontFromBytes provides a mock function with given fields: familyStr, styleStr, jsonFileBytes, zFileBytes
 }
 
-// AddFontFromBytes provides a mock function with given fields: familyStr, styleStr, jsonFileBytes, zFileBytes
 func (_m *Fpdf) AddFontFromBytes(familyStr string, styleStr string, jsonFileBytes []byte, zFileBytes []byte) {
-	_m.Called(familyStr, styleStr, jsonFileBytes, zFileBytes)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_AddFontFromBytes_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AddFontFromBytes'
@@ -76,29 +73,30 @@ type Fpdf_AddFontFromBytes_Call struct {
 //   - jsonFileBytes []byte
 //   - zFileBytes []byte
 func (_e *Fpdf_Expecter) AddFontFromBytes(familyStr interface{}, styleStr interface{}, jsonFileBytes interface{}, zFileBytes interface{}) *Fpdf_AddFontFromBytes_Call {
-	return &Fpdf_AddFontFromBytes_Call{Call: _e.mock.On("AddFontFromBytes", familyStr, styleStr, jsonFileBytes, zFileBytes)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddFontFromBytes_Call) Run(run func(familyStr string, styleStr string, jsonFileBytes []byte, zFileBytes []byte)) *Fpdf_AddFontFromBytes_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(string), args[2].([]byte), args[3].([]byte))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddFontFromBytes_Call) Return() *Fpdf_AddFontFromBytes_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddFontFromBytes_Call) RunAndReturn(run func(string, string, []byte, []byte)) *Fpdf_AddFontFromBytes_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// AddFontFromReader provides a mock function with given fields: familyStr, styleStr, r
 }
 
-// AddFontFromReader provides a mock function with given fields: familyStr, styleStr, r
 func (_m *Fpdf) AddFontFromReader(familyStr string, styleStr string, r io.Reader) {
-	_m.Called(familyStr, styleStr, r)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_AddFontFromReader_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AddFontFromReader'
@@ -111,43 +109,28 @@ type Fpdf_AddFontFromReader_Call struct {
 //   - styleStr string
 //   - r io.Reader
 func (_e *Fpdf_Expecter) AddFontFromReader(familyStr interface{}, styleStr interface{}, r interface{}) *Fpdf_AddFontFromReader_Call {
-	return &Fpdf_AddFontFromReader_Call{Call: _e.mock.On("AddFontFromReader", familyStr, styleStr, r)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddFontFromReader_Call) Run(run func(familyStr string, styleStr string, r io.Reader)) *Fpdf_AddFontFromReader_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(string), args[2].(io.Reader))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddFontFromReader_Call) Return() *Fpdf_AddFontFromReader_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddFontFromReader_Call) RunAndReturn(run func(string, string, io.Reader)) *Fpdf_AddFontFromReader_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// AddLayer provides a mock function with given fields: name, visible
 }
 
-// AddLayer provides a mock function with given fields: name, visible
-func (_m *Fpdf) AddLayer(name string, visible bool) int {
-	ret := _m.Called(name, visible)
-
-	if len(ret) == 0 {
-		panic("no return value specified for AddLayer")
-	}
-
-	var r0 int
-	if rf, ok := ret.Get(0).(func(string, bool) int); ok {
-		r0 = rf(name, visible)
-	} else {
-		r0 = ret.Get(0).(int)
-	}
-
-	return r0
-}
+func (_m *Fpdf) AddLayer(name string, visible bool) int { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_AddLayer_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AddLayer'
 type Fpdf_AddLayer_Call struct {
@@ -158,43 +141,27 @@ type Fpdf_AddLayer_Call struct {
 //   - name string
 //   - visible bool
 func (_e *Fpdf_Expecter) AddLayer(name interface{}, visible interface{}) *Fpdf_AddLayer_Call {
-	return &Fpdf_AddLayer_Call{Call: _e.mock.On("AddLayer", name, visible)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddLayer_Call) Run(run func(name string, visible bool)) *Fpdf_AddLayer_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddLayer_Call) Return(layerID int) *Fpdf_AddLayer_Call {
-	_c.Call.Return(layerID)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddLayer_Call) RunAndReturn(run func(string, bool) int) *Fpdf_AddLayer_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // AddLink provides a mock function with no fields
-func (_m *Fpdf) AddLink() int {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for AddLink")
-	}
-
-	var r0 int
-	if rf, ok := ret.Get(0).(func() int); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(int)
-	}
-
-	return r0
-}
+func (_m *Fpdf) AddLink() int { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_AddLink_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AddLink'
 type Fpdf_AddLink_Call struct {
@@ -202,62 +169,55 @@ type Fpdf_AddLink_Call struct {
 }
 
 // AddLink is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) AddLink() *Fpdf_AddLink_Call {
-	return &Fpdf_AddLink_Call{Call: _e.mock.On("AddLink")}
-}
+func (_e *Fpdf_Expecter) AddLink() *Fpdf_AddLink_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_AddLink_Call) Run(run func()) *Fpdf_AddLink_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddLink_Call) Return(_a0 int) *Fpdf_AddLink_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddLink_Call) RunAndReturn(run func() int) *Fpdf_AddLink_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // AddPage provides a mock function with no fields
 func (_m *Fpdf) AddPage() {
-	_m.Called()
+	_ = "STUB: not implemented"
+
+	// Fpdf_AddPage_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AddPage'
+	return
 }
 
-// Fpdf_AddPage_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AddPage'
 type Fpdf_AddPage_Call struct {
 	*mock.Call
 }
 
 // AddPage is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) AddPage() *Fpdf_AddPage_Call {
-	return &Fpdf_AddPage_Call{Call: _e.mock.On("AddPage")}
-}
+func (_e *Fpdf_Expecter) AddPage() *Fpdf_AddPage_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_AddPage_Call) Run(run func()) *Fpdf_AddPage_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_AddPage_Call) Return() *Fpdf_AddPage_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_AddPage_Call) Return() *Fpdf_AddPage_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_AddPage_Call) RunAndReturn(run func()) *Fpdf_AddPage_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// AddPageFormat provides a mock function with given fields: orientationStr, size
 }
 
-// AddPageFormat provides a mock function with given fields: orientationStr, size
 func (_m *Fpdf) AddPageFormat(orientationStr string, size gofpdf.SizeType) {
-	_m.Called(orientationStr, size)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_AddPageFormat_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AddPageFormat'
@@ -269,29 +229,30 @@ type Fpdf_AddPageFormat_Call struct {
 //   - orientationStr string
 //   - size gofpdf.SizeType
 func (_e *Fpdf_Expecter) AddPageFormat(orientationStr interface{}, size interface{}) *Fpdf_AddPageFormat_Call {
-	return &Fpdf_AddPageFormat_Call{Call: _e.mock.On("AddPageFormat", orientationStr, size)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddPageFormat_Call) Run(run func(orientationStr string, size gofpdf.SizeType)) *Fpdf_AddPageFormat_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(gofpdf.SizeType))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddPageFormat_Call) Return() *Fpdf_AddPageFormat_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddPageFormat_Call) RunAndReturn(run func(string, gofpdf.SizeType)) *Fpdf_AddPageFormat_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// AddSpotColor provides a mock function with given fields: nameStr, c, m, y, k
 }
 
-// AddSpotColor provides a mock function with given fields: nameStr, c, m, y, k
 func (_m *Fpdf) AddSpotColor(nameStr string, c byte, m byte, y byte, k byte) {
-	_m.Called(nameStr, c, m, y, k)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_AddSpotColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AddSpotColor'
@@ -306,29 +267,30 @@ type Fpdf_AddSpotColor_Call struct {
 //   - y byte
 //   - k byte
 func (_e *Fpdf_Expecter) AddSpotColor(nameStr interface{}, c interface{}, m interface{}, y interface{}, k interface{}) *Fpdf_AddSpotColor_Call {
-	return &Fpdf_AddSpotColor_Call{Call: _e.mock.On("AddSpotColor", nameStr, c, m, y, k)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddSpotColor_Call) Run(run func(nameStr string, c byte, m byte, y byte, k byte)) *Fpdf_AddSpotColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(byte), args[2].(byte), args[3].(byte), args[4].(byte))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddSpotColor_Call) Return() *Fpdf_AddSpotColor_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddSpotColor_Call) RunAndReturn(run func(string, byte, byte, byte, byte)) *Fpdf_AddSpotColor_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// AddUTF8FontFromBytes provides a mock function with given fields: familyStr, styleStr, bytes
 }
 
-// AddUTF8FontFromBytes provides a mock function with given fields: familyStr, styleStr, bytes
 func (_m *Fpdf) AddUTF8FontFromBytes(familyStr string, styleStr string, bytes []byte) {
-	_m.Called(familyStr, styleStr, bytes)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_AddUTF8FontFromBytes_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AddUTF8FontFromBytes'
@@ -341,30 +303,28 @@ type Fpdf_AddUTF8FontFromBytes_Call struct {
 //   - styleStr string
 //   - bytes []byte
 func (_e *Fpdf_Expecter) AddUTF8FontFromBytes(familyStr interface{}, styleStr interface{}, bytes interface{}) *Fpdf_AddUTF8FontFromBytes_Call {
-	return &Fpdf_AddUTF8FontFromBytes_Call{Call: _e.mock.On("AddUTF8FontFromBytes", familyStr, styleStr, bytes)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddUTF8FontFromBytes_Call) Run(run func(familyStr string, styleStr string, bytes []byte)) *Fpdf_AddUTF8FontFromBytes_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(string), args[2].([]byte))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddUTF8FontFromBytes_Call) Return() *Fpdf_AddUTF8FontFromBytes_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AddUTF8FontFromBytes_Call) RunAndReturn(run func(string, string, []byte)) *Fpdf_AddUTF8FontFromBytes_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// AliasNbPages provides a mock function with given fields: aliasStr
 }
 
-// AliasNbPages provides a mock function with given fields: aliasStr
-func (_m *Fpdf) AliasNbPages(aliasStr string) {
-	_m.Called(aliasStr)
-}
+func (_m *Fpdf) AliasNbPages(aliasStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_AliasNbPages_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'AliasNbPages'
 type Fpdf_AliasNbPages_Call struct {
@@ -374,29 +334,30 @@ type Fpdf_AliasNbPages_Call struct {
 // AliasNbPages is a helper method to define mock.On call
 //   - aliasStr string
 func (_e *Fpdf_Expecter) AliasNbPages(aliasStr interface{}) *Fpdf_AliasNbPages_Call {
-	return &Fpdf_AliasNbPages_Call{Call: _e.mock.On("AliasNbPages", aliasStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AliasNbPages_Call) Run(run func(aliasStr string)) *Fpdf_AliasNbPages_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AliasNbPages_Call) Return() *Fpdf_AliasNbPages_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_AliasNbPages_Call) RunAndReturn(run func(string)) *Fpdf_AliasNbPages_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Arc provides a mock function with given fields: x, y, rx, ry, degRotate, degStart, degEnd, styleStr
 }
 
-// Arc provides a mock function with given fields: x, y, rx, ry, degRotate, degStart, degEnd, styleStr
 func (_m *Fpdf) Arc(x float64, y float64, rx float64, ry float64, degRotate float64, degStart float64, degEnd float64, styleStr string) {
-	_m.Called(x, y, rx, ry, degRotate, degStart, degEnd, styleStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Arc_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Arc'
@@ -414,29 +375,27 @@ type Fpdf_Arc_Call struct {
 //   - degEnd float64
 //   - styleStr string
 func (_e *Fpdf_Expecter) Arc(x interface{}, y interface{}, rx interface{}, ry interface{}, degRotate interface{}, degStart interface{}, degEnd interface{}, styleStr interface{}) *Fpdf_Arc_Call {
-	return &Fpdf_Arc_Call{Call: _e.mock.On("Arc", x, y, rx, ry, degRotate, degStart, degEnd, styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Arc_Call) Run(run func(x float64, y float64, rx float64, ry float64, degRotate float64, degStart float64, degEnd float64, styleStr string)) *Fpdf_Arc_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64), args[5].(float64), args[6].(float64), args[7].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Arc_Call) Return() *Fpdf_Arc_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Arc_Call) Return() *Fpdf_Arc_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Arc_Call) RunAndReturn(run func(float64, float64, float64, float64, float64, float64, float64, string)) *Fpdf_Arc_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ArcTo provides a mock function with given fields: x, y, rx, ry, degRotate, degStart, degEnd
 }
 
-// ArcTo provides a mock function with given fields: x, y, rx, ry, degRotate, degStart, degEnd
 func (_m *Fpdf) ArcTo(x float64, y float64, rx float64, ry float64, degRotate float64, degStart float64, degEnd float64) {
-	_m.Called(x, y, rx, ry, degRotate, degStart, degEnd)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_ArcTo_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ArcTo'
@@ -453,32 +412,31 @@ type Fpdf_ArcTo_Call struct {
 //   - degStart float64
 //   - degEnd float64
 func (_e *Fpdf_Expecter) ArcTo(x interface{}, y interface{}, rx interface{}, ry interface{}, degRotate interface{}, degStart interface{}, degEnd interface{}) *Fpdf_ArcTo_Call {
-	return &Fpdf_ArcTo_Call{Call: _e.mock.On("ArcTo", x, y, rx, ry, degRotate, degStart, degEnd)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ArcTo_Call) Run(run func(x float64, y float64, rx float64, ry float64, degRotate float64, degStart float64, degEnd float64)) *Fpdf_ArcTo_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64), args[5].(float64), args[6].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_ArcTo_Call) Return() *Fpdf_ArcTo_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_ArcTo_Call) Return() *Fpdf_ArcTo_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_ArcTo_Call) RunAndReturn(run func(float64, float64, float64, float64, float64, float64, float64)) *Fpdf_ArcTo_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// BeginLayer provides a mock function with given fields: id
 }
 
-// BeginLayer provides a mock function with given fields: id
 func (_m *Fpdf) BeginLayer(id int) {
-	_m.Called(id)
+	_ = "STUB: not implemented"
+
+	// Fpdf_BeginLayer_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'BeginLayer'
+	return
 }
 
-// Fpdf_BeginLayer_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'BeginLayer'
 type Fpdf_BeginLayer_Call struct {
 	*mock.Call
 }
@@ -486,29 +444,30 @@ type Fpdf_BeginLayer_Call struct {
 // BeginLayer is a helper method to define mock.On call
 //   - id int
 func (_e *Fpdf_Expecter) BeginLayer(id interface{}) *Fpdf_BeginLayer_Call {
-	return &Fpdf_BeginLayer_Call{Call: _e.mock.On("BeginLayer", id)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_BeginLayer_Call) Run(run func(id int)) *Fpdf_BeginLayer_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(int))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_BeginLayer_Call) Return() *Fpdf_BeginLayer_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_BeginLayer_Call) RunAndReturn(run func(int)) *Fpdf_BeginLayer_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Beziergon provides a mock function with given fields: points, styleStr
 }
 
-// Beziergon provides a mock function with given fields: points, styleStr
 func (_m *Fpdf) Beziergon(points []gofpdf.PointType, styleStr string) {
-	_m.Called(points, styleStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Beziergon_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Beziergon'
@@ -520,30 +479,25 @@ type Fpdf_Beziergon_Call struct {
 //   - points []gofpdf.PointType
 //   - styleStr string
 func (_e *Fpdf_Expecter) Beziergon(points interface{}, styleStr interface{}) *Fpdf_Beziergon_Call {
-	return &Fpdf_Beziergon_Call{Call: _e.mock.On("Beziergon", points, styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Beziergon_Call) Run(run func(points []gofpdf.PointType, styleStr string)) *Fpdf_Beziergon_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].([]gofpdf.PointType), args[1].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Beziergon_Call) Return() *Fpdf_Beziergon_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Beziergon_Call) Return() *Fpdf_Beziergon_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Beziergon_Call) RunAndReturn(run func([]gofpdf.PointType, string)) *Fpdf_Beziergon_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Bookmark provides a mock function with given fields: txtStr, level, y
 }
 
-// Bookmark provides a mock function with given fields: txtStr, level, y
-func (_m *Fpdf) Bookmark(txtStr string, level int, y float64) {
-	_m.Called(txtStr, level, y)
-}
+func (_m *Fpdf) Bookmark(txtStr string, level int, y float64) { _ = "STUB: not implemented"; return }
 
 // Fpdf_Bookmark_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Bookmark'
 type Fpdf_Bookmark_Call struct {
@@ -555,30 +509,25 @@ type Fpdf_Bookmark_Call struct {
 //   - level int
 //   - y float64
 func (_e *Fpdf_Expecter) Bookmark(txtStr interface{}, level interface{}, y interface{}) *Fpdf_Bookmark_Call {
-	return &Fpdf_Bookmark_Call{Call: _e.mock.On("Bookmark", txtStr, level, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Bookmark_Call) Run(run func(txtStr string, level int, y float64)) *Fpdf_Bookmark_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(int), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Bookmark_Call) Return() *Fpdf_Bookmark_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Bookmark_Call) Return() *Fpdf_Bookmark_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Bookmark_Call) RunAndReturn(run func(string, int, float64)) *Fpdf_Bookmark_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Cell provides a mock function with given fields: w, h, txtStr
 }
 
-// Cell provides a mock function with given fields: w, h, txtStr
-func (_m *Fpdf) Cell(w float64, h float64, txtStr string) {
-	_m.Called(w, h, txtStr)
-}
+func (_m *Fpdf) Cell(w float64, h float64, txtStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_Cell_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Cell'
 type Fpdf_Cell_Call struct {
@@ -590,29 +539,27 @@ type Fpdf_Cell_Call struct {
 //   - h float64
 //   - txtStr string
 func (_e *Fpdf_Expecter) Cell(w interface{}, h interface{}, txtStr interface{}) *Fpdf_Cell_Call {
-	return &Fpdf_Cell_Call{Call: _e.mock.On("Cell", w, h, txtStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Cell_Call) Run(run func(w float64, h float64, txtStr string)) *Fpdf_Cell_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Cell_Call) Return() *Fpdf_Cell_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Cell_Call) Return() *Fpdf_Cell_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Cell_Call) RunAndReturn(run func(float64, float64, string)) *Fpdf_Cell_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// CellFormat provides a mock function with given fields: w, h, txtStr, borderStr, ln, alignStr, fill, link, linkStr
 }
 
-// CellFormat provides a mock function with given fields: w, h, txtStr, borderStr, ln, alignStr, fill, link, linkStr
 func (_m *Fpdf) CellFormat(w float64, h float64, txtStr string, borderStr string, ln int, alignStr string, fill bool, link int, linkStr string) {
-	_m.Called(w, h, txtStr, borderStr, ln, alignStr, fill, link, linkStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_CellFormat_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'CellFormat'
@@ -631,32 +578,30 @@ type Fpdf_CellFormat_Call struct {
 //   - link int
 //   - linkStr string
 func (_e *Fpdf_Expecter) CellFormat(w interface{}, h interface{}, txtStr interface{}, borderStr interface{}, ln interface{}, alignStr interface{}, fill interface{}, link interface{}, linkStr interface{}) *Fpdf_CellFormat_Call {
-	return &Fpdf_CellFormat_Call{Call: _e.mock.On("CellFormat", w, h, txtStr, borderStr, ln, alignStr, fill, link, linkStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CellFormat_Call) Run(run func(w float64, h float64, txtStr string, borderStr string, ln int, alignStr string, fill bool, link int, linkStr string)) *Fpdf_CellFormat_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(string), args[3].(string), args[4].(int), args[5].(string), args[6].(bool), args[7].(int), args[8].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CellFormat_Call) Return() *Fpdf_CellFormat_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CellFormat_Call) RunAndReturn(run func(float64, float64, string, string, int, string, bool, int, string)) *Fpdf_CellFormat_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Cellf provides a mock function with given fields: w, h, fmtStr, args
 }
 
-// Cellf provides a mock function with given fields: w, h, fmtStr, args
 func (_m *Fpdf) Cellf(w float64, h float64, fmtStr string, args ...interface{}) {
-	var _ca []interface{}
-	_ca = append(_ca, w, h, fmtStr)
-	_ca = append(_ca, args...)
-	_m.Called(_ca...)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Cellf_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Cellf'
@@ -670,36 +615,27 @@ type Fpdf_Cellf_Call struct {
 //   - fmtStr string
 //   - args ...interface{}
 func (_e *Fpdf_Expecter) Cellf(w interface{}, h interface{}, fmtStr interface{}, args ...interface{}) *Fpdf_Cellf_Call {
-	return &Fpdf_Cellf_Call{Call: _e.mock.On("Cellf",
-		append([]interface{}{w, h, fmtStr}, args...)...)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Cellf_Call) Run(run func(w float64, h float64, fmtStr string, args ...interface{})) *Fpdf_Cellf_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		variadicArgs := make([]interface{}, len(args)-3)
-		for i, a := range args[3:] {
-			if a != nil {
-				variadicArgs[i] = a.(interface{})
-			}
-		}
-		run(args[0].(float64), args[1].(float64), args[2].(string), variadicArgs...)
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Cellf_Call) Return() *Fpdf_Cellf_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Cellf_Call) Return() *Fpdf_Cellf_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Cellf_Call) RunAndReturn(run func(float64, float64, string, ...interface{})) *Fpdf_Cellf_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Circle provides a mock function with given fields: x, y, r, styleStr
 }
 
-// Circle provides a mock function with given fields: x, y, r, styleStr
 func (_m *Fpdf) Circle(x float64, y float64, r float64, styleStr string) {
-	_m.Called(x, y, r, styleStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Circle_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Circle'
@@ -713,61 +649,58 @@ type Fpdf_Circle_Call struct {
 //   - r float64
 //   - styleStr string
 func (_e *Fpdf_Expecter) Circle(x interface{}, y interface{}, r interface{}, styleStr interface{}) *Fpdf_Circle_Call {
-	return &Fpdf_Circle_Call{Call: _e.mock.On("Circle", x, y, r, styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Circle_Call) Run(run func(x float64, y float64, r float64, styleStr string)) *Fpdf_Circle_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Circle_Call) Return() *Fpdf_Circle_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Circle_Call) Return() *Fpdf_Circle_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Circle_Call) RunAndReturn(run func(float64, float64, float64, string)) *Fpdf_Circle_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ClearError provides a mock function with no fields
 }
 
-// ClearError provides a mock function with no fields
 func (_m *Fpdf) ClearError() {
-	_m.Called()
+	_ = "STUB: not implemented"
+
+	// Fpdf_ClearError_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClearError'
+	return
 }
 
-// Fpdf_ClearError_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClearError'
 type Fpdf_ClearError_Call struct {
 	*mock.Call
 }
 
 // ClearError is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) ClearError() *Fpdf_ClearError_Call {
-	return &Fpdf_ClearError_Call{Call: _e.mock.On("ClearError")}
-}
+func (_e *Fpdf_Expecter) ClearError() *Fpdf_ClearError_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_ClearError_Call) Run(run func()) *Fpdf_ClearError_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClearError_Call) Return() *Fpdf_ClearError_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClearError_Call) RunAndReturn(run func()) *Fpdf_ClearError_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ClipCircle provides a mock function with given fields: x, y, r, outline
 }
 
-// ClipCircle provides a mock function with given fields: x, y, r, outline
 func (_m *Fpdf) ClipCircle(x float64, y float64, r float64, outline bool) {
-	_m.Called(x, y, r, outline)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_ClipCircle_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClipCircle'
@@ -781,29 +714,30 @@ type Fpdf_ClipCircle_Call struct {
 //   - r float64
 //   - outline bool
 func (_e *Fpdf_Expecter) ClipCircle(x interface{}, y interface{}, r interface{}, outline interface{}) *Fpdf_ClipCircle_Call {
-	return &Fpdf_ClipCircle_Call{Call: _e.mock.On("ClipCircle", x, y, r, outline)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipCircle_Call) Run(run func(x float64, y float64, r float64, outline bool)) *Fpdf_ClipCircle_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipCircle_Call) Return() *Fpdf_ClipCircle_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipCircle_Call) RunAndReturn(run func(float64, float64, float64, bool)) *Fpdf_ClipCircle_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ClipEllipse provides a mock function with given fields: x, y, rx, ry, outline
 }
 
-// ClipEllipse provides a mock function with given fields: x, y, rx, ry, outline
 func (_m *Fpdf) ClipEllipse(x float64, y float64, rx float64, ry float64, outline bool) {
-	_m.Called(x, y, rx, ry, outline)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_ClipEllipse_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClipEllipse'
@@ -818,61 +752,58 @@ type Fpdf_ClipEllipse_Call struct {
 //   - ry float64
 //   - outline bool
 func (_e *Fpdf_Expecter) ClipEllipse(x interface{}, y interface{}, rx interface{}, ry interface{}, outline interface{}) *Fpdf_ClipEllipse_Call {
-	return &Fpdf_ClipEllipse_Call{Call: _e.mock.On("ClipEllipse", x, y, rx, ry, outline)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipEllipse_Call) Run(run func(x float64, y float64, rx float64, ry float64, outline bool)) *Fpdf_ClipEllipse_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipEllipse_Call) Return() *Fpdf_ClipEllipse_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipEllipse_Call) RunAndReturn(run func(float64, float64, float64, float64, bool)) *Fpdf_ClipEllipse_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ClipEnd provides a mock function with no fields
 }
 
-// ClipEnd provides a mock function with no fields
 func (_m *Fpdf) ClipEnd() {
-	_m.Called()
+	_ = "STUB: not implemented"
+
+	// Fpdf_ClipEnd_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClipEnd'
+	return
 }
 
-// Fpdf_ClipEnd_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClipEnd'
 type Fpdf_ClipEnd_Call struct {
 	*mock.Call
 }
 
 // ClipEnd is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) ClipEnd() *Fpdf_ClipEnd_Call {
-	return &Fpdf_ClipEnd_Call{Call: _e.mock.On("ClipEnd")}
-}
+func (_e *Fpdf_Expecter) ClipEnd() *Fpdf_ClipEnd_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_ClipEnd_Call) Run(run func()) *Fpdf_ClipEnd_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_ClipEnd_Call) Return() *Fpdf_ClipEnd_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_ClipEnd_Call) Return() *Fpdf_ClipEnd_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_ClipEnd_Call) RunAndReturn(run func()) *Fpdf_ClipEnd_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ClipPolygon provides a mock function with given fields: points, outline
 }
 
-// ClipPolygon provides a mock function with given fields: points, outline
 func (_m *Fpdf) ClipPolygon(points []gofpdf.PointType, outline bool) {
-	_m.Called(points, outline)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_ClipPolygon_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClipPolygon'
@@ -884,29 +815,30 @@ type Fpdf_ClipPolygon_Call struct {
 //   - points []gofpdf.PointType
 //   - outline bool
 func (_e *Fpdf_Expecter) ClipPolygon(points interface{}, outline interface{}) *Fpdf_ClipPolygon_Call {
-	return &Fpdf_ClipPolygon_Call{Call: _e.mock.On("ClipPolygon", points, outline)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipPolygon_Call) Run(run func(points []gofpdf.PointType, outline bool)) *Fpdf_ClipPolygon_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].([]gofpdf.PointType), args[1].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipPolygon_Call) Return() *Fpdf_ClipPolygon_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipPolygon_Call) RunAndReturn(run func([]gofpdf.PointType, bool)) *Fpdf_ClipPolygon_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ClipRect provides a mock function with given fields: x, y, w, h, outline
 }
 
-// ClipRect provides a mock function with given fields: x, y, w, h, outline
 func (_m *Fpdf) ClipRect(x float64, y float64, w float64, h float64, outline bool) {
-	_m.Called(x, y, w, h, outline)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_ClipRect_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClipRect'
@@ -921,29 +853,27 @@ type Fpdf_ClipRect_Call struct {
 //   - h float64
 //   - outline bool
 func (_e *Fpdf_Expecter) ClipRect(x interface{}, y interface{}, w interface{}, h interface{}, outline interface{}) *Fpdf_ClipRect_Call {
-	return &Fpdf_ClipRect_Call{Call: _e.mock.On("ClipRect", x, y, w, h, outline)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipRect_Call) Run(run func(x float64, y float64, w float64, h float64, outline bool)) *Fpdf_ClipRect_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_ClipRect_Call) Return() *Fpdf_ClipRect_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_ClipRect_Call) Return() *Fpdf_ClipRect_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_ClipRect_Call) RunAndReturn(run func(float64, float64, float64, float64, bool)) *Fpdf_ClipRect_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ClipRoundedRect provides a mock function with given fields: x, y, w, h, r, outline
 }
 
-// ClipRoundedRect provides a mock function with given fields: x, y, w, h, r, outline
 func (_m *Fpdf) ClipRoundedRect(x float64, y float64, w float64, h float64, r float64, outline bool) {
-	_m.Called(x, y, w, h, r, outline)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_ClipRoundedRect_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClipRoundedRect'
@@ -959,29 +889,30 @@ type Fpdf_ClipRoundedRect_Call struct {
 //   - r float64
 //   - outline bool
 func (_e *Fpdf_Expecter) ClipRoundedRect(x interface{}, y interface{}, w interface{}, h interface{}, r interface{}, outline interface{}) *Fpdf_ClipRoundedRect_Call {
-	return &Fpdf_ClipRoundedRect_Call{Call: _e.mock.On("ClipRoundedRect", x, y, w, h, r, outline)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipRoundedRect_Call) Run(run func(x float64, y float64, w float64, h float64, r float64, outline bool)) *Fpdf_ClipRoundedRect_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64), args[5].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipRoundedRect_Call) Return() *Fpdf_ClipRoundedRect_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipRoundedRect_Call) RunAndReturn(run func(float64, float64, float64, float64, float64, bool)) *Fpdf_ClipRoundedRect_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ClipText provides a mock function with given fields: x, y, txtStr, outline
 }
 
-// ClipText provides a mock function with given fields: x, y, txtStr, outline
 func (_m *Fpdf) ClipText(x float64, y float64, txtStr string, outline bool) {
-	_m.Called(x, y, txtStr, outline)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_ClipText_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClipText'
@@ -995,108 +926,80 @@ type Fpdf_ClipText_Call struct {
 //   - txtStr string
 //   - outline bool
 func (_e *Fpdf_Expecter) ClipText(x interface{}, y interface{}, txtStr interface{}, outline interface{}) *Fpdf_ClipText_Call {
-	return &Fpdf_ClipText_Call{Call: _e.mock.On("ClipText", x, y, txtStr, outline)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ClipText_Call) Run(run func(x float64, y float64, txtStr string, outline bool)) *Fpdf_ClipText_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(string), args[3].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_ClipText_Call) Return() *Fpdf_ClipText_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_ClipText_Call) Return() *Fpdf_ClipText_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_ClipText_Call) RunAndReturn(run func(float64, float64, string, bool)) *Fpdf_ClipText_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Close provides a mock function with no fields
 }
 
-// Close provides a mock function with no fields
 func (_m *Fpdf) Close() {
-	_m.Called()
+	_ = "STUB: not implemented"
+
+	// Fpdf_Close_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Close'
+	return
 }
 
-// Fpdf_Close_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Close'
 type Fpdf_Close_Call struct {
 	*mock.Call
 }
 
 // Close is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) Close() *Fpdf_Close_Call {
-	return &Fpdf_Close_Call{Call: _e.mock.On("Close")}
-}
+func (_e *Fpdf_Expecter) Close() *Fpdf_Close_Call { _ = "STUB: not implemented"; return nil }
 
-func (_c *Fpdf_Close_Call) Run(run func()) *Fpdf_Close_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
-}
+func (_c *Fpdf_Close_Call) Run(run func()) *Fpdf_Close_Call { _ = "STUB: not implemented"; return nil }
 
-func (_c *Fpdf_Close_Call) Return() *Fpdf_Close_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Close_Call) Return() *Fpdf_Close_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Close_Call) RunAndReturn(run func()) *Fpdf_Close_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ClosePath provides a mock function with no fields
 }
 
-// ClosePath provides a mock function with no fields
 func (_m *Fpdf) ClosePath() {
-	_m.Called()
+	_ = "STUB: not implemented"
+
+	// Fpdf_ClosePath_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClosePath'
+	return
 }
 
-// Fpdf_ClosePath_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ClosePath'
 type Fpdf_ClosePath_Call struct {
 	*mock.Call
 }
 
 // ClosePath is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) ClosePath() *Fpdf_ClosePath_Call {
-	return &Fpdf_ClosePath_Call{Call: _e.mock.On("ClosePath")}
-}
+func (_e *Fpdf_Expecter) ClosePath() *Fpdf_ClosePath_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_ClosePath_Call) Run(run func()) *Fpdf_ClosePath_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_ClosePath_Call) Return() *Fpdf_ClosePath_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_ClosePath_Call) Return() *Fpdf_ClosePath_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_ClosePath_Call) RunAndReturn(run func()) *Fpdf_ClosePath_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// CreateTemplate provides a mock function with given fields: fn
 }
 
-// CreateTemplate provides a mock function with given fields: fn
 func (_m *Fpdf) CreateTemplate(fn func(*gofpdf.Tpl)) gofpdf.Template {
-	ret := _m.Called(fn)
-
-	if len(ret) == 0 {
-		panic("no return value specified for CreateTemplate")
-	}
-
-	var r0 gofpdf.Template
-	if rf, ok := ret.Get(0).(func(func(*gofpdf.Tpl)) gofpdf.Template); ok {
-		r0 = rf(fn)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(gofpdf.Template)
-		}
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return *new(gofpdf.Template)
 }
 
 // Fpdf_CreateTemplate_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'CreateTemplate'
@@ -1107,44 +1010,29 @@ type Fpdf_CreateTemplate_Call struct {
 // CreateTemplate is a helper method to define mock.On call
 //   - fn func(*gofpdf.Tpl)
 func (_e *Fpdf_Expecter) CreateTemplate(fn interface{}) *Fpdf_CreateTemplate_Call {
-	return &Fpdf_CreateTemplate_Call{Call: _e.mock.On("CreateTemplate", fn)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CreateTemplate_Call) Run(run func(fn func(*gofpdf.Tpl))) *Fpdf_CreateTemplate_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(func(*gofpdf.Tpl)))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CreateTemplate_Call) Return(_a0 gofpdf.Template) *Fpdf_CreateTemplate_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CreateTemplate_Call) RunAndReturn(run func(func(*gofpdf.Tpl)) gofpdf.Template) *Fpdf_CreateTemplate_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // CreateTemplateCustom provides a mock function with given fields: corner, size, fn
 func (_m *Fpdf) CreateTemplateCustom(corner gofpdf.PointType, size gofpdf.SizeType, fn func(*gofpdf.Tpl)) gofpdf.Template {
-	ret := _m.Called(corner, size, fn)
-
-	if len(ret) == 0 {
-		panic("no return value specified for CreateTemplateCustom")
-	}
-
-	var r0 gofpdf.Template
-	if rf, ok := ret.Get(0).(func(gofpdf.PointType, gofpdf.SizeType, func(*gofpdf.Tpl)) gofpdf.Template); ok {
-		r0 = rf(corner, size, fn)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(gofpdf.Template)
-		}
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return *new(gofpdf.Template)
 }
 
 // Fpdf_CreateTemplateCustom_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'CreateTemplateCustom'
@@ -1157,29 +1045,29 @@ type Fpdf_CreateTemplateCustom_Call struct {
 //   - size gofpdf.SizeType
 //   - fn func(*gofpdf.Tpl)
 func (_e *Fpdf_Expecter) CreateTemplateCustom(corner interface{}, size interface{}, fn interface{}) *Fpdf_CreateTemplateCustom_Call {
-	return &Fpdf_CreateTemplateCustom_Call{Call: _e.mock.On("CreateTemplateCustom", corner, size, fn)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CreateTemplateCustom_Call) Run(run func(corner gofpdf.PointType, size gofpdf.SizeType, fn func(*gofpdf.Tpl))) *Fpdf_CreateTemplateCustom_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(gofpdf.PointType), args[1].(gofpdf.SizeType), args[2].(func(*gofpdf.Tpl)))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CreateTemplateCustom_Call) Return(_a0 gofpdf.Template) *Fpdf_CreateTemplateCustom_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CreateTemplateCustom_Call) RunAndReturn(run func(gofpdf.PointType, gofpdf.SizeType, func(*gofpdf.Tpl)) gofpdf.Template) *Fpdf_CreateTemplateCustom_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Curve provides a mock function with given fields: x0, y0, cx, cy, x1, y1, styleStr
 func (_m *Fpdf) Curve(x0 float64, y0 float64, cx float64, cy float64, x1 float64, y1 float64, styleStr string) {
-	_m.Called(x0, y0, cx, cy, x1, y1, styleStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Curve_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Curve'
@@ -1196,29 +1084,27 @@ type Fpdf_Curve_Call struct {
 //   - y1 float64
 //   - styleStr string
 func (_e *Fpdf_Expecter) Curve(x0 interface{}, y0 interface{}, cx interface{}, cy interface{}, x1 interface{}, y1 interface{}, styleStr interface{}) *Fpdf_Curve_Call {
-	return &Fpdf_Curve_Call{Call: _e.mock.On("Curve", x0, y0, cx, cy, x1, y1, styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Curve_Call) Run(run func(x0 float64, y0 float64, cx float64, cy float64, x1 float64, y1 float64, styleStr string)) *Fpdf_Curve_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64), args[5].(float64), args[6].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Curve_Call) Return() *Fpdf_Curve_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Curve_Call) Return() *Fpdf_Curve_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Curve_Call) RunAndReturn(run func(float64, float64, float64, float64, float64, float64, string)) *Fpdf_Curve_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// CurveBezierCubic provides a mock function with given fields: x0, y0, cx0, cy0, cx1, cy1, x1, y1, styleStr
 }
 
-// CurveBezierCubic provides a mock function with given fields: x0, y0, cx0, cy0, cx1, cy1, x1, y1, styleStr
 func (_m *Fpdf) CurveBezierCubic(x0 float64, y0 float64, cx0 float64, cy0 float64, cx1 float64, cy1 float64, x1 float64, y1 float64, styleStr string) {
-	_m.Called(x0, y0, cx0, cy0, cx1, cy1, x1, y1, styleStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_CurveBezierCubic_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'CurveBezierCubic'
@@ -1237,29 +1123,30 @@ type Fpdf_CurveBezierCubic_Call struct {
 //   - y1 float64
 //   - styleStr string
 func (_e *Fpdf_Expecter) CurveBezierCubic(x0 interface{}, y0 interface{}, cx0 interface{}, cy0 interface{}, cx1 interface{}, cy1 interface{}, x1 interface{}, y1 interface{}, styleStr interface{}) *Fpdf_CurveBezierCubic_Call {
-	return &Fpdf_CurveBezierCubic_Call{Call: _e.mock.On("CurveBezierCubic", x0, y0, cx0, cy0, cx1, cy1, x1, y1, styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CurveBezierCubic_Call) Run(run func(x0 float64, y0 float64, cx0 float64, cy0 float64, cx1 float64, cy1 float64, x1 float64, y1 float64, styleStr string)) *Fpdf_CurveBezierCubic_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64), args[5].(float64), args[6].(float64), args[7].(float64), args[8].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CurveBezierCubic_Call) Return() *Fpdf_CurveBezierCubic_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CurveBezierCubic_Call) RunAndReturn(run func(float64, float64, float64, float64, float64, float64, float64, float64, string)) *Fpdf_CurveBezierCubic_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// CurveBezierCubicTo provides a mock function with given fields: cx0, cy0, cx1, cy1, x, y
 }
 
-// CurveBezierCubicTo provides a mock function with given fields: cx0, cy0, cx1, cy1, x, y
 func (_m *Fpdf) CurveBezierCubicTo(cx0 float64, cy0 float64, cx1 float64, cy1 float64, x float64, y float64) {
-	_m.Called(cx0, cy0, cx1, cy1, x, y)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_CurveBezierCubicTo_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'CurveBezierCubicTo'
@@ -1275,29 +1162,30 @@ type Fpdf_CurveBezierCubicTo_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) CurveBezierCubicTo(cx0 interface{}, cy0 interface{}, cx1 interface{}, cy1 interface{}, x interface{}, y interface{}) *Fpdf_CurveBezierCubicTo_Call {
-	return &Fpdf_CurveBezierCubicTo_Call{Call: _e.mock.On("CurveBezierCubicTo", cx0, cy0, cx1, cy1, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CurveBezierCubicTo_Call) Run(run func(cx0 float64, cy0 float64, cx1 float64, cy1 float64, x float64, y float64)) *Fpdf_CurveBezierCubicTo_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64), args[5].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CurveBezierCubicTo_Call) Return() *Fpdf_CurveBezierCubicTo_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CurveBezierCubicTo_Call) RunAndReturn(run func(float64, float64, float64, float64, float64, float64)) *Fpdf_CurveBezierCubicTo_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// CurveCubic provides a mock function with given fields: x0, y0, cx0, cy0, x1, y1, cx1, cy1, styleStr
 }
 
-// CurveCubic provides a mock function with given fields: x0, y0, cx0, cy0, x1, y1, cx1, cy1, styleStr
 func (_m *Fpdf) CurveCubic(x0 float64, y0 float64, cx0 float64, cy0 float64, x1 float64, y1 float64, cx1 float64, cy1 float64, styleStr string) {
-	_m.Called(x0, y0, cx0, cy0, x1, y1, cx1, cy1, styleStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_CurveCubic_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'CurveCubic'
@@ -1316,32 +1204,34 @@ type Fpdf_CurveCubic_Call struct {
 //   - cy1 float64
 //   - styleStr string
 func (_e *Fpdf_Expecter) CurveCubic(x0 interface{}, y0 interface{}, cx0 interface{}, cy0 interface{}, x1 interface{}, y1 interface{}, cx1 interface{}, cy1 interface{}, styleStr interface{}) *Fpdf_CurveCubic_Call {
-	return &Fpdf_CurveCubic_Call{Call: _e.mock.On("CurveCubic", x0, y0, cx0, cy0, x1, y1, cx1, cy1, styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CurveCubic_Call) Run(run func(x0 float64, y0 float64, cx0 float64, cy0 float64, x1 float64, y1 float64, cx1 float64, cy1 float64, styleStr string)) *Fpdf_CurveCubic_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64), args[5].(float64), args[6].(float64), args[7].(float64), args[8].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CurveCubic_Call) Return() *Fpdf_CurveCubic_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CurveCubic_Call) RunAndReturn(run func(float64, float64, float64, float64, float64, float64, float64, float64, string)) *Fpdf_CurveCubic_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// CurveTo provides a mock function with given fields: cx, cy, x, y
 }
 
-// CurveTo provides a mock function with given fields: cx, cy, x, y
 func (_m *Fpdf) CurveTo(cx float64, cy float64, x float64, y float64) {
-	_m.Called(cx, cy, x, y)
+	_ = "STUB: not implemented"
+	return
+
+	// Fpdf_CurveTo_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'CurveTo'
 }
 
-// Fpdf_CurveTo_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'CurveTo'
 type Fpdf_CurveTo_Call struct {
 	*mock.Call
 }
@@ -1352,30 +1242,25 @@ type Fpdf_CurveTo_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) CurveTo(cx interface{}, cy interface{}, x interface{}, y interface{}) *Fpdf_CurveTo_Call {
-	return &Fpdf_CurveTo_Call{Call: _e.mock.On("CurveTo", cx, cy, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_CurveTo_Call) Run(run func(cx float64, cy float64, x float64, y float64)) *Fpdf_CurveTo_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_CurveTo_Call) Return() *Fpdf_CurveTo_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_CurveTo_Call) Return() *Fpdf_CurveTo_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_CurveTo_Call) RunAndReturn(run func(float64, float64, float64, float64)) *Fpdf_CurveTo_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// DrawPath provides a mock function with given fields: styleStr
 }
 
-// DrawPath provides a mock function with given fields: styleStr
-func (_m *Fpdf) DrawPath(styleStr string) {
-	_m.Called(styleStr)
-}
+func (_m *Fpdf) DrawPath(styleStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_DrawPath_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'DrawPath'
 type Fpdf_DrawPath_Call struct {
@@ -1385,29 +1270,27 @@ type Fpdf_DrawPath_Call struct {
 // DrawPath is a helper method to define mock.On call
 //   - styleStr string
 func (_e *Fpdf_Expecter) DrawPath(styleStr interface{}) *Fpdf_DrawPath_Call {
-	return &Fpdf_DrawPath_Call{Call: _e.mock.On("DrawPath", styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_DrawPath_Call) Run(run func(styleStr string)) *Fpdf_DrawPath_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_DrawPath_Call) Return() *Fpdf_DrawPath_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_DrawPath_Call) Return() *Fpdf_DrawPath_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_DrawPath_Call) RunAndReturn(run func(string)) *Fpdf_DrawPath_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Ellipse provides a mock function with given fields: x, y, rx, ry, degRotate, styleStr
 }
 
-// Ellipse provides a mock function with given fields: x, y, rx, ry, degRotate, styleStr
 func (_m *Fpdf) Ellipse(x float64, y float64, rx float64, ry float64, degRotate float64, styleStr string) {
-	_m.Called(x, y, rx, ry, degRotate, styleStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Ellipse_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Ellipse'
@@ -1423,75 +1306,53 @@ type Fpdf_Ellipse_Call struct {
 //   - degRotate float64
 //   - styleStr string
 func (_e *Fpdf_Expecter) Ellipse(x interface{}, y interface{}, rx interface{}, ry interface{}, degRotate interface{}, styleStr interface{}) *Fpdf_Ellipse_Call {
-	return &Fpdf_Ellipse_Call{Call: _e.mock.On("Ellipse", x, y, rx, ry, degRotate, styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Ellipse_Call) Run(run func(x float64, y float64, rx float64, ry float64, degRotate float64, styleStr string)) *Fpdf_Ellipse_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64), args[5].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Ellipse_Call) Return() *Fpdf_Ellipse_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Ellipse_Call) Return() *Fpdf_Ellipse_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Ellipse_Call) RunAndReturn(run func(float64, float64, float64, float64, float64, string)) *Fpdf_Ellipse_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// EndLayer provides a mock function with no fields
 }
 
-// EndLayer provides a mock function with no fields
 func (_m *Fpdf) EndLayer() {
-	_m.Called()
+	_ = "STUB: not implemented"
+
+	// Fpdf_EndLayer_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'EndLayer'
+	return
 }
 
-// Fpdf_EndLayer_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'EndLayer'
 type Fpdf_EndLayer_Call struct {
 	*mock.Call
 }
 
 // EndLayer is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) EndLayer() *Fpdf_EndLayer_Call {
-	return &Fpdf_EndLayer_Call{Call: _e.mock.On("EndLayer")}
-}
+func (_e *Fpdf_Expecter) EndLayer() *Fpdf_EndLayer_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_EndLayer_Call) Run(run func()) *Fpdf_EndLayer_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_EndLayer_Call) Return() *Fpdf_EndLayer_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_EndLayer_Call) Return() *Fpdf_EndLayer_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_EndLayer_Call) RunAndReturn(run func()) *Fpdf_EndLayer_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Err provides a mock function with no fields
 }
 
-// Err provides a mock function with no fields
-func (_m *Fpdf) Err() bool {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for Err")
-	}
-
-	var r0 bool
-	if rf, ok := ret.Get(0).(func() bool); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(bool)
-	}
-
-	return r0
-}
+func (_m *Fpdf) Err() bool { _ = "STUB: not implemented"; return false }
 
 // Fpdf_Err_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Err'
 type Fpdf_Err_Call struct {
@@ -1499,44 +1360,19 @@ type Fpdf_Err_Call struct {
 }
 
 // Err is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) Err() *Fpdf_Err_Call {
-	return &Fpdf_Err_Call{Call: _e.mock.On("Err")}
-}
+func (_e *Fpdf_Expecter) Err() *Fpdf_Err_Call { _ = "STUB: not implemented"; return nil }
 
-func (_c *Fpdf_Err_Call) Run(run func()) *Fpdf_Err_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
-}
+func (_c *Fpdf_Err_Call) Run(run func()) *Fpdf_Err_Call { _ = "STUB: not implemented"; return nil }
 
-func (_c *Fpdf_Err_Call) Return(_a0 bool) *Fpdf_Err_Call {
-	_c.Call.Return(_a0)
-	return _c
-}
+func (_c *Fpdf_Err_Call) Return(_a0 bool) *Fpdf_Err_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Err_Call) RunAndReturn(run func() bool) *Fpdf_Err_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Error provides a mock function with no fields
-func (_m *Fpdf) Error() error {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for Error")
-	}
-
-	var r0 error
-	if rf, ok := ret.Get(0).(func() error); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Error(0)
-	}
-
-	return r0
-}
+func (_m *Fpdf) Error() error { _ = "STUB: not implemented"; return nil }
 
 // Fpdf_Error_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Error'
 type Fpdf_Error_Call struct {
@@ -1544,54 +1380,22 @@ type Fpdf_Error_Call struct {
 }
 
 // Error is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) Error() *Fpdf_Error_Call {
-	return &Fpdf_Error_Call{Call: _e.mock.On("Error")}
-}
+func (_e *Fpdf_Expecter) Error() *Fpdf_Error_Call { _ = "STUB: not implemented"; return nil }
 
-func (_c *Fpdf_Error_Call) Run(run func()) *Fpdf_Error_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
-}
+func (_c *Fpdf_Error_Call) Run(run func()) *Fpdf_Error_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Error_Call) Return(_a0 error) *Fpdf_Error_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Error_Call) RunAndReturn(run func() error) *Fpdf_Error_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetAlpha provides a mock function with no fields
-func (_m *Fpdf) GetAlpha() (float64, string) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetAlpha")
-	}
-
-	var r0 float64
-	var r1 string
-	if rf, ok := ret.Get(0).(func() (float64, string)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	if rf, ok := ret.Get(1).(func() string); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(string)
-	}
-
-	return r0, r1
-}
+func (_m *Fpdf) GetAlpha() (float64, string) { _ = "STUB: not implemented"; return 0, "" }
 
 // Fpdf_GetAlpha_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetAlpha'
 type Fpdf_GetAlpha_Call struct {
@@ -1599,54 +1403,25 @@ type Fpdf_GetAlpha_Call struct {
 }
 
 // GetAlpha is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) GetAlpha() *Fpdf_GetAlpha_Call {
-	return &Fpdf_GetAlpha_Call{Call: _e.mock.On("GetAlpha")}
-}
+func (_e *Fpdf_Expecter) GetAlpha() *Fpdf_GetAlpha_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_GetAlpha_Call) Run(run func()) *Fpdf_GetAlpha_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetAlpha_Call) Return(alpha float64, blendModeStr string) *Fpdf_GetAlpha_Call {
-	_c.Call.Return(alpha, blendModeStr)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetAlpha_Call) RunAndReturn(run func() (float64, string)) *Fpdf_GetAlpha_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetAutoPageBreak provides a mock function with no fields
-func (_m *Fpdf) GetAutoPageBreak() (bool, float64) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetAutoPageBreak")
-	}
-
-	var r0 bool
-	var r1 float64
-	if rf, ok := ret.Get(0).(func() (bool, float64)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() bool); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(bool)
-	}
-
-	if rf, ok := ret.Get(1).(func() float64); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(float64)
-	}
-
-	return r0, r1
-}
+func (_m *Fpdf) GetAutoPageBreak() (bool, float64) { _ = "STUB: not implemented"; return false, 0 }
 
 // Fpdf_GetAutoPageBreak_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetAutoPageBreak'
 type Fpdf_GetAutoPageBreak_Call struct {
@@ -1655,43 +1430,27 @@ type Fpdf_GetAutoPageBreak_Call struct {
 
 // GetAutoPageBreak is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetAutoPageBreak() *Fpdf_GetAutoPageBreak_Call {
-	return &Fpdf_GetAutoPageBreak_Call{Call: _e.mock.On("GetAutoPageBreak")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetAutoPageBreak_Call) Run(run func()) *Fpdf_GetAutoPageBreak_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetAutoPageBreak_Call) Return(auto bool, margin float64) *Fpdf_GetAutoPageBreak_Call {
-	_c.Call.Return(auto, margin)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetAutoPageBreak_Call) RunAndReturn(run func() (bool, float64)) *Fpdf_GetAutoPageBreak_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetCellMargin provides a mock function with no fields
-func (_m *Fpdf) GetCellMargin() float64 {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetCellMargin")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
-}
+func (_m *Fpdf) GetCellMargin() float64 { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_GetCellMargin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetCellMargin'
 type Fpdf_GetCellMargin_Call struct {
@@ -1700,43 +1459,27 @@ type Fpdf_GetCellMargin_Call struct {
 
 // GetCellMargin is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetCellMargin() *Fpdf_GetCellMargin_Call {
-	return &Fpdf_GetCellMargin_Call{Call: _e.mock.On("GetCellMargin")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetCellMargin_Call) Run(run func()) *Fpdf_GetCellMargin_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetCellMargin_Call) Return(_a0 float64) *Fpdf_GetCellMargin_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetCellMargin_Call) RunAndReturn(run func() float64) *Fpdf_GetCellMargin_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetConversionRatio provides a mock function with no fields
-func (_m *Fpdf) GetConversionRatio() float64 {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetConversionRatio")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
-}
+func (_m *Fpdf) GetConversionRatio() float64 { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_GetConversionRatio_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetConversionRatio'
 type Fpdf_GetConversionRatio_Call struct {
@@ -1745,60 +1488,27 @@ type Fpdf_GetConversionRatio_Call struct {
 
 // GetConversionRatio is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetConversionRatio() *Fpdf_GetConversionRatio_Call {
-	return &Fpdf_GetConversionRatio_Call{Call: _e.mock.On("GetConversionRatio")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetConversionRatio_Call) Run(run func()) *Fpdf_GetConversionRatio_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetConversionRatio_Call) Return(_a0 float64) *Fpdf_GetConversionRatio_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetConversionRatio_Call) RunAndReturn(run func() float64) *Fpdf_GetConversionRatio_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetDrawColor provides a mock function with no fields
-func (_m *Fpdf) GetDrawColor() (int, int, int) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetDrawColor")
-	}
-
-	var r0 int
-	var r1 int
-	var r2 int
-	if rf, ok := ret.Get(0).(func() (int, int, int)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() int); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(int)
-	}
-
-	if rf, ok := ret.Get(1).(func() int); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(int)
-	}
-
-	if rf, ok := ret.Get(2).(func() int); ok {
-		r2 = rf()
-	} else {
-		r2 = ret.Get(2).(int)
-	}
-
-	return r0, r1, r2
-}
+func (_m *Fpdf) GetDrawColor() (int, int, int) { _ = "STUB: not implemented"; return 0, 0, 0 }
 
 // Fpdf_GetDrawColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetDrawColor'
 type Fpdf_GetDrawColor_Call struct {
@@ -1807,73 +1517,29 @@ type Fpdf_GetDrawColor_Call struct {
 
 // GetDrawColor is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetDrawColor() *Fpdf_GetDrawColor_Call {
-	return &Fpdf_GetDrawColor_Call{Call: _e.mock.On("GetDrawColor")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetDrawColor_Call) Run(run func()) *Fpdf_GetDrawColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetDrawColor_Call) Return(_a0 int, _a1 int, _a2 int) *Fpdf_GetDrawColor_Call {
-	_c.Call.Return(_a0, _a1, _a2)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetDrawColor_Call) RunAndReturn(run func() (int, int, int)) *Fpdf_GetDrawColor_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetDrawSpotColor provides a mock function with no fields
 func (_m *Fpdf) GetDrawSpotColor() (string, byte, byte, byte, byte) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetDrawSpotColor")
-	}
-
-	var r0 string
-	var r1 byte
-	var r2 byte
-	var r3 byte
-	var r4 byte
-	if rf, ok := ret.Get(0).(func() (string, byte, byte, byte, byte)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() string); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(string)
-	}
-
-	if rf, ok := ret.Get(1).(func() byte); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(byte)
-	}
-
-	if rf, ok := ret.Get(2).(func() byte); ok {
-		r2 = rf()
-	} else {
-		r2 = ret.Get(2).(byte)
-	}
-
-	if rf, ok := ret.Get(3).(func() byte); ok {
-		r3 = rf()
-	} else {
-		r3 = ret.Get(3).(byte)
-	}
-
-	if rf, ok := ret.Get(4).(func() byte); ok {
-		r4 = rf()
-	} else {
-		r4 = ret.Get(4).(byte)
-	}
-
-	return r0, r1, r2, r3, r4
+	_ = "STUB: not implemented"
+	return "", 0, 0, 0, 0
 }
 
 // Fpdf_GetDrawSpotColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetDrawSpotColor'
@@ -1883,60 +1549,27 @@ type Fpdf_GetDrawSpotColor_Call struct {
 
 // GetDrawSpotColor is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetDrawSpotColor() *Fpdf_GetDrawSpotColor_Call {
-	return &Fpdf_GetDrawSpotColor_Call{Call: _e.mock.On("GetDrawSpotColor")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetDrawSpotColor_Call) Run(run func()) *Fpdf_GetDrawSpotColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetDrawSpotColor_Call) Return(name string, c byte, m byte, y byte, k byte) *Fpdf_GetDrawSpotColor_Call {
-	_c.Call.Return(name, c, m, y, k)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetDrawSpotColor_Call) RunAndReturn(run func() (string, byte, byte, byte, byte)) *Fpdf_GetDrawSpotColor_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetFillColor provides a mock function with no fields
-func (_m *Fpdf) GetFillColor() (int, int, int) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetFillColor")
-	}
-
-	var r0 int
-	var r1 int
-	var r2 int
-	if rf, ok := ret.Get(0).(func() (int, int, int)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() int); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(int)
-	}
-
-	if rf, ok := ret.Get(1).(func() int); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(int)
-	}
-
-	if rf, ok := ret.Get(2).(func() int); ok {
-		r2 = rf()
-	} else {
-		r2 = ret.Get(2).(int)
-	}
-
-	return r0, r1, r2
-}
+func (_m *Fpdf) GetFillColor() (int, int, int) { _ = "STUB: not implemented"; return 0, 0, 0 }
 
 // Fpdf_GetFillColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetFillColor'
 type Fpdf_GetFillColor_Call struct {
@@ -1945,73 +1578,29 @@ type Fpdf_GetFillColor_Call struct {
 
 // GetFillColor is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetFillColor() *Fpdf_GetFillColor_Call {
-	return &Fpdf_GetFillColor_Call{Call: _e.mock.On("GetFillColor")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFillColor_Call) Run(run func()) *Fpdf_GetFillColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFillColor_Call) Return(_a0 int, _a1 int, _a2 int) *Fpdf_GetFillColor_Call {
-	_c.Call.Return(_a0, _a1, _a2)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFillColor_Call) RunAndReturn(run func() (int, int, int)) *Fpdf_GetFillColor_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetFillSpotColor provides a mock function with no fields
 func (_m *Fpdf) GetFillSpotColor() (string, byte, byte, byte, byte) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetFillSpotColor")
-	}
-
-	var r0 string
-	var r1 byte
-	var r2 byte
-	var r3 byte
-	var r4 byte
-	if rf, ok := ret.Get(0).(func() (string, byte, byte, byte, byte)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() string); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(string)
-	}
-
-	if rf, ok := ret.Get(1).(func() byte); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(byte)
-	}
-
-	if rf, ok := ret.Get(2).(func() byte); ok {
-		r2 = rf()
-	} else {
-		r2 = ret.Get(2).(byte)
-	}
-
-	if rf, ok := ret.Get(3).(func() byte); ok {
-		r3 = rf()
-	} else {
-		r3 = ret.Get(3).(byte)
-	}
-
-	if rf, ok := ret.Get(4).(func() byte); ok {
-		r4 = rf()
-	} else {
-		r4 = ret.Get(4).(byte)
-	}
-
-	return r0, r1, r2, r3, r4
+	_ = "STUB: not implemented"
+	return "", 0, 0, 0, 0
 }
 
 // Fpdf_GetFillSpotColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetFillSpotColor'
@@ -2021,42 +1610,29 @@ type Fpdf_GetFillSpotColor_Call struct {
 
 // GetFillSpotColor is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetFillSpotColor() *Fpdf_GetFillSpotColor_Call {
-	return &Fpdf_GetFillSpotColor_Call{Call: _e.mock.On("GetFillSpotColor")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFillSpotColor_Call) Run(run func()) *Fpdf_GetFillSpotColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFillSpotColor_Call) Return(name string, c byte, m byte, y byte, k byte) *Fpdf_GetFillSpotColor_Call {
-	_c.Call.Return(name, c, m, y, k)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFillSpotColor_Call) RunAndReturn(run func() (string, byte, byte, byte, byte)) *Fpdf_GetFillSpotColor_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetFontDesc provides a mock function with given fields: familyStr, styleStr
 func (_m *Fpdf) GetFontDesc(familyStr string, styleStr string) gofpdf.FontDescType {
-	ret := _m.Called(familyStr, styleStr)
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetFontDesc")
-	}
-
-	var r0 gofpdf.FontDescType
-	if rf, ok := ret.Get(0).(func(string, string) gofpdf.FontDescType); ok {
-		r0 = rf(familyStr, styleStr)
-	} else {
-		r0 = ret.Get(0).(gofpdf.FontDescType)
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return *new(gofpdf.FontDescType)
 }
 
 // Fpdf_GetFontDesc_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetFontDesc'
@@ -2068,53 +1644,27 @@ type Fpdf_GetFontDesc_Call struct {
 //   - familyStr string
 //   - styleStr string
 func (_e *Fpdf_Expecter) GetFontDesc(familyStr interface{}, styleStr interface{}) *Fpdf_GetFontDesc_Call {
-	return &Fpdf_GetFontDesc_Call{Call: _e.mock.On("GetFontDesc", familyStr, styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFontDesc_Call) Run(run func(familyStr string, styleStr string)) *Fpdf_GetFontDesc_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFontDesc_Call) Return(_a0 gofpdf.FontDescType) *Fpdf_GetFontDesc_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFontDesc_Call) RunAndReturn(run func(string, string) gofpdf.FontDescType) *Fpdf_GetFontDesc_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetFontSize provides a mock function with no fields
-func (_m *Fpdf) GetFontSize() (float64, float64) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetFontSize")
-	}
-
-	var r0 float64
-	var r1 float64
-	if rf, ok := ret.Get(0).(func() (float64, float64)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	if rf, ok := ret.Get(1).(func() float64); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(float64)
-	}
-
-	return r0, r1
-}
+func (_m *Fpdf) GetFontSize() (float64, float64) { _ = "STUB: not implemented"; return 0, 0 }
 
 // Fpdf_GetFontSize_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetFontSize'
 type Fpdf_GetFontSize_Call struct {
@@ -2123,44 +1673,29 @@ type Fpdf_GetFontSize_Call struct {
 
 // GetFontSize is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetFontSize() *Fpdf_GetFontSize_Call {
-	return &Fpdf_GetFontSize_Call{Call: _e.mock.On("GetFontSize")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFontSize_Call) Run(run func()) *Fpdf_GetFontSize_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFontSize_Call) Return(ptSize float64, unitSize float64) *Fpdf_GetFontSize_Call {
-	_c.Call.Return(ptSize, unitSize)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetFontSize_Call) RunAndReturn(run func() (float64, float64)) *Fpdf_GetFontSize_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetImageInfo provides a mock function with given fields: imageStr
 func (_m *Fpdf) GetImageInfo(imageStr string) *gofpdf.ImageInfoType {
-	ret := _m.Called(imageStr)
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetImageInfo")
-	}
-
-	var r0 *gofpdf.ImageInfoType
-	if rf, ok := ret.Get(0).(func(string) *gofpdf.ImageInfoType); ok {
-		r0 = rf(imageStr)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*gofpdf.ImageInfoType)
-		}
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Fpdf_GetImageInfo_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetImageInfo'
@@ -2171,43 +1706,27 @@ type Fpdf_GetImageInfo_Call struct {
 // GetImageInfo is a helper method to define mock.On call
 //   - imageStr string
 func (_e *Fpdf_Expecter) GetImageInfo(imageStr interface{}) *Fpdf_GetImageInfo_Call {
-	return &Fpdf_GetImageInfo_Call{Call: _e.mock.On("GetImageInfo", imageStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetImageInfo_Call) Run(run func(imageStr string)) *Fpdf_GetImageInfo_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetImageInfo_Call) Return(info *gofpdf.ImageInfoType) *Fpdf_GetImageInfo_Call {
-	_c.Call.Return(info)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetImageInfo_Call) RunAndReturn(run func(string) *gofpdf.ImageInfoType) *Fpdf_GetImageInfo_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetLineWidth provides a mock function with no fields
-func (_m *Fpdf) GetLineWidth() float64 {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetLineWidth")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
-}
+func (_m *Fpdf) GetLineWidth() float64 { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_GetLineWidth_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetLineWidth'
 type Fpdf_GetLineWidth_Call struct {
@@ -2216,66 +1735,29 @@ type Fpdf_GetLineWidth_Call struct {
 
 // GetLineWidth is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetLineWidth() *Fpdf_GetLineWidth_Call {
-	return &Fpdf_GetLineWidth_Call{Call: _e.mock.On("GetLineWidth")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetLineWidth_Call) Run(run func()) *Fpdf_GetLineWidth_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetLineWidth_Call) Return(_a0 float64) *Fpdf_GetLineWidth_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetLineWidth_Call) RunAndReturn(run func() float64) *Fpdf_GetLineWidth_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetMargins provides a mock function with no fields
 func (_m *Fpdf) GetMargins() (float64, float64, float64, float64) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetMargins")
-	}
-
-	var r0 float64
-	var r1 float64
-	var r2 float64
-	var r3 float64
-	if rf, ok := ret.Get(0).(func() (float64, float64, float64, float64)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	if rf, ok := ret.Get(1).(func() float64); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(float64)
-	}
-
-	if rf, ok := ret.Get(2).(func() float64); ok {
-		r2 = rf()
-	} else {
-		r2 = ret.Get(2).(float64)
-	}
-
-	if rf, ok := ret.Get(3).(func() float64); ok {
-		r3 = rf()
-	} else {
-		r3 = ret.Get(3).(float64)
-	}
-
-	return r0, r1, r2, r3
+	_ = "STUB: not implemented"
+	return 0, 0, 0, 0
 }
 
 // Fpdf_GetMargins_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetMargins'
@@ -2284,54 +1766,25 @@ type Fpdf_GetMargins_Call struct {
 }
 
 // GetMargins is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) GetMargins() *Fpdf_GetMargins_Call {
-	return &Fpdf_GetMargins_Call{Call: _e.mock.On("GetMargins")}
-}
+func (_e *Fpdf_Expecter) GetMargins() *Fpdf_GetMargins_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_GetMargins_Call) Run(run func()) *Fpdf_GetMargins_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetMargins_Call) Return(left float64, top float64, right float64, bottom float64) *Fpdf_GetMargins_Call {
-	_c.Call.Return(left, top, right, bottom)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetMargins_Call) RunAndReturn(run func() (float64, float64, float64, float64)) *Fpdf_GetMargins_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetPageSize provides a mock function with no fields
-func (_m *Fpdf) GetPageSize() (float64, float64) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetPageSize")
-	}
-
-	var r0 float64
-	var r1 float64
-	if rf, ok := ret.Get(0).(func() (float64, float64)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	if rf, ok := ret.Get(1).(func() float64); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(float64)
-	}
-
-	return r0, r1
-}
+func (_m *Fpdf) GetPageSize() (float64, float64) { _ = "STUB: not implemented"; return 0, 0 }
 
 // Fpdf_GetPageSize_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetPageSize'
 type Fpdf_GetPageSize_Call struct {
@@ -2340,42 +1793,29 @@ type Fpdf_GetPageSize_Call struct {
 
 // GetPageSize is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetPageSize() *Fpdf_GetPageSize_Call {
-	return &Fpdf_GetPageSize_Call{Call: _e.mock.On("GetPageSize")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetPageSize_Call) Run(run func()) *Fpdf_GetPageSize_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetPageSize_Call) Return(width float64, height float64) *Fpdf_GetPageSize_Call {
-	_c.Call.Return(width, height)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetPageSize_Call) RunAndReturn(run func() (float64, float64)) *Fpdf_GetPageSize_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetPageSizeStr provides a mock function with given fields: sizeStr
 func (_m *Fpdf) GetPageSizeStr(sizeStr string) gofpdf.SizeType {
-	ret := _m.Called(sizeStr)
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetPageSizeStr")
-	}
-
-	var r0 gofpdf.SizeType
-	if rf, ok := ret.Get(0).(func(string) gofpdf.SizeType); ok {
-		r0 = rf(sizeStr)
-	} else {
-		r0 = ret.Get(0).(gofpdf.SizeType)
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return *new(gofpdf.SizeType)
 }
 
 // Fpdf_GetPageSizeStr_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetPageSizeStr'
@@ -2386,43 +1826,27 @@ type Fpdf_GetPageSizeStr_Call struct {
 // GetPageSizeStr is a helper method to define mock.On call
 //   - sizeStr string
 func (_e *Fpdf_Expecter) GetPageSizeStr(sizeStr interface{}) *Fpdf_GetPageSizeStr_Call {
-	return &Fpdf_GetPageSizeStr_Call{Call: _e.mock.On("GetPageSizeStr", sizeStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetPageSizeStr_Call) Run(run func(sizeStr string)) *Fpdf_GetPageSizeStr_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetPageSizeStr_Call) Return(size gofpdf.SizeType) *Fpdf_GetPageSizeStr_Call {
-	_c.Call.Return(size)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetPageSizeStr_Call) RunAndReturn(run func(string) gofpdf.SizeType) *Fpdf_GetPageSizeStr_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetStringWidth provides a mock function with given fields: s
-func (_m *Fpdf) GetStringWidth(s string) float64 {
-	ret := _m.Called(s)
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetStringWidth")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func(string) float64); ok {
-		r0 = rf(s)
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
-}
+func (_m *Fpdf) GetStringWidth(s string) float64 { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_GetStringWidth_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetStringWidth'
 type Fpdf_GetStringWidth_Call struct {
@@ -2432,60 +1856,27 @@ type Fpdf_GetStringWidth_Call struct {
 // GetStringWidth is a helper method to define mock.On call
 //   - s string
 func (_e *Fpdf_Expecter) GetStringWidth(s interface{}) *Fpdf_GetStringWidth_Call {
-	return &Fpdf_GetStringWidth_Call{Call: _e.mock.On("GetStringWidth", s)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetStringWidth_Call) Run(run func(s string)) *Fpdf_GetStringWidth_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetStringWidth_Call) Return(_a0 float64) *Fpdf_GetStringWidth_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetStringWidth_Call) RunAndReturn(run func(string) float64) *Fpdf_GetStringWidth_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetTextColor provides a mock function with no fields
-func (_m *Fpdf) GetTextColor() (int, int, int) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetTextColor")
-	}
-
-	var r0 int
-	var r1 int
-	var r2 int
-	if rf, ok := ret.Get(0).(func() (int, int, int)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() int); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(int)
-	}
-
-	if rf, ok := ret.Get(1).(func() int); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(int)
-	}
-
-	if rf, ok := ret.Get(2).(func() int); ok {
-		r2 = rf()
-	} else {
-		r2 = ret.Get(2).(int)
-	}
-
-	return r0, r1, r2
-}
+func (_m *Fpdf) GetTextColor() (int, int, int) { _ = "STUB: not implemented"; return 0, 0, 0 }
 
 // Fpdf_GetTextColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetTextColor'
 type Fpdf_GetTextColor_Call struct {
@@ -2494,73 +1885,29 @@ type Fpdf_GetTextColor_Call struct {
 
 // GetTextColor is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetTextColor() *Fpdf_GetTextColor_Call {
-	return &Fpdf_GetTextColor_Call{Call: _e.mock.On("GetTextColor")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetTextColor_Call) Run(run func()) *Fpdf_GetTextColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetTextColor_Call) Return(_a0 int, _a1 int, _a2 int) *Fpdf_GetTextColor_Call {
-	_c.Call.Return(_a0, _a1, _a2)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetTextColor_Call) RunAndReturn(run func() (int, int, int)) *Fpdf_GetTextColor_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetTextSpotColor provides a mock function with no fields
 func (_m *Fpdf) GetTextSpotColor() (string, byte, byte, byte, byte) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetTextSpotColor")
-	}
-
-	var r0 string
-	var r1 byte
-	var r2 byte
-	var r3 byte
-	var r4 byte
-	if rf, ok := ret.Get(0).(func() (string, byte, byte, byte, byte)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() string); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(string)
-	}
-
-	if rf, ok := ret.Get(1).(func() byte); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(byte)
-	}
-
-	if rf, ok := ret.Get(2).(func() byte); ok {
-		r2 = rf()
-	} else {
-		r2 = ret.Get(2).(byte)
-	}
-
-	if rf, ok := ret.Get(3).(func() byte); ok {
-		r3 = rf()
-	} else {
-		r3 = ret.Get(3).(byte)
-	}
-
-	if rf, ok := ret.Get(4).(func() byte); ok {
-		r4 = rf()
-	} else {
-		r4 = ret.Get(4).(byte)
-	}
-
-	return r0, r1, r2, r3, r4
+	_ = "STUB: not implemented"
+	return "", 0, 0, 0, 0
 }
 
 // Fpdf_GetTextSpotColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetTextSpotColor'
@@ -2570,43 +1917,27 @@ type Fpdf_GetTextSpotColor_Call struct {
 
 // GetTextSpotColor is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) GetTextSpotColor() *Fpdf_GetTextSpotColor_Call {
-	return &Fpdf_GetTextSpotColor_Call{Call: _e.mock.On("GetTextSpotColor")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetTextSpotColor_Call) Run(run func()) *Fpdf_GetTextSpotColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetTextSpotColor_Call) Return(name string, c byte, m byte, y byte, k byte) *Fpdf_GetTextSpotColor_Call {
-	_c.Call.Return(name, c, m, y, k)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetTextSpotColor_Call) RunAndReturn(run func() (string, byte, byte, byte, byte)) *Fpdf_GetTextSpotColor_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetX provides a mock function with no fields
-func (_m *Fpdf) GetX() float64 {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetX")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
-}
+func (_m *Fpdf) GetX() float64 { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_GetX_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetX'
 type Fpdf_GetX_Call struct {
@@ -2614,54 +1945,22 @@ type Fpdf_GetX_Call struct {
 }
 
 // GetX is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) GetX() *Fpdf_GetX_Call {
-	return &Fpdf_GetX_Call{Call: _e.mock.On("GetX")}
-}
+func (_e *Fpdf_Expecter) GetX() *Fpdf_GetX_Call { _ = "STUB: not implemented"; return nil }
 
-func (_c *Fpdf_GetX_Call) Run(run func()) *Fpdf_GetX_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
-}
+func (_c *Fpdf_GetX_Call) Run(run func()) *Fpdf_GetX_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_GetX_Call) Return(_a0 float64) *Fpdf_GetX_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetX_Call) RunAndReturn(run func() float64) *Fpdf_GetX_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetXY provides a mock function with no fields
-func (_m *Fpdf) GetXY() (float64, float64) {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetXY")
-	}
-
-	var r0 float64
-	var r1 float64
-	if rf, ok := ret.Get(0).(func() (float64, float64)); ok {
-		return rf()
-	}
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	if rf, ok := ret.Get(1).(func() float64); ok {
-		r1 = rf()
-	} else {
-		r1 = ret.Get(1).(float64)
-	}
-
-	return r0, r1
-}
+func (_m *Fpdf) GetXY() (float64, float64) { _ = "STUB: not implemented"; return 0, 0 }
 
 // Fpdf_GetXY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetXY'
 type Fpdf_GetXY_Call struct {
@@ -2669,44 +1968,22 @@ type Fpdf_GetXY_Call struct {
 }
 
 // GetXY is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) GetXY() *Fpdf_GetXY_Call {
-	return &Fpdf_GetXY_Call{Call: _e.mock.On("GetXY")}
-}
+func (_e *Fpdf_Expecter) GetXY() *Fpdf_GetXY_Call { _ = "STUB: not implemented"; return nil }
 
-func (_c *Fpdf_GetXY_Call) Run(run func()) *Fpdf_GetXY_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
-}
+func (_c *Fpdf_GetXY_Call) Run(run func()) *Fpdf_GetXY_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_GetXY_Call) Return(_a0 float64, _a1 float64) *Fpdf_GetXY_Call {
-	_c.Call.Return(_a0, _a1)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetXY_Call) RunAndReturn(run func() (float64, float64)) *Fpdf_GetXY_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetY provides a mock function with no fields
-func (_m *Fpdf) GetY() float64 {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetY")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func() float64); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
-}
+func (_m *Fpdf) GetY() float64 { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_GetY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetY'
 type Fpdf_GetY_Call struct {
@@ -2714,43 +1991,24 @@ type Fpdf_GetY_Call struct {
 }
 
 // GetY is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) GetY() *Fpdf_GetY_Call {
-	return &Fpdf_GetY_Call{Call: _e.mock.On("GetY")}
-}
+func (_e *Fpdf_Expecter) GetY() *Fpdf_GetY_Call { _ = "STUB: not implemented"; return nil }
 
-func (_c *Fpdf_GetY_Call) Run(run func()) *Fpdf_GetY_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
-}
+func (_c *Fpdf_GetY_Call) Run(run func()) *Fpdf_GetY_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_GetY_Call) Return(_a0 float64) *Fpdf_GetY_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_GetY_Call) RunAndReturn(run func() float64) *Fpdf_GetY_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // HTMLBasicNew provides a mock function with no fields
 func (_m *Fpdf) HTMLBasicNew() gofpdf.HTMLBasicType {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for HTMLBasicNew")
-	}
-
-	var r0 gofpdf.HTMLBasicType
-	if rf, ok := ret.Get(0).(func() gofpdf.HTMLBasicType); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(gofpdf.HTMLBasicType)
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return *new(gofpdf.HTMLBasicType)
 }
 
 // Fpdf_HTMLBasicNew_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'HTMLBasicNew'
@@ -2760,29 +2018,29 @@ type Fpdf_HTMLBasicNew_Call struct {
 
 // HTMLBasicNew is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) HTMLBasicNew() *Fpdf_HTMLBasicNew_Call {
-	return &Fpdf_HTMLBasicNew_Call{Call: _e.mock.On("HTMLBasicNew")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_HTMLBasicNew_Call) Run(run func()) *Fpdf_HTMLBasicNew_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_HTMLBasicNew_Call) Return(html gofpdf.HTMLBasicType) *Fpdf_HTMLBasicNew_Call {
-	_c.Call.Return(html)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_HTMLBasicNew_Call) RunAndReturn(run func() gofpdf.HTMLBasicType) *Fpdf_HTMLBasicNew_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Image provides a mock function with given fields: imageNameStr, x, y, w, h, flow, tp, link, linkStr
 func (_m *Fpdf) Image(imageNameStr string, x float64, y float64, w float64, h float64, flow bool, tp string, link int, linkStr string) {
-	_m.Called(imageNameStr, x, y, w, h, flow, tp, link, linkStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Image_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Image'
@@ -2801,29 +2059,27 @@ type Fpdf_Image_Call struct {
 //   - link int
 //   - linkStr string
 func (_e *Fpdf_Expecter) Image(imageNameStr interface{}, x interface{}, y interface{}, w interface{}, h interface{}, flow interface{}, tp interface{}, link interface{}, linkStr interface{}) *Fpdf_Image_Call {
-	return &Fpdf_Image_Call{Call: _e.mock.On("Image", imageNameStr, x, y, w, h, flow, tp, link, linkStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Image_Call) Run(run func(imageNameStr string, x float64, y float64, w float64, h float64, flow bool, tp string, link int, linkStr string)) *Fpdf_Image_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64), args[5].(bool), args[6].(string), args[7].(int), args[8].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Image_Call) Return() *Fpdf_Image_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Image_Call) Return() *Fpdf_Image_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Image_Call) RunAndReturn(run func(string, float64, float64, float64, float64, bool, string, int, string)) *Fpdf_Image_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ImageOptions provides a mock function with given fields: imageNameStr, x, y, w, h, flow, options, link, linkStr
 }
 
-// ImageOptions provides a mock function with given fields: imageNameStr, x, y, w, h, flow, options, link, linkStr
 func (_m *Fpdf) ImageOptions(imageNameStr string, x float64, y float64, w float64, h float64, flow bool, options gofpdf.ImageOptions, link int, linkStr string) {
-	_m.Called(imageNameStr, x, y, w, h, flow, options, link, linkStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_ImageOptions_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ImageOptions'
@@ -2842,43 +2098,28 @@ type Fpdf_ImageOptions_Call struct {
 //   - link int
 //   - linkStr string
 func (_e *Fpdf_Expecter) ImageOptions(imageNameStr interface{}, x interface{}, y interface{}, w interface{}, h interface{}, flow interface{}, options interface{}, link interface{}, linkStr interface{}) *Fpdf_ImageOptions_Call {
-	return &Fpdf_ImageOptions_Call{Call: _e.mock.On("ImageOptions", imageNameStr, x, y, w, h, flow, options, link, linkStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ImageOptions_Call) Run(run func(imageNameStr string, x float64, y float64, w float64, h float64, flow bool, options gofpdf.ImageOptions, link int, linkStr string)) *Fpdf_ImageOptions_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64), args[5].(bool), args[6].(gofpdf.ImageOptions), args[7].(int), args[8].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ImageOptions_Call) Return() *Fpdf_ImageOptions_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ImageOptions_Call) RunAndReturn(run func(string, float64, float64, float64, float64, bool, gofpdf.ImageOptions, int, string)) *Fpdf_ImageOptions_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// ImageTypeFromMime provides a mock function with given fields: mimeStr
 }
 
-// ImageTypeFromMime provides a mock function with given fields: mimeStr
-func (_m *Fpdf) ImageTypeFromMime(mimeStr string) string {
-	ret := _m.Called(mimeStr)
-
-	if len(ret) == 0 {
-		panic("no return value specified for ImageTypeFromMime")
-	}
-
-	var r0 string
-	if rf, ok := ret.Get(0).(func(string) string); ok {
-		r0 = rf(mimeStr)
-	} else {
-		r0 = ret.Get(0).(string)
-	}
-
-	return r0
-}
+func (_m *Fpdf) ImageTypeFromMime(mimeStr string) string { _ = "STUB: not implemented"; return "" }
 
 // Fpdf_ImageTypeFromMime_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'ImageTypeFromMime'
 type Fpdf_ImageTypeFromMime_Call struct {
@@ -2888,29 +2129,29 @@ type Fpdf_ImageTypeFromMime_Call struct {
 // ImageTypeFromMime is a helper method to define mock.On call
 //   - mimeStr string
 func (_e *Fpdf_Expecter) ImageTypeFromMime(mimeStr interface{}) *Fpdf_ImageTypeFromMime_Call {
-	return &Fpdf_ImageTypeFromMime_Call{Call: _e.mock.On("ImageTypeFromMime", mimeStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ImageTypeFromMime_Call) Run(run func(mimeStr string)) *Fpdf_ImageTypeFromMime_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ImageTypeFromMime_Call) Return(tp string) *Fpdf_ImageTypeFromMime_Call {
-	_c.Call.Return(tp)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_ImageTypeFromMime_Call) RunAndReturn(run func(string) string) *Fpdf_ImageTypeFromMime_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Line provides a mock function with given fields: x1, y1, x2, y2
 func (_m *Fpdf) Line(x1 float64, y1 float64, x2 float64, y2 float64) {
-	_m.Called(x1, y1, x2, y2)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Line_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Line'
@@ -2924,32 +2165,31 @@ type Fpdf_Line_Call struct {
 //   - x2 float64
 //   - y2 float64
 func (_e *Fpdf_Expecter) Line(x1 interface{}, y1 interface{}, x2 interface{}, y2 interface{}) *Fpdf_Line_Call {
-	return &Fpdf_Line_Call{Call: _e.mock.On("Line", x1, y1, x2, y2)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Line_Call) Run(run func(x1 float64, y1 float64, x2 float64, y2 float64)) *Fpdf_Line_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Line_Call) Return() *Fpdf_Line_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Line_Call) Return() *Fpdf_Line_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Line_Call) RunAndReturn(run func(float64, float64, float64, float64)) *Fpdf_Line_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// LineTo provides a mock function with given fields: x, y
 }
 
-// LineTo provides a mock function with given fields: x, y
 func (_m *Fpdf) LineTo(x float64, y float64) {
-	_m.Called(x, y)
+	_ = "STUB: not implemented"
+
+	// Fpdf_LineTo_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'LineTo'
+	return
 }
 
-// Fpdf_LineTo_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'LineTo'
 type Fpdf_LineTo_Call struct {
 	*mock.Call
 }
@@ -2958,29 +2198,27 @@ type Fpdf_LineTo_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) LineTo(x interface{}, y interface{}) *Fpdf_LineTo_Call {
-	return &Fpdf_LineTo_Call{Call: _e.mock.On("LineTo", x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_LineTo_Call) Run(run func(x float64, y float64)) *Fpdf_LineTo_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_LineTo_Call) Return() *Fpdf_LineTo_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_LineTo_Call) Return() *Fpdf_LineTo_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_LineTo_Call) RunAndReturn(run func(float64, float64)) *Fpdf_LineTo_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// LinearGradient provides a mock function with given fields: x, y, w, h, r1, g1, b1, r2, g2, b2, x1, y1, x2, y2
 }
 
-// LinearGradient provides a mock function with given fields: x, y, w, h, r1, g1, b1, r2, g2, b2, x1, y1, x2, y2
 func (_m *Fpdf) LinearGradient(x float64, y float64, w float64, h float64, r1 int, g1 int, b1 int, r2 int, g2 int, b2 int, x1 float64, y1 float64, x2 float64, y2 float64) {
-	_m.Called(x, y, w, h, r1, g1, b1, r2, g2, b2, x1, y1, x2, y2)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_LinearGradient_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'LinearGradient'
@@ -3004,29 +2242,30 @@ type Fpdf_LinearGradient_Call struct {
 //   - x2 float64
 //   - y2 float64
 func (_e *Fpdf_Expecter) LinearGradient(x interface{}, y interface{}, w interface{}, h interface{}, r1 interface{}, g1 interface{}, b1 interface{}, r2 interface{}, g2 interface{}, b2 interface{}, x1 interface{}, y1 interface{}, x2 interface{}, y2 interface{}) *Fpdf_LinearGradient_Call {
-	return &Fpdf_LinearGradient_Call{Call: _e.mock.On("LinearGradient", x, y, w, h, r1, g1, b1, r2, g2, b2, x1, y1, x2, y2)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_LinearGradient_Call) Run(run func(x float64, y float64, w float64, h float64, r1 int, g1 int, b1 int, r2 int, g2 int, b2 int, x1 float64, y1 float64, x2 float64, y2 float64)) *Fpdf_LinearGradient_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(int), args[5].(int), args[6].(int), args[7].(int), args[8].(int), args[9].(int), args[10].(float64), args[11].(float64), args[12].(float64), args[13].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_LinearGradient_Call) Return() *Fpdf_LinearGradient_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_LinearGradient_Call) RunAndReturn(run func(float64, float64, float64, float64, int, int, int, int, int, int, float64, float64, float64, float64)) *Fpdf_LinearGradient_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Link provides a mock function with given fields: x, y, w, h, link
 }
 
-// Link provides a mock function with given fields: x, y, w, h, link
 func (_m *Fpdf) Link(x float64, y float64, w float64, h float64, link int) {
-	_m.Called(x, y, w, h, link)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Link_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Link'
@@ -3041,29 +2280,27 @@ type Fpdf_Link_Call struct {
 //   - h float64
 //   - link int
 func (_e *Fpdf_Expecter) Link(x interface{}, y interface{}, w interface{}, h interface{}, link interface{}) *Fpdf_Link_Call {
-	return &Fpdf_Link_Call{Call: _e.mock.On("Link", x, y, w, h, link)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Link_Call) Run(run func(x float64, y float64, w float64, h float64, link int)) *Fpdf_Link_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(int))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Link_Call) Return() *Fpdf_Link_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Link_Call) Return() *Fpdf_Link_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Link_Call) RunAndReturn(run func(float64, float64, float64, float64, int)) *Fpdf_Link_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// LinkString provides a mock function with given fields: x, y, w, h, linkStr
 }
 
-// LinkString provides a mock function with given fields: x, y, w, h, linkStr
 func (_m *Fpdf) LinkString(x float64, y float64, w float64, h float64, linkStr string) {
-	_m.Called(x, y, w, h, linkStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_LinkString_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'LinkString'
@@ -3078,65 +2315,63 @@ type Fpdf_LinkString_Call struct {
 //   - h float64
 //   - linkStr string
 func (_e *Fpdf_Expecter) LinkString(x interface{}, y interface{}, w interface{}, h interface{}, linkStr interface{}) *Fpdf_LinkString_Call {
-	return &Fpdf_LinkString_Call{Call: _e.mock.On("LinkString", x, y, w, h, linkStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_LinkString_Call) Run(run func(x float64, y float64, w float64, h float64, linkStr string)) *Fpdf_LinkString_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_LinkString_Call) Return() *Fpdf_LinkString_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_LinkString_Call) RunAndReturn(run func(float64, float64, float64, float64, string)) *Fpdf_LinkString_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Ln provides a mock function with given fields: h
 }
 
-// Ln provides a mock function with given fields: h
 func (_m *Fpdf) Ln(h float64) {
-	_m.Called(h)
+	_ = "STUB: not implemented"
+
+	// Fpdf_Ln_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Ln'
+	return
 }
 
-// Fpdf_Ln_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Ln'
 type Fpdf_Ln_Call struct {
 	*mock.Call
 }
 
 // Ln is a helper method to define mock.On call
 //   - h float64
-func (_e *Fpdf_Expecter) Ln(h interface{}) *Fpdf_Ln_Call {
-	return &Fpdf_Ln_Call{Call: _e.mock.On("Ln", h)}
-}
+func (_e *Fpdf_Expecter) Ln(h interface{}) *Fpdf_Ln_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Ln_Call) Run(run func(h float64)) *Fpdf_Ln_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Ln_Call) Return() *Fpdf_Ln_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Ln_Call) Return() *Fpdf_Ln_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Ln_Call) RunAndReturn(run func(float64)) *Fpdf_Ln_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// MoveTo provides a mock function with given fields: x, y
 }
 
-// MoveTo provides a mock function with given fields: x, y
 func (_m *Fpdf) MoveTo(x float64, y float64) {
-	_m.Called(x, y)
+	_ = "STUB: not implemented"
+
+	// Fpdf_MoveTo_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'MoveTo'
+	return
 }
 
-// Fpdf_MoveTo_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'MoveTo'
 type Fpdf_MoveTo_Call struct {
 	*mock.Call
 }
@@ -3145,29 +2380,27 @@ type Fpdf_MoveTo_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) MoveTo(x interface{}, y interface{}) *Fpdf_MoveTo_Call {
-	return &Fpdf_MoveTo_Call{Call: _e.mock.On("MoveTo", x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_MoveTo_Call) Run(run func(x float64, y float64)) *Fpdf_MoveTo_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_MoveTo_Call) Return() *Fpdf_MoveTo_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_MoveTo_Call) Return() *Fpdf_MoveTo_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_MoveTo_Call) RunAndReturn(run func(float64, float64)) *Fpdf_MoveTo_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// MultiCell provides a mock function with given fields: w, h, txtStr, borderStr, alignStr, fill
 }
 
-// MultiCell provides a mock function with given fields: w, h, txtStr, borderStr, alignStr, fill
 func (_m *Fpdf) MultiCell(w float64, h float64, txtStr string, borderStr string, alignStr string, fill bool) {
-	_m.Called(w, h, txtStr, borderStr, alignStr, fill)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_MultiCell_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'MultiCell'
@@ -3183,43 +2416,25 @@ type Fpdf_MultiCell_Call struct {
 //   - alignStr string
 //   - fill bool
 func (_e *Fpdf_Expecter) MultiCell(w interface{}, h interface{}, txtStr interface{}, borderStr interface{}, alignStr interface{}, fill interface{}) *Fpdf_MultiCell_Call {
-	return &Fpdf_MultiCell_Call{Call: _e.mock.On("MultiCell", w, h, txtStr, borderStr, alignStr, fill)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_MultiCell_Call) Run(run func(w float64, h float64, txtStr string, borderStr string, alignStr string, fill bool)) *Fpdf_MultiCell_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(string), args[3].(string), args[4].(string), args[5].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_MultiCell_Call) Return() *Fpdf_MultiCell_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_MultiCell_Call) Return() *Fpdf_MultiCell_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_MultiCell_Call) RunAndReturn(run func(float64, float64, string, string, string, bool)) *Fpdf_MultiCell_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Ok provides a mock function with no fields
 }
 
-// Ok provides a mock function with no fields
-func (_m *Fpdf) Ok() bool {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for Ok")
-	}
-
-	var r0 bool
-	if rf, ok := ret.Get(0).(func() bool); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(bool)
-	}
-
-	return r0
-}
+func (_m *Fpdf) Ok() bool { _ = "STUB: not implemented"; return false }
 
 // Fpdf_Ok_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Ok'
 type Fpdf_Ok_Call struct {
@@ -3227,76 +2442,53 @@ type Fpdf_Ok_Call struct {
 }
 
 // Ok is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) Ok() *Fpdf_Ok_Call {
-	return &Fpdf_Ok_Call{Call: _e.mock.On("Ok")}
-}
+func (_e *Fpdf_Expecter) Ok() *Fpdf_Ok_Call { _ = "STUB: not implemented"; return nil }
 
-func (_c *Fpdf_Ok_Call) Run(run func()) *Fpdf_Ok_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
-}
+func (_c *Fpdf_Ok_Call) Run(run func()) *Fpdf_Ok_Call { _ = "STUB: not implemented"; return nil }
 
-func (_c *Fpdf_Ok_Call) Return(_a0 bool) *Fpdf_Ok_Call {
-	_c.Call.Return(_a0)
-	return _c
-}
+func (_c *Fpdf_Ok_Call) Return(_a0 bool) *Fpdf_Ok_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Ok_Call) RunAndReturn(run func() bool) *Fpdf_Ok_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // OpenLayerPane provides a mock function with no fields
 func (_m *Fpdf) OpenLayerPane() {
-	_m.Called()
+	_ = "STUB: not implemented"
+
+	// Fpdf_OpenLayerPane_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'OpenLayerPane'
+	return
 }
 
-// Fpdf_OpenLayerPane_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'OpenLayerPane'
 type Fpdf_OpenLayerPane_Call struct {
 	*mock.Call
 }
 
 // OpenLayerPane is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) OpenLayerPane() *Fpdf_OpenLayerPane_Call {
-	return &Fpdf_OpenLayerPane_Call{Call: _e.mock.On("OpenLayerPane")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_OpenLayerPane_Call) Run(run func()) *Fpdf_OpenLayerPane_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_OpenLayerPane_Call) Return() *Fpdf_OpenLayerPane_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_OpenLayerPane_Call) RunAndReturn(run func()) *Fpdf_OpenLayerPane_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Output provides a mock function with given fields: w
 }
 
-// Output provides a mock function with given fields: w
-func (_m *Fpdf) Output(w io.Writer) error {
-	ret := _m.Called(w)
-
-	if len(ret) == 0 {
-		panic("no return value specified for Output")
-	}
-
-	var r0 error
-	if rf, ok := ret.Get(0).(func(io.Writer) error); ok {
-		r0 = rf(w)
-	} else {
-		r0 = ret.Error(0)
-	}
-
-	return r0
-}
+func (_m *Fpdf) Output(w io.Writer) error { _ = "STUB: not implemented"; return nil }
 
 // Fpdf_Output_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Output'
 type Fpdf_Output_Call struct {
@@ -3306,43 +2498,27 @@ type Fpdf_Output_Call struct {
 // Output is a helper method to define mock.On call
 //   - w io.Writer
 func (_e *Fpdf_Expecter) Output(w interface{}) *Fpdf_Output_Call {
-	return &Fpdf_Output_Call{Call: _e.mock.On("Output", w)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Output_Call) Run(run func(w io.Writer)) *Fpdf_Output_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(io.Writer))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Output_Call) Return(_a0 error) *Fpdf_Output_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Output_Call) RunAndReturn(run func(io.Writer) error) *Fpdf_Output_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // OutputAndClose provides a mock function with given fields: w
-func (_m *Fpdf) OutputAndClose(w io.WriteCloser) error {
-	ret := _m.Called(w)
-
-	if len(ret) == 0 {
-		panic("no return value specified for OutputAndClose")
-	}
-
-	var r0 error
-	if rf, ok := ret.Get(0).(func(io.WriteCloser) error); ok {
-		r0 = rf(w)
-	} else {
-		r0 = ret.Error(0)
-	}
-
-	return r0
-}
+func (_m *Fpdf) OutputAndClose(w io.WriteCloser) error { _ = "STUB: not implemented"; return nil }
 
 // Fpdf_OutputAndClose_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'OutputAndClose'
 type Fpdf_OutputAndClose_Call struct {
@@ -3352,43 +2528,27 @@ type Fpdf_OutputAndClose_Call struct {
 // OutputAndClose is a helper method to define mock.On call
 //   - w io.WriteCloser
 func (_e *Fpdf_Expecter) OutputAndClose(w interface{}) *Fpdf_OutputAndClose_Call {
-	return &Fpdf_OutputAndClose_Call{Call: _e.mock.On("OutputAndClose", w)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_OutputAndClose_Call) Run(run func(w io.WriteCloser)) *Fpdf_OutputAndClose_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(io.WriteCloser))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_OutputAndClose_Call) Return(_a0 error) *Fpdf_OutputAndClose_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_OutputAndClose_Call) RunAndReturn(run func(io.WriteCloser) error) *Fpdf_OutputAndClose_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // OutputFileAndClose provides a mock function with given fields: fileStr
-func (_m *Fpdf) OutputFileAndClose(fileStr string) error {
-	ret := _m.Called(fileStr)
-
-	if len(ret) == 0 {
-		panic("no return value specified for OutputFileAndClose")
-	}
-
-	var r0 error
-	if rf, ok := ret.Get(0).(func(string) error); ok {
-		r0 = rf(fileStr)
-	} else {
-		r0 = ret.Error(0)
-	}
-
-	return r0
-}
+func (_m *Fpdf) OutputFileAndClose(fileStr string) error { _ = "STUB: not implemented"; return nil }
 
 // Fpdf_OutputFileAndClose_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'OutputFileAndClose'
 type Fpdf_OutputFileAndClose_Call struct {
@@ -3398,43 +2558,27 @@ type Fpdf_OutputFileAndClose_Call struct {
 // OutputFileAndClose is a helper method to define mock.On call
 //   - fileStr string
 func (_e *Fpdf_Expecter) OutputFileAndClose(fileStr interface{}) *Fpdf_OutputFileAndClose_Call {
-	return &Fpdf_OutputFileAndClose_Call{Call: _e.mock.On("OutputFileAndClose", fileStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_OutputFileAndClose_Call) Run(run func(fileStr string)) *Fpdf_OutputFileAndClose_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_OutputFileAndClose_Call) Return(_a0 error) *Fpdf_OutputFileAndClose_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_OutputFileAndClose_Call) RunAndReturn(run func(string) error) *Fpdf_OutputFileAndClose_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // PageCount provides a mock function with no fields
-func (_m *Fpdf) PageCount() int {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for PageCount")
-	}
-
-	var r0 int
-	if rf, ok := ret.Get(0).(func() int); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(int)
-	}
-
-	return r0
-}
+func (_m *Fpdf) PageCount() int { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_PageCount_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'PageCount'
 type Fpdf_PageCount_Call struct {
@@ -3442,44 +2586,25 @@ type Fpdf_PageCount_Call struct {
 }
 
 // PageCount is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) PageCount() *Fpdf_PageCount_Call {
-	return &Fpdf_PageCount_Call{Call: _e.mock.On("PageCount")}
-}
+func (_e *Fpdf_Expecter) PageCount() *Fpdf_PageCount_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_PageCount_Call) Run(run func()) *Fpdf_PageCount_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PageCount_Call) Return(_a0 int) *Fpdf_PageCount_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PageCount_Call) RunAndReturn(run func() int) *Fpdf_PageCount_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // PageNo provides a mock function with no fields
-func (_m *Fpdf) PageNo() int {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for PageNo")
-	}
-
-	var r0 int
-	if rf, ok := ret.Get(0).(func() int); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(int)
-	}
-
-	return r0
-}
+func (_m *Fpdf) PageNo() int { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_PageNo_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'PageNo'
 type Fpdf_PageNo_Call struct {
@@ -3487,60 +2612,27 @@ type Fpdf_PageNo_Call struct {
 }
 
 // PageNo is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) PageNo() *Fpdf_PageNo_Call {
-	return &Fpdf_PageNo_Call{Call: _e.mock.On("PageNo")}
-}
+func (_e *Fpdf_Expecter) PageNo() *Fpdf_PageNo_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_PageNo_Call) Run(run func()) *Fpdf_PageNo_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PageNo_Call) Return(_a0 int) *Fpdf_PageNo_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PageNo_Call) RunAndReturn(run func() int) *Fpdf_PageNo_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // PageSize provides a mock function with given fields: pageNum
 func (_m *Fpdf) PageSize(pageNum int) (float64, float64, string) {
-	ret := _m.Called(pageNum)
-
-	if len(ret) == 0 {
-		panic("no return value specified for PageSize")
-	}
-
-	var r0 float64
-	var r1 float64
-	var r2 string
-	if rf, ok := ret.Get(0).(func(int) (float64, float64, string)); ok {
-		return rf(pageNum)
-	}
-	if rf, ok := ret.Get(0).(func(int) float64); ok {
-		r0 = rf(pageNum)
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	if rf, ok := ret.Get(1).(func(int) float64); ok {
-		r1 = rf(pageNum)
-	} else {
-		r1 = ret.Get(1).(float64)
-	}
-
-	if rf, ok := ret.Get(2).(func(int) string); ok {
-		r2 = rf(pageNum)
-	} else {
-		r2 = ret.Get(2).(string)
-	}
-
-	return r0, r1, r2
+	_ = "STUB: not implemented"
+	return 0, 0, ""
 }
 
 // Fpdf_PageSize_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'PageSize'
@@ -3551,43 +2643,27 @@ type Fpdf_PageSize_Call struct {
 // PageSize is a helper method to define mock.On call
 //   - pageNum int
 func (_e *Fpdf_Expecter) PageSize(pageNum interface{}) *Fpdf_PageSize_Call {
-	return &Fpdf_PageSize_Call{Call: _e.mock.On("PageSize", pageNum)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PageSize_Call) Run(run func(pageNum int)) *Fpdf_PageSize_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(int))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PageSize_Call) Return(wd float64, ht float64, unitStr string) *Fpdf_PageSize_Call {
-	_c.Call.Return(wd, ht, unitStr)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PageSize_Call) RunAndReturn(run func(int) (float64, float64, string)) *Fpdf_PageSize_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // PointConvert provides a mock function with given fields: pt
-func (_m *Fpdf) PointConvert(pt float64) float64 {
-	ret := _m.Called(pt)
-
-	if len(ret) == 0 {
-		panic("no return value specified for PointConvert")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func(float64) float64); ok {
-		r0 = rf(pt)
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
-}
+func (_m *Fpdf) PointConvert(pt float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_PointConvert_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'PointConvert'
 type Fpdf_PointConvert_Call struct {
@@ -3597,43 +2673,27 @@ type Fpdf_PointConvert_Call struct {
 // PointConvert is a helper method to define mock.On call
 //   - pt float64
 func (_e *Fpdf_Expecter) PointConvert(pt interface{}) *Fpdf_PointConvert_Call {
-	return &Fpdf_PointConvert_Call{Call: _e.mock.On("PointConvert", pt)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PointConvert_Call) Run(run func(pt float64)) *Fpdf_PointConvert_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PointConvert_Call) Return(u float64) *Fpdf_PointConvert_Call {
-	_c.Call.Return(u)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PointConvert_Call) RunAndReturn(run func(float64) float64) *Fpdf_PointConvert_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // PointToUnitConvert provides a mock function with given fields: pt
-func (_m *Fpdf) PointToUnitConvert(pt float64) float64 {
-	ret := _m.Called(pt)
-
-	if len(ret) == 0 {
-		panic("no return value specified for PointToUnitConvert")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func(float64) float64); ok {
-		r0 = rf(pt)
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
-}
+func (_m *Fpdf) PointToUnitConvert(pt float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_PointToUnitConvert_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'PointToUnitConvert'
 type Fpdf_PointToUnitConvert_Call struct {
@@ -3643,29 +2703,29 @@ type Fpdf_PointToUnitConvert_Call struct {
 // PointToUnitConvert is a helper method to define mock.On call
 //   - pt float64
 func (_e *Fpdf_Expecter) PointToUnitConvert(pt interface{}) *Fpdf_PointToUnitConvert_Call {
-	return &Fpdf_PointToUnitConvert_Call{Call: _e.mock.On("PointToUnitConvert", pt)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PointToUnitConvert_Call) Run(run func(pt float64)) *Fpdf_PointToUnitConvert_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PointToUnitConvert_Call) Return(u float64) *Fpdf_PointToUnitConvert_Call {
-	_c.Call.Return(u)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_PointToUnitConvert_Call) RunAndReturn(run func(float64) float64) *Fpdf_PointToUnitConvert_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Polygon provides a mock function with given fields: points, styleStr
 func (_m *Fpdf) Polygon(points []gofpdf.PointType, styleStr string) {
-	_m.Called(points, styleStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Polygon_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Polygon'
@@ -3677,29 +2737,27 @@ type Fpdf_Polygon_Call struct {
 //   - points []gofpdf.PointType
 //   - styleStr string
 func (_e *Fpdf_Expecter) Polygon(points interface{}, styleStr interface{}) *Fpdf_Polygon_Call {
-	return &Fpdf_Polygon_Call{Call: _e.mock.On("Polygon", points, styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Polygon_Call) Run(run func(points []gofpdf.PointType, styleStr string)) *Fpdf_Polygon_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].([]gofpdf.PointType), args[1].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Polygon_Call) Return() *Fpdf_Polygon_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Polygon_Call) Return() *Fpdf_Polygon_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Polygon_Call) RunAndReturn(run func([]gofpdf.PointType, string)) *Fpdf_Polygon_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// RadialGradient provides a mock function with given fields: x, y, w, h, r1, g1, b1, r2, g2, b2, x1, y1, x2, y2, r
 }
 
-// RadialGradient provides a mock function with given fields: x, y, w, h, r1, g1, b1, r2, g2, b2, x1, y1, x2, y2, r
 func (_m *Fpdf) RadialGradient(x float64, y float64, w float64, h float64, r1 int, g1 int, b1 int, r2 int, g2 int, b2 int, x1 float64, y1 float64, x2 float64, y2 float64, r float64) {
-	_m.Called(x, y, w, h, r1, g1, b1, r2, g2, b2, x1, y1, x2, y2, r)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_RadialGradient_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'RadialGradient'
@@ -3724,32 +2782,34 @@ type Fpdf_RadialGradient_Call struct {
 //   - y2 float64
 //   - r float64
 func (_e *Fpdf_Expecter) RadialGradient(x interface{}, y interface{}, w interface{}, h interface{}, r1 interface{}, g1 interface{}, b1 interface{}, r2 interface{}, g2 interface{}, b2 interface{}, x1 interface{}, y1 interface{}, x2 interface{}, y2 interface{}, r interface{}) *Fpdf_RadialGradient_Call {
-	return &Fpdf_RadialGradient_Call{Call: _e.mock.On("RadialGradient", x, y, w, h, r1, g1, b1, r2, g2, b2, x1, y1, x2, y2, r)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RadialGradient_Call) Run(run func(x float64, y float64, w float64, h float64, r1 int, g1 int, b1 int, r2 int, g2 int, b2 int, x1 float64, y1 float64, x2 float64, y2 float64, r float64)) *Fpdf_RadialGradient_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(int), args[5].(int), args[6].(int), args[7].(int), args[8].(int), args[9].(int), args[10].(float64), args[11].(float64), args[12].(float64), args[13].(float64), args[14].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RadialGradient_Call) Return() *Fpdf_RadialGradient_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RadialGradient_Call) RunAndReturn(run func(float64, float64, float64, float64, int, int, int, int, int, int, float64, float64, float64, float64, float64)) *Fpdf_RadialGradient_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// RawWriteBuf provides a mock function with given fields: r
 }
 
-// RawWriteBuf provides a mock function with given fields: r
 func (_m *Fpdf) RawWriteBuf(r io.Reader) {
-	_m.Called(r)
+	_ = "STUB: not implemented"
+
+	// Fpdf_RawWriteBuf_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'RawWriteBuf'
+	return
 }
 
-// Fpdf_RawWriteBuf_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'RawWriteBuf'
 type Fpdf_RawWriteBuf_Call struct {
 	*mock.Call
 }
@@ -3757,32 +2817,34 @@ type Fpdf_RawWriteBuf_Call struct {
 // RawWriteBuf is a helper method to define mock.On call
 //   - r io.Reader
 func (_e *Fpdf_Expecter) RawWriteBuf(r interface{}) *Fpdf_RawWriteBuf_Call {
-	return &Fpdf_RawWriteBuf_Call{Call: _e.mock.On("RawWriteBuf", r)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RawWriteBuf_Call) Run(run func(r io.Reader)) *Fpdf_RawWriteBuf_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(io.Reader))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RawWriteBuf_Call) Return() *Fpdf_RawWriteBuf_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RawWriteBuf_Call) RunAndReturn(run func(io.Reader)) *Fpdf_RawWriteBuf_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// RawWriteStr provides a mock function with given fields: str
 }
 
-// RawWriteStr provides a mock function with given fields: str
 func (_m *Fpdf) RawWriteStr(str string) {
-	_m.Called(str)
+	_ = "STUB: not implemented"
+
+	// Fpdf_RawWriteStr_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'RawWriteStr'
+	return
 }
 
-// Fpdf_RawWriteStr_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'RawWriteStr'
 type Fpdf_RawWriteStr_Call struct {
 	*mock.Call
 }
@@ -3790,29 +2852,30 @@ type Fpdf_RawWriteStr_Call struct {
 // RawWriteStr is a helper method to define mock.On call
 //   - str string
 func (_e *Fpdf_Expecter) RawWriteStr(str interface{}) *Fpdf_RawWriteStr_Call {
-	return &Fpdf_RawWriteStr_Call{Call: _e.mock.On("RawWriteStr", str)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RawWriteStr_Call) Run(run func(str string)) *Fpdf_RawWriteStr_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RawWriteStr_Call) Return() *Fpdf_RawWriteStr_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RawWriteStr_Call) RunAndReturn(run func(string)) *Fpdf_RawWriteStr_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Rect provides a mock function with given fields: x, y, w, h, styleStr
 }
 
-// Rect provides a mock function with given fields: x, y, w, h, styleStr
 func (_m *Fpdf) Rect(x float64, y float64, w float64, h float64, styleStr string) {
-	_m.Called(x, y, w, h, styleStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Rect_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Rect'
@@ -3827,30 +2890,25 @@ type Fpdf_Rect_Call struct {
 //   - h float64
 //   - styleStr string
 func (_e *Fpdf_Expecter) Rect(x interface{}, y interface{}, w interface{}, h interface{}, styleStr interface{}) *Fpdf_Rect_Call {
-	return &Fpdf_Rect_Call{Call: _e.mock.On("Rect", x, y, w, h, styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Rect_Call) Run(run func(x float64, y float64, w float64, h float64, styleStr string)) *Fpdf_Rect_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Rect_Call) Return() *Fpdf_Rect_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Rect_Call) Return() *Fpdf_Rect_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Rect_Call) RunAndReturn(run func(float64, float64, float64, float64, string)) *Fpdf_Rect_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// RegisterAlias provides a mock function with given fields: alias, replacement
 }
 
-// RegisterAlias provides a mock function with given fields: alias, replacement
-func (_m *Fpdf) RegisterAlias(alias string, replacement string) {
-	_m.Called(alias, replacement)
-}
+func (_m *Fpdf) RegisterAlias(alias string, replacement string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_RegisterAlias_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'RegisterAlias'
 type Fpdf_RegisterAlias_Call struct {
@@ -3861,44 +2919,30 @@ type Fpdf_RegisterAlias_Call struct {
 //   - alias string
 //   - replacement string
 func (_e *Fpdf_Expecter) RegisterAlias(alias interface{}, replacement interface{}) *Fpdf_RegisterAlias_Call {
-	return &Fpdf_RegisterAlias_Call{Call: _e.mock.On("RegisterAlias", alias, replacement)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterAlias_Call) Run(run func(alias string, replacement string)) *Fpdf_RegisterAlias_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterAlias_Call) Return() *Fpdf_RegisterAlias_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterAlias_Call) RunAndReturn(run func(string, string)) *Fpdf_RegisterAlias_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// RegisterImage provides a mock function with given fields: fileStr, tp
 }
 
-// RegisterImage provides a mock function with given fields: fileStr, tp
 func (_m *Fpdf) RegisterImage(fileStr string, tp string) *gofpdf.ImageInfoType {
-	ret := _m.Called(fileStr, tp)
-
-	if len(ret) == 0 {
-		panic("no return value specified for RegisterImage")
-	}
-
-	var r0 *gofpdf.ImageInfoType
-	if rf, ok := ret.Get(0).(func(string, string) *gofpdf.ImageInfoType); ok {
-		r0 = rf(fileStr, tp)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*gofpdf.ImageInfoType)
-		}
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Fpdf_RegisterImage_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'RegisterImage'
@@ -3910,44 +2954,29 @@ type Fpdf_RegisterImage_Call struct {
 //   - fileStr string
 //   - tp string
 func (_e *Fpdf_Expecter) RegisterImage(fileStr interface{}, tp interface{}) *Fpdf_RegisterImage_Call {
-	return &Fpdf_RegisterImage_Call{Call: _e.mock.On("RegisterImage", fileStr, tp)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImage_Call) Run(run func(fileStr string, tp string)) *Fpdf_RegisterImage_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImage_Call) Return(info *gofpdf.ImageInfoType) *Fpdf_RegisterImage_Call {
-	_c.Call.Return(info)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImage_Call) RunAndReturn(run func(string, string) *gofpdf.ImageInfoType) *Fpdf_RegisterImage_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // RegisterImageOptions provides a mock function with given fields: fileStr, options
 func (_m *Fpdf) RegisterImageOptions(fileStr string, options gofpdf.ImageOptions) *gofpdf.ImageInfoType {
-	ret := _m.Called(fileStr, options)
-
-	if len(ret) == 0 {
-		panic("no return value specified for RegisterImageOptions")
-	}
-
-	var r0 *gofpdf.ImageInfoType
-	if rf, ok := ret.Get(0).(func(string, gofpdf.ImageOptions) *gofpdf.ImageInfoType); ok {
-		r0 = rf(fileStr, options)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*gofpdf.ImageInfoType)
-		}
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Fpdf_RegisterImageOptions_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'RegisterImageOptions'
@@ -3959,44 +2988,29 @@ type Fpdf_RegisterImageOptions_Call struct {
 //   - fileStr string
 //   - options gofpdf.ImageOptions
 func (_e *Fpdf_Expecter) RegisterImageOptions(fileStr interface{}, options interface{}) *Fpdf_RegisterImageOptions_Call {
-	return &Fpdf_RegisterImageOptions_Call{Call: _e.mock.On("RegisterImageOptions", fileStr, options)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImageOptions_Call) Run(run func(fileStr string, options gofpdf.ImageOptions)) *Fpdf_RegisterImageOptions_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(gofpdf.ImageOptions))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImageOptions_Call) Return(info *gofpdf.ImageInfoType) *Fpdf_RegisterImageOptions_Call {
-	_c.Call.Return(info)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImageOptions_Call) RunAndReturn(run func(string, gofpdf.ImageOptions) *gofpdf.ImageInfoType) *Fpdf_RegisterImageOptions_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // RegisterImageOptionsReader provides a mock function with given fields: imgName, options, r
 func (_m *Fpdf) RegisterImageOptionsReader(imgName string, options gofpdf.ImageOptions, r io.Reader) *gofpdf.ImageInfoType {
-	ret := _m.Called(imgName, options, r)
-
-	if len(ret) == 0 {
-		panic("no return value specified for RegisterImageOptionsReader")
-	}
-
-	var r0 *gofpdf.ImageInfoType
-	if rf, ok := ret.Get(0).(func(string, gofpdf.ImageOptions, io.Reader) *gofpdf.ImageInfoType); ok {
-		r0 = rf(imgName, options, r)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*gofpdf.ImageInfoType)
-		}
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Fpdf_RegisterImageOptionsReader_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'RegisterImageOptionsReader'
@@ -4009,44 +3023,29 @@ type Fpdf_RegisterImageOptionsReader_Call struct {
 //   - options gofpdf.ImageOptions
 //   - r io.Reader
 func (_e *Fpdf_Expecter) RegisterImageOptionsReader(imgName interface{}, options interface{}, r interface{}) *Fpdf_RegisterImageOptionsReader_Call {
-	return &Fpdf_RegisterImageOptionsReader_Call{Call: _e.mock.On("RegisterImageOptionsReader", imgName, options, r)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImageOptionsReader_Call) Run(run func(imgName string, options gofpdf.ImageOptions, r io.Reader)) *Fpdf_RegisterImageOptionsReader_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(gofpdf.ImageOptions), args[2].(io.Reader))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImageOptionsReader_Call) Return(info *gofpdf.ImageInfoType) *Fpdf_RegisterImageOptionsReader_Call {
-	_c.Call.Return(info)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImageOptionsReader_Call) RunAndReturn(run func(string, gofpdf.ImageOptions, io.Reader) *gofpdf.ImageInfoType) *Fpdf_RegisterImageOptionsReader_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // RegisterImageReader provides a mock function with given fields: imgName, tp, r
 func (_m *Fpdf) RegisterImageReader(imgName string, tp string, r io.Reader) *gofpdf.ImageInfoType {
-	ret := _m.Called(imgName, tp, r)
-
-	if len(ret) == 0 {
-		panic("no return value specified for RegisterImageReader")
-	}
-
-	var r0 *gofpdf.ImageInfoType
-	if rf, ok := ret.Get(0).(func(string, string, io.Reader) *gofpdf.ImageInfoType); ok {
-		r0 = rf(imgName, tp, r)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*gofpdf.ImageInfoType)
-		}
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Fpdf_RegisterImageReader_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'RegisterImageReader'
@@ -4059,32 +3058,33 @@ type Fpdf_RegisterImageReader_Call struct {
 //   - tp string
 //   - r io.Reader
 func (_e *Fpdf_Expecter) RegisterImageReader(imgName interface{}, tp interface{}, r interface{}) *Fpdf_RegisterImageReader_Call {
-	return &Fpdf_RegisterImageReader_Call{Call: _e.mock.On("RegisterImageReader", imgName, tp, r)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImageReader_Call) Run(run func(imgName string, tp string, r io.Reader)) *Fpdf_RegisterImageReader_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(string), args[2].(io.Reader))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImageReader_Call) Return(info *gofpdf.ImageInfoType) *Fpdf_RegisterImageReader_Call {
-	_c.Call.Return(info)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_RegisterImageReader_Call) RunAndReturn(run func(string, string, io.Reader) *gofpdf.ImageInfoType) *Fpdf_RegisterImageReader_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SVGBasicWrite provides a mock function with given fields: sb, scale
 func (_m *Fpdf) SVGBasicWrite(sb *gofpdf.SVGBasicType, scale float64) {
-	_m.Called(sb, scale)
+	_ = "STUB: not implemented"
+	return
+
+	// Fpdf_SVGBasicWrite_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SVGBasicWrite'
 }
 
-// Fpdf_SVGBasicWrite_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SVGBasicWrite'
 type Fpdf_SVGBasicWrite_Call struct {
 	*mock.Call
 }
@@ -4093,32 +3093,34 @@ type Fpdf_SVGBasicWrite_Call struct {
 //   - sb *gofpdf.SVGBasicType
 //   - scale float64
 func (_e *Fpdf_Expecter) SVGBasicWrite(sb interface{}, scale interface{}) *Fpdf_SVGBasicWrite_Call {
-	return &Fpdf_SVGBasicWrite_Call{Call: _e.mock.On("SVGBasicWrite", sb, scale)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SVGBasicWrite_Call) Run(run func(sb *gofpdf.SVGBasicType, scale float64)) *Fpdf_SVGBasicWrite_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(*gofpdf.SVGBasicType), args[1].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SVGBasicWrite_Call) Return() *Fpdf_SVGBasicWrite_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SVGBasicWrite_Call) RunAndReturn(run func(*gofpdf.SVGBasicType, float64)) *Fpdf_SVGBasicWrite_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetAcceptPageBreakFunc provides a mock function with given fields: fnc
 }
 
-// SetAcceptPageBreakFunc provides a mock function with given fields: fnc
 func (_m *Fpdf) SetAcceptPageBreakFunc(fnc func() bool) {
-	_m.Called(fnc)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetAcceptPageBreakFunc_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetAcceptPageBreakFunc'
+	return
 }
 
-// Fpdf_SetAcceptPageBreakFunc_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetAcceptPageBreakFunc'
 type Fpdf_SetAcceptPageBreakFunc_Call struct {
 	*mock.Call
 }
@@ -4126,30 +3128,28 @@ type Fpdf_SetAcceptPageBreakFunc_Call struct {
 // SetAcceptPageBreakFunc is a helper method to define mock.On call
 //   - fnc func() bool
 func (_e *Fpdf_Expecter) SetAcceptPageBreakFunc(fnc interface{}) *Fpdf_SetAcceptPageBreakFunc_Call {
-	return &Fpdf_SetAcceptPageBreakFunc_Call{Call: _e.mock.On("SetAcceptPageBreakFunc", fnc)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetAcceptPageBreakFunc_Call) Run(run func(fnc func() bool)) *Fpdf_SetAcceptPageBreakFunc_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(func() bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetAcceptPageBreakFunc_Call) Return() *Fpdf_SetAcceptPageBreakFunc_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetAcceptPageBreakFunc_Call) RunAndReturn(run func(func() bool)) *Fpdf_SetAcceptPageBreakFunc_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetAlpha provides a mock function with given fields: alpha, blendModeStr
 }
 
-// SetAlpha provides a mock function with given fields: alpha, blendModeStr
-func (_m *Fpdf) SetAlpha(alpha float64, blendModeStr string) {
-	_m.Called(alpha, blendModeStr)
-}
+func (_m *Fpdf) SetAlpha(alpha float64, blendModeStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetAlpha_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetAlpha'
 type Fpdf_SetAlpha_Call struct {
@@ -4160,30 +3160,25 @@ type Fpdf_SetAlpha_Call struct {
 //   - alpha float64
 //   - blendModeStr string
 func (_e *Fpdf_Expecter) SetAlpha(alpha interface{}, blendModeStr interface{}) *Fpdf_SetAlpha_Call {
-	return &Fpdf_SetAlpha_Call{Call: _e.mock.On("SetAlpha", alpha, blendModeStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetAlpha_Call) Run(run func(alpha float64, blendModeStr string)) *Fpdf_SetAlpha_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetAlpha_Call) Return() *Fpdf_SetAlpha_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetAlpha_Call) Return() *Fpdf_SetAlpha_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetAlpha_Call) RunAndReturn(run func(float64, string)) *Fpdf_SetAlpha_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetAuthor provides a mock function with given fields: authorStr, isUTF8
 }
 
-// SetAuthor provides a mock function with given fields: authorStr, isUTF8
-func (_m *Fpdf) SetAuthor(authorStr string, isUTF8 bool) {
-	_m.Called(authorStr, isUTF8)
-}
+func (_m *Fpdf) SetAuthor(authorStr string, isUTF8 bool) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetAuthor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetAuthor'
 type Fpdf_SetAuthor_Call struct {
@@ -4194,30 +3189,25 @@ type Fpdf_SetAuthor_Call struct {
 //   - authorStr string
 //   - isUTF8 bool
 func (_e *Fpdf_Expecter) SetAuthor(authorStr interface{}, isUTF8 interface{}) *Fpdf_SetAuthor_Call {
-	return &Fpdf_SetAuthor_Call{Call: _e.mock.On("SetAuthor", authorStr, isUTF8)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetAuthor_Call) Run(run func(authorStr string, isUTF8 bool)) *Fpdf_SetAuthor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetAuthor_Call) Return() *Fpdf_SetAuthor_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetAuthor_Call) Return() *Fpdf_SetAuthor_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetAuthor_Call) RunAndReturn(run func(string, bool)) *Fpdf_SetAuthor_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetAutoPageBreak provides a mock function with given fields: auto, margin
 }
 
-// SetAutoPageBreak provides a mock function with given fields: auto, margin
-func (_m *Fpdf) SetAutoPageBreak(auto bool, margin float64) {
-	_m.Called(auto, margin)
-}
+func (_m *Fpdf) SetAutoPageBreak(auto bool, margin float64) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetAutoPageBreak_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetAutoPageBreak'
 type Fpdf_SetAutoPageBreak_Call struct {
@@ -4228,32 +3218,34 @@ type Fpdf_SetAutoPageBreak_Call struct {
 //   - auto bool
 //   - margin float64
 func (_e *Fpdf_Expecter) SetAutoPageBreak(auto interface{}, margin interface{}) *Fpdf_SetAutoPageBreak_Call {
-	return &Fpdf_SetAutoPageBreak_Call{Call: _e.mock.On("SetAutoPageBreak", auto, margin)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetAutoPageBreak_Call) Run(run func(auto bool, margin float64)) *Fpdf_SetAutoPageBreak_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(bool), args[1].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetAutoPageBreak_Call) Return() *Fpdf_SetAutoPageBreak_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetAutoPageBreak_Call) RunAndReturn(run func(bool, float64)) *Fpdf_SetAutoPageBreak_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetCatalogSort provides a mock function with given fields: flag
 }
 
-// SetCatalogSort provides a mock function with given fields: flag
 func (_m *Fpdf) SetCatalogSort(flag bool) {
-	_m.Called(flag)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetCatalogSort_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetCatalogSort'
+	return
 }
 
-// Fpdf_SetCatalogSort_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetCatalogSort'
 type Fpdf_SetCatalogSort_Call struct {
 	*mock.Call
 }
@@ -4261,32 +3253,34 @@ type Fpdf_SetCatalogSort_Call struct {
 // SetCatalogSort is a helper method to define mock.On call
 //   - flag bool
 func (_e *Fpdf_Expecter) SetCatalogSort(flag interface{}) *Fpdf_SetCatalogSort_Call {
-	return &Fpdf_SetCatalogSort_Call{Call: _e.mock.On("SetCatalogSort", flag)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCatalogSort_Call) Run(run func(flag bool)) *Fpdf_SetCatalogSort_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCatalogSort_Call) Return() *Fpdf_SetCatalogSort_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCatalogSort_Call) RunAndReturn(run func(bool)) *Fpdf_SetCatalogSort_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetCellMargin provides a mock function with given fields: margin
 }
 
-// SetCellMargin provides a mock function with given fields: margin
 func (_m *Fpdf) SetCellMargin(margin float64) {
-	_m.Called(margin)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetCellMargin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetCellMargin'
+	return
 }
 
-// Fpdf_SetCellMargin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetCellMargin'
 type Fpdf_SetCellMargin_Call struct {
 	*mock.Call
 }
@@ -4294,30 +3288,28 @@ type Fpdf_SetCellMargin_Call struct {
 // SetCellMargin is a helper method to define mock.On call
 //   - margin float64
 func (_e *Fpdf_Expecter) SetCellMargin(margin interface{}) *Fpdf_SetCellMargin_Call {
-	return &Fpdf_SetCellMargin_Call{Call: _e.mock.On("SetCellMargin", margin)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCellMargin_Call) Run(run func(margin float64)) *Fpdf_SetCellMargin_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCellMargin_Call) Return() *Fpdf_SetCellMargin_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCellMargin_Call) RunAndReturn(run func(float64)) *Fpdf_SetCellMargin_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetCompression provides a mock function with given fields: compress
 }
 
-// SetCompression provides a mock function with given fields: compress
-func (_m *Fpdf) SetCompression(compress bool) {
-	_m.Called(compress)
-}
+func (_m *Fpdf) SetCompression(compress bool) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetCompression_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetCompression'
 type Fpdf_SetCompression_Call struct {
@@ -4327,32 +3319,34 @@ type Fpdf_SetCompression_Call struct {
 // SetCompression is a helper method to define mock.On call
 //   - compress bool
 func (_e *Fpdf_Expecter) SetCompression(compress interface{}) *Fpdf_SetCompression_Call {
-	return &Fpdf_SetCompression_Call{Call: _e.mock.On("SetCompression", compress)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCompression_Call) Run(run func(compress bool)) *Fpdf_SetCompression_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCompression_Call) Return() *Fpdf_SetCompression_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCompression_Call) RunAndReturn(run func(bool)) *Fpdf_SetCompression_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetCreationDate provides a mock function with given fields: tm
 }
 
-// SetCreationDate provides a mock function with given fields: tm
 func (_m *Fpdf) SetCreationDate(tm time.Time) {
-	_m.Called(tm)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetCreationDate_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetCreationDate'
+	return
 }
 
-// Fpdf_SetCreationDate_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetCreationDate'
 type Fpdf_SetCreationDate_Call struct {
 	*mock.Call
 }
@@ -4360,30 +3354,28 @@ type Fpdf_SetCreationDate_Call struct {
 // SetCreationDate is a helper method to define mock.On call
 //   - tm time.Time
 func (_e *Fpdf_Expecter) SetCreationDate(tm interface{}) *Fpdf_SetCreationDate_Call {
-	return &Fpdf_SetCreationDate_Call{Call: _e.mock.On("SetCreationDate", tm)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCreationDate_Call) Run(run func(tm time.Time)) *Fpdf_SetCreationDate_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(time.Time))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCreationDate_Call) Return() *Fpdf_SetCreationDate_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCreationDate_Call) RunAndReturn(run func(time.Time)) *Fpdf_SetCreationDate_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetCreator provides a mock function with given fields: creatorStr, isUTF8
 }
 
-// SetCreator provides a mock function with given fields: creatorStr, isUTF8
-func (_m *Fpdf) SetCreator(creatorStr string, isUTF8 bool) {
-	_m.Called(creatorStr, isUTF8)
-}
+func (_m *Fpdf) SetCreator(creatorStr string, isUTF8 bool) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetCreator_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetCreator'
 type Fpdf_SetCreator_Call struct {
@@ -4394,29 +3386,30 @@ type Fpdf_SetCreator_Call struct {
 //   - creatorStr string
 //   - isUTF8 bool
 func (_e *Fpdf_Expecter) SetCreator(creatorStr interface{}, isUTF8 interface{}) *Fpdf_SetCreator_Call {
-	return &Fpdf_SetCreator_Call{Call: _e.mock.On("SetCreator", creatorStr, isUTF8)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCreator_Call) Run(run func(creatorStr string, isUTF8 bool)) *Fpdf_SetCreator_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCreator_Call) Return() *Fpdf_SetCreator_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetCreator_Call) RunAndReturn(run func(string, bool)) *Fpdf_SetCreator_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetDashPattern provides a mock function with given fields: dashArray, dashPhase
 }
 
-// SetDashPattern provides a mock function with given fields: dashArray, dashPhase
 func (_m *Fpdf) SetDashPattern(dashArray []float64, dashPhase float64) {
-	_m.Called(dashArray, dashPhase)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_SetDashPattern_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetDashPattern'
@@ -4428,30 +3421,28 @@ type Fpdf_SetDashPattern_Call struct {
 //   - dashArray []float64
 //   - dashPhase float64
 func (_e *Fpdf_Expecter) SetDashPattern(dashArray interface{}, dashPhase interface{}) *Fpdf_SetDashPattern_Call {
-	return &Fpdf_SetDashPattern_Call{Call: _e.mock.On("SetDashPattern", dashArray, dashPhase)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDashPattern_Call) Run(run func(dashArray []float64, dashPhase float64)) *Fpdf_SetDashPattern_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].([]float64), args[1].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDashPattern_Call) Return() *Fpdf_SetDashPattern_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDashPattern_Call) RunAndReturn(run func([]float64, float64)) *Fpdf_SetDashPattern_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetDisplayMode provides a mock function with given fields: zoomStr, layoutStr
 }
 
-// SetDisplayMode provides a mock function with given fields: zoomStr, layoutStr
-func (_m *Fpdf) SetDisplayMode(zoomStr string, layoutStr string) {
-	_m.Called(zoomStr, layoutStr)
-}
+func (_m *Fpdf) SetDisplayMode(zoomStr string, layoutStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetDisplayMode_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetDisplayMode'
 type Fpdf_SetDisplayMode_Call struct {
@@ -4462,32 +3453,34 @@ type Fpdf_SetDisplayMode_Call struct {
 //   - zoomStr string
 //   - layoutStr string
 func (_e *Fpdf_Expecter) SetDisplayMode(zoomStr interface{}, layoutStr interface{}) *Fpdf_SetDisplayMode_Call {
-	return &Fpdf_SetDisplayMode_Call{Call: _e.mock.On("SetDisplayMode", zoomStr, layoutStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDisplayMode_Call) Run(run func(zoomStr string, layoutStr string)) *Fpdf_SetDisplayMode_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDisplayMode_Call) Return() *Fpdf_SetDisplayMode_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDisplayMode_Call) RunAndReturn(run func(string, string)) *Fpdf_SetDisplayMode_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetDrawColor provides a mock function with given fields: r, g, b
 }
 
-// SetDrawColor provides a mock function with given fields: r, g, b
 func (_m *Fpdf) SetDrawColor(r int, g int, b int) {
-	_m.Called(r, g, b)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetDrawColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetDrawColor'
+	return
 }
 
-// Fpdf_SetDrawColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetDrawColor'
 type Fpdf_SetDrawColor_Call struct {
 	*mock.Call
 }
@@ -4497,30 +3490,28 @@ type Fpdf_SetDrawColor_Call struct {
 //   - g int
 //   - b int
 func (_e *Fpdf_Expecter) SetDrawColor(r interface{}, g interface{}, b interface{}) *Fpdf_SetDrawColor_Call {
-	return &Fpdf_SetDrawColor_Call{Call: _e.mock.On("SetDrawColor", r, g, b)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDrawColor_Call) Run(run func(r int, g int, b int)) *Fpdf_SetDrawColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(int), args[1].(int), args[2].(int))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDrawColor_Call) Return() *Fpdf_SetDrawColor_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDrawColor_Call) RunAndReturn(run func(int, int, int)) *Fpdf_SetDrawColor_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetDrawSpotColor provides a mock function with given fields: nameStr, tint
 }
 
-// SetDrawSpotColor provides a mock function with given fields: nameStr, tint
-func (_m *Fpdf) SetDrawSpotColor(nameStr string, tint byte) {
-	_m.Called(nameStr, tint)
-}
+func (_m *Fpdf) SetDrawSpotColor(nameStr string, tint byte) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetDrawSpotColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetDrawSpotColor'
 type Fpdf_SetDrawSpotColor_Call struct {
@@ -4531,32 +3522,34 @@ type Fpdf_SetDrawSpotColor_Call struct {
 //   - nameStr string
 //   - tint byte
 func (_e *Fpdf_Expecter) SetDrawSpotColor(nameStr interface{}, tint interface{}) *Fpdf_SetDrawSpotColor_Call {
-	return &Fpdf_SetDrawSpotColor_Call{Call: _e.mock.On("SetDrawSpotColor", nameStr, tint)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDrawSpotColor_Call) Run(run func(nameStr string, tint byte)) *Fpdf_SetDrawSpotColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(byte))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDrawSpotColor_Call) Return() *Fpdf_SetDrawSpotColor_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetDrawSpotColor_Call) RunAndReturn(run func(string, byte)) *Fpdf_SetDrawSpotColor_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetError provides a mock function with given fields: err
 }
 
-// SetError provides a mock function with given fields: err
 func (_m *Fpdf) SetError(err error) {
-	_m.Called(err)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetError_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetError'
+	return
 }
 
-// Fpdf_SetError_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetError'
 type Fpdf_SetError_Call struct {
 	*mock.Call
 }
@@ -4564,33 +3557,25 @@ type Fpdf_SetError_Call struct {
 // SetError is a helper method to define mock.On call
 //   - err error
 func (_e *Fpdf_Expecter) SetError(err interface{}) *Fpdf_SetError_Call {
-	return &Fpdf_SetError_Call{Call: _e.mock.On("SetError", err)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetError_Call) Run(run func(err error)) *Fpdf_SetError_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(error))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetError_Call) Return() *Fpdf_SetError_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetError_Call) Return() *Fpdf_SetError_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetError_Call) RunAndReturn(run func(error)) *Fpdf_SetError_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetErrorf provides a mock function with given fields: fmtStr, args
 }
 
-// SetErrorf provides a mock function with given fields: fmtStr, args
-func (_m *Fpdf) SetErrorf(fmtStr string, args ...interface{}) {
-	var _ca []interface{}
-	_ca = append(_ca, fmtStr)
-	_ca = append(_ca, args...)
-	_m.Called(_ca...)
-}
+func (_m *Fpdf) SetErrorf(fmtStr string, args ...interface{}) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetErrorf_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetErrorf'
 type Fpdf_SetErrorf_Call struct {
@@ -4601,39 +3586,31 @@ type Fpdf_SetErrorf_Call struct {
 //   - fmtStr string
 //   - args ...interface{}
 func (_e *Fpdf_Expecter) SetErrorf(fmtStr interface{}, args ...interface{}) *Fpdf_SetErrorf_Call {
-	return &Fpdf_SetErrorf_Call{Call: _e.mock.On("SetErrorf",
-		append([]interface{}{fmtStr}, args...)...)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetErrorf_Call) Run(run func(fmtStr string, args ...interface{})) *Fpdf_SetErrorf_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		variadicArgs := make([]interface{}, len(args)-1)
-		for i, a := range args[1:] {
-			if a != nil {
-				variadicArgs[i] = a.(interface{})
-			}
-		}
-		run(args[0].(string), variadicArgs...)
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetErrorf_Call) Return() *Fpdf_SetErrorf_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetErrorf_Call) Return() *Fpdf_SetErrorf_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetErrorf_Call) RunAndReturn(run func(string, ...interface{})) *Fpdf_SetErrorf_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFillColor provides a mock function with given fields: r, g, b
 }
 
-// SetFillColor provides a mock function with given fields: r, g, b
 func (_m *Fpdf) SetFillColor(r int, g int, b int) {
-	_m.Called(r, g, b)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetFillColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFillColor'
+	return
 }
 
-// Fpdf_SetFillColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFillColor'
 type Fpdf_SetFillColor_Call struct {
 	*mock.Call
 }
@@ -4643,30 +3620,28 @@ type Fpdf_SetFillColor_Call struct {
 //   - g int
 //   - b int
 func (_e *Fpdf_Expecter) SetFillColor(r interface{}, g interface{}, b interface{}) *Fpdf_SetFillColor_Call {
-	return &Fpdf_SetFillColor_Call{Call: _e.mock.On("SetFillColor", r, g, b)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFillColor_Call) Run(run func(r int, g int, b int)) *Fpdf_SetFillColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(int), args[1].(int), args[2].(int))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFillColor_Call) Return() *Fpdf_SetFillColor_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFillColor_Call) RunAndReturn(run func(int, int, int)) *Fpdf_SetFillColor_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFillSpotColor provides a mock function with given fields: nameStr, tint
 }
 
-// SetFillSpotColor provides a mock function with given fields: nameStr, tint
-func (_m *Fpdf) SetFillSpotColor(nameStr string, tint byte) {
-	_m.Called(nameStr, tint)
-}
+func (_m *Fpdf) SetFillSpotColor(nameStr string, tint byte) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetFillSpotColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFillSpotColor'
 type Fpdf_SetFillSpotColor_Call struct {
@@ -4677,29 +3652,30 @@ type Fpdf_SetFillSpotColor_Call struct {
 //   - nameStr string
 //   - tint byte
 func (_e *Fpdf_Expecter) SetFillSpotColor(nameStr interface{}, tint interface{}) *Fpdf_SetFillSpotColor_Call {
-	return &Fpdf_SetFillSpotColor_Call{Call: _e.mock.On("SetFillSpotColor", nameStr, tint)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFillSpotColor_Call) Run(run func(nameStr string, tint byte)) *Fpdf_SetFillSpotColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(byte))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFillSpotColor_Call) Return() *Fpdf_SetFillSpotColor_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFillSpotColor_Call) RunAndReturn(run func(string, byte)) *Fpdf_SetFillSpotColor_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFont provides a mock function with given fields: familyStr, styleStr, size
 }
 
-// SetFont provides a mock function with given fields: familyStr, styleStr, size
 func (_m *Fpdf) SetFont(familyStr string, styleStr string, size float64) {
-	_m.Called(familyStr, styleStr, size)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_SetFont_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFont'
@@ -4712,32 +3688,31 @@ type Fpdf_SetFont_Call struct {
 //   - styleStr string
 //   - size float64
 func (_e *Fpdf_Expecter) SetFont(familyStr interface{}, styleStr interface{}, size interface{}) *Fpdf_SetFont_Call {
-	return &Fpdf_SetFont_Call{Call: _e.mock.On("SetFont", familyStr, styleStr, size)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFont_Call) Run(run func(familyStr string, styleStr string, size float64)) *Fpdf_SetFont_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(string), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetFont_Call) Return() *Fpdf_SetFont_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetFont_Call) Return() *Fpdf_SetFont_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetFont_Call) RunAndReturn(run func(string, string, float64)) *Fpdf_SetFont_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFontLoader provides a mock function with given fields: loader
 }
 
-// SetFontLoader provides a mock function with given fields: loader
 func (_m *Fpdf) SetFontLoader(loader gofpdf.FontLoader) {
-	_m.Called(loader)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetFontLoader_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFontLoader'
+	return
 }
 
-// Fpdf_SetFontLoader_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFontLoader'
 type Fpdf_SetFontLoader_Call struct {
 	*mock.Call
 }
@@ -4745,30 +3720,28 @@ type Fpdf_SetFontLoader_Call struct {
 // SetFontLoader is a helper method to define mock.On call
 //   - loader gofpdf.FontLoader
 func (_e *Fpdf_Expecter) SetFontLoader(loader interface{}) *Fpdf_SetFontLoader_Call {
-	return &Fpdf_SetFontLoader_Call{Call: _e.mock.On("SetFontLoader", loader)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontLoader_Call) Run(run func(loader gofpdf.FontLoader)) *Fpdf_SetFontLoader_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(gofpdf.FontLoader))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontLoader_Call) Return() *Fpdf_SetFontLoader_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontLoader_Call) RunAndReturn(run func(gofpdf.FontLoader)) *Fpdf_SetFontLoader_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFontLocation provides a mock function with given fields: fontDirStr
 }
 
-// SetFontLocation provides a mock function with given fields: fontDirStr
-func (_m *Fpdf) SetFontLocation(fontDirStr string) {
-	_m.Called(fontDirStr)
-}
+func (_m *Fpdf) SetFontLocation(fontDirStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetFontLocation_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFontLocation'
 type Fpdf_SetFontLocation_Call struct {
@@ -4778,32 +3751,34 @@ type Fpdf_SetFontLocation_Call struct {
 // SetFontLocation is a helper method to define mock.On call
 //   - fontDirStr string
 func (_e *Fpdf_Expecter) SetFontLocation(fontDirStr interface{}) *Fpdf_SetFontLocation_Call {
-	return &Fpdf_SetFontLocation_Call{Call: _e.mock.On("SetFontLocation", fontDirStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontLocation_Call) Run(run func(fontDirStr string)) *Fpdf_SetFontLocation_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontLocation_Call) Return() *Fpdf_SetFontLocation_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontLocation_Call) RunAndReturn(run func(string)) *Fpdf_SetFontLocation_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFontSize provides a mock function with given fields: size
 }
 
-// SetFontSize provides a mock function with given fields: size
 func (_m *Fpdf) SetFontSize(size float64) {
-	_m.Called(size)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetFontSize_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFontSize'
+	return
 }
 
-// Fpdf_SetFontSize_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFontSize'
 type Fpdf_SetFontSize_Call struct {
 	*mock.Call
 }
@@ -4811,30 +3786,28 @@ type Fpdf_SetFontSize_Call struct {
 // SetFontSize is a helper method to define mock.On call
 //   - size float64
 func (_e *Fpdf_Expecter) SetFontSize(size interface{}) *Fpdf_SetFontSize_Call {
-	return &Fpdf_SetFontSize_Call{Call: _e.mock.On("SetFontSize", size)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontSize_Call) Run(run func(size float64)) *Fpdf_SetFontSize_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontSize_Call) Return() *Fpdf_SetFontSize_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontSize_Call) RunAndReturn(run func(float64)) *Fpdf_SetFontSize_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFontStyle provides a mock function with given fields: styleStr
 }
 
-// SetFontStyle provides a mock function with given fields: styleStr
-func (_m *Fpdf) SetFontStyle(styleStr string) {
-	_m.Called(styleStr)
-}
+func (_m *Fpdf) SetFontStyle(styleStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetFontStyle_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFontStyle'
 type Fpdf_SetFontStyle_Call struct {
@@ -4844,32 +3817,34 @@ type Fpdf_SetFontStyle_Call struct {
 // SetFontStyle is a helper method to define mock.On call
 //   - styleStr string
 func (_e *Fpdf_Expecter) SetFontStyle(styleStr interface{}) *Fpdf_SetFontStyle_Call {
-	return &Fpdf_SetFontStyle_Call{Call: _e.mock.On("SetFontStyle", styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontStyle_Call) Run(run func(styleStr string)) *Fpdf_SetFontStyle_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontStyle_Call) Return() *Fpdf_SetFontStyle_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontStyle_Call) RunAndReturn(run func(string)) *Fpdf_SetFontStyle_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFontUnitSize provides a mock function with given fields: size
 }
 
-// SetFontUnitSize provides a mock function with given fields: size
 func (_m *Fpdf) SetFontUnitSize(size float64) {
-	_m.Called(size)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetFontUnitSize_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFontUnitSize'
+	return
 }
 
-// Fpdf_SetFontUnitSize_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFontUnitSize'
 type Fpdf_SetFontUnitSize_Call struct {
 	*mock.Call
 }
@@ -4877,32 +3852,34 @@ type Fpdf_SetFontUnitSize_Call struct {
 // SetFontUnitSize is a helper method to define mock.On call
 //   - size float64
 func (_e *Fpdf_Expecter) SetFontUnitSize(size interface{}) *Fpdf_SetFontUnitSize_Call {
-	return &Fpdf_SetFontUnitSize_Call{Call: _e.mock.On("SetFontUnitSize", size)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontUnitSize_Call) Run(run func(size float64)) *Fpdf_SetFontUnitSize_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontUnitSize_Call) Return() *Fpdf_SetFontUnitSize_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFontUnitSize_Call) RunAndReturn(run func(float64)) *Fpdf_SetFontUnitSize_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFooterFunc provides a mock function with given fields: fnc
 }
 
-// SetFooterFunc provides a mock function with given fields: fnc
 func (_m *Fpdf) SetFooterFunc(fnc func()) {
-	_m.Called(fnc)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetFooterFunc_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFooterFunc'
+	return
 }
 
-// Fpdf_SetFooterFunc_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFooterFunc'
 type Fpdf_SetFooterFunc_Call struct {
 	*mock.Call
 }
@@ -4910,32 +3887,34 @@ type Fpdf_SetFooterFunc_Call struct {
 // SetFooterFunc is a helper method to define mock.On call
 //   - fnc func()
 func (_e *Fpdf_Expecter) SetFooterFunc(fnc interface{}) *Fpdf_SetFooterFunc_Call {
-	return &Fpdf_SetFooterFunc_Call{Call: _e.mock.On("SetFooterFunc", fnc)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFooterFunc_Call) Run(run func(fnc func())) *Fpdf_SetFooterFunc_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(func()))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFooterFunc_Call) Return() *Fpdf_SetFooterFunc_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFooterFunc_Call) RunAndReturn(run func(func())) *Fpdf_SetFooterFunc_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetFooterFuncLpi provides a mock function with given fields: fnc
 }
 
-// SetFooterFuncLpi provides a mock function with given fields: fnc
 func (_m *Fpdf) SetFooterFuncLpi(fnc func(bool)) {
-	_m.Called(fnc)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetFooterFuncLpi_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFooterFuncLpi'
+	return
 }
 
-// Fpdf_SetFooterFuncLpi_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetFooterFuncLpi'
 type Fpdf_SetFooterFuncLpi_Call struct {
 	*mock.Call
 }
@@ -4943,32 +3922,34 @@ type Fpdf_SetFooterFuncLpi_Call struct {
 // SetFooterFuncLpi is a helper method to define mock.On call
 //   - fnc func(bool)
 func (_e *Fpdf_Expecter) SetFooterFuncLpi(fnc interface{}) *Fpdf_SetFooterFuncLpi_Call {
-	return &Fpdf_SetFooterFuncLpi_Call{Call: _e.mock.On("SetFooterFuncLpi", fnc)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFooterFuncLpi_Call) Run(run func(fnc func(bool))) *Fpdf_SetFooterFuncLpi_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(func(bool)))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFooterFuncLpi_Call) Return() *Fpdf_SetFooterFuncLpi_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetFooterFuncLpi_Call) RunAndReturn(run func(func(bool))) *Fpdf_SetFooterFuncLpi_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetHeaderFunc provides a mock function with given fields: fnc
 }
 
-// SetHeaderFunc provides a mock function with given fields: fnc
 func (_m *Fpdf) SetHeaderFunc(fnc func()) {
-	_m.Called(fnc)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetHeaderFunc_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetHeaderFunc'
+	return
 }
 
-// Fpdf_SetHeaderFunc_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetHeaderFunc'
 type Fpdf_SetHeaderFunc_Call struct {
 	*mock.Call
 }
@@ -4976,30 +3957,28 @@ type Fpdf_SetHeaderFunc_Call struct {
 // SetHeaderFunc is a helper method to define mock.On call
 //   - fnc func()
 func (_e *Fpdf_Expecter) SetHeaderFunc(fnc interface{}) *Fpdf_SetHeaderFunc_Call {
-	return &Fpdf_SetHeaderFunc_Call{Call: _e.mock.On("SetHeaderFunc", fnc)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetHeaderFunc_Call) Run(run func(fnc func())) *Fpdf_SetHeaderFunc_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(func()))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetHeaderFunc_Call) Return() *Fpdf_SetHeaderFunc_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetHeaderFunc_Call) RunAndReturn(run func(func())) *Fpdf_SetHeaderFunc_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetHeaderFuncMode provides a mock function with given fields: fnc, homeMode
 }
 
-// SetHeaderFuncMode provides a mock function with given fields: fnc, homeMode
-func (_m *Fpdf) SetHeaderFuncMode(fnc func(), homeMode bool) {
-	_m.Called(fnc, homeMode)
-}
+func (_m *Fpdf) SetHeaderFuncMode(fnc func(), homeMode bool) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetHeaderFuncMode_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetHeaderFuncMode'
 type Fpdf_SetHeaderFuncMode_Call struct {
@@ -5010,64 +3989,62 @@ type Fpdf_SetHeaderFuncMode_Call struct {
 //   - fnc func()
 //   - homeMode bool
 func (_e *Fpdf_Expecter) SetHeaderFuncMode(fnc interface{}, homeMode interface{}) *Fpdf_SetHeaderFuncMode_Call {
-	return &Fpdf_SetHeaderFuncMode_Call{Call: _e.mock.On("SetHeaderFuncMode", fnc, homeMode)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetHeaderFuncMode_Call) Run(run func(fnc func(), homeMode bool)) *Fpdf_SetHeaderFuncMode_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(func()), args[1].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetHeaderFuncMode_Call) Return() *Fpdf_SetHeaderFuncMode_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetHeaderFuncMode_Call) RunAndReturn(run func(func(), bool)) *Fpdf_SetHeaderFuncMode_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetHomeXY provides a mock function with no fields
 }
 
-// SetHomeXY provides a mock function with no fields
 func (_m *Fpdf) SetHomeXY() {
-	_m.Called()
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetHomeXY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetHomeXY'
+	return
 }
 
-// Fpdf_SetHomeXY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetHomeXY'
 type Fpdf_SetHomeXY_Call struct {
 	*mock.Call
 }
 
 // SetHomeXY is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) SetHomeXY() *Fpdf_SetHomeXY_Call {
-	return &Fpdf_SetHomeXY_Call{Call: _e.mock.On("SetHomeXY")}
-}
+func (_e *Fpdf_Expecter) SetHomeXY() *Fpdf_SetHomeXY_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetHomeXY_Call) Run(run func()) *Fpdf_SetHomeXY_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetHomeXY_Call) Return() *Fpdf_SetHomeXY_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetHomeXY_Call) Return() *Fpdf_SetHomeXY_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetHomeXY_Call) RunAndReturn(run func()) *Fpdf_SetHomeXY_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetJavascript provides a mock function with given fields: script
 }
 
-// SetJavascript provides a mock function with given fields: script
 func (_m *Fpdf) SetJavascript(script string) {
-	_m.Called(script)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetJavascript_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetJavascript'
+	return
 }
 
-// Fpdf_SetJavascript_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetJavascript'
 type Fpdf_SetJavascript_Call struct {
 	*mock.Call
 }
@@ -5075,30 +4052,28 @@ type Fpdf_SetJavascript_Call struct {
 // SetJavascript is a helper method to define mock.On call
 //   - script string
 func (_e *Fpdf_Expecter) SetJavascript(script interface{}) *Fpdf_SetJavascript_Call {
-	return &Fpdf_SetJavascript_Call{Call: _e.mock.On("SetJavascript", script)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetJavascript_Call) Run(run func(script string)) *Fpdf_SetJavascript_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetJavascript_Call) Return() *Fpdf_SetJavascript_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetJavascript_Call) RunAndReturn(run func(string)) *Fpdf_SetJavascript_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetKeywords provides a mock function with given fields: keywordsStr, isUTF8
 }
 
-// SetKeywords provides a mock function with given fields: keywordsStr, isUTF8
-func (_m *Fpdf) SetKeywords(keywordsStr string, isUTF8 bool) {
-	_m.Called(keywordsStr, isUTF8)
-}
+func (_m *Fpdf) SetKeywords(keywordsStr string, isUTF8 bool) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetKeywords_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetKeywords'
 type Fpdf_SetKeywords_Call struct {
@@ -5109,32 +4084,34 @@ type Fpdf_SetKeywords_Call struct {
 //   - keywordsStr string
 //   - isUTF8 bool
 func (_e *Fpdf_Expecter) SetKeywords(keywordsStr interface{}, isUTF8 interface{}) *Fpdf_SetKeywords_Call {
-	return &Fpdf_SetKeywords_Call{Call: _e.mock.On("SetKeywords", keywordsStr, isUTF8)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetKeywords_Call) Run(run func(keywordsStr string, isUTF8 bool)) *Fpdf_SetKeywords_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetKeywords_Call) Return() *Fpdf_SetKeywords_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetKeywords_Call) RunAndReturn(run func(string, bool)) *Fpdf_SetKeywords_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetLeftMargin provides a mock function with given fields: margin
 }
 
-// SetLeftMargin provides a mock function with given fields: margin
 func (_m *Fpdf) SetLeftMargin(margin float64) {
-	_m.Called(margin)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetLeftMargin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetLeftMargin'
+	return
 }
 
-// Fpdf_SetLeftMargin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetLeftMargin'
 type Fpdf_SetLeftMargin_Call struct {
 	*mock.Call
 }
@@ -5142,30 +4119,28 @@ type Fpdf_SetLeftMargin_Call struct {
 // SetLeftMargin is a helper method to define mock.On call
 //   - margin float64
 func (_e *Fpdf_Expecter) SetLeftMargin(margin interface{}) *Fpdf_SetLeftMargin_Call {
-	return &Fpdf_SetLeftMargin_Call{Call: _e.mock.On("SetLeftMargin", margin)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLeftMargin_Call) Run(run func(margin float64)) *Fpdf_SetLeftMargin_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLeftMargin_Call) Return() *Fpdf_SetLeftMargin_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLeftMargin_Call) RunAndReturn(run func(float64)) *Fpdf_SetLeftMargin_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetLineCapStyle provides a mock function with given fields: styleStr
 }
 
-// SetLineCapStyle provides a mock function with given fields: styleStr
-func (_m *Fpdf) SetLineCapStyle(styleStr string) {
-	_m.Called(styleStr)
-}
+func (_m *Fpdf) SetLineCapStyle(styleStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetLineCapStyle_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetLineCapStyle'
 type Fpdf_SetLineCapStyle_Call struct {
@@ -5175,30 +4150,28 @@ type Fpdf_SetLineCapStyle_Call struct {
 // SetLineCapStyle is a helper method to define mock.On call
 //   - styleStr string
 func (_e *Fpdf_Expecter) SetLineCapStyle(styleStr interface{}) *Fpdf_SetLineCapStyle_Call {
-	return &Fpdf_SetLineCapStyle_Call{Call: _e.mock.On("SetLineCapStyle", styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLineCapStyle_Call) Run(run func(styleStr string)) *Fpdf_SetLineCapStyle_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLineCapStyle_Call) Return() *Fpdf_SetLineCapStyle_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLineCapStyle_Call) RunAndReturn(run func(string)) *Fpdf_SetLineCapStyle_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetLineJoinStyle provides a mock function with given fields: styleStr
 }
 
-// SetLineJoinStyle provides a mock function with given fields: styleStr
-func (_m *Fpdf) SetLineJoinStyle(styleStr string) {
-	_m.Called(styleStr)
-}
+func (_m *Fpdf) SetLineJoinStyle(styleStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetLineJoinStyle_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetLineJoinStyle'
 type Fpdf_SetLineJoinStyle_Call struct {
@@ -5208,32 +4181,34 @@ type Fpdf_SetLineJoinStyle_Call struct {
 // SetLineJoinStyle is a helper method to define mock.On call
 //   - styleStr string
 func (_e *Fpdf_Expecter) SetLineJoinStyle(styleStr interface{}) *Fpdf_SetLineJoinStyle_Call {
-	return &Fpdf_SetLineJoinStyle_Call{Call: _e.mock.On("SetLineJoinStyle", styleStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLineJoinStyle_Call) Run(run func(styleStr string)) *Fpdf_SetLineJoinStyle_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLineJoinStyle_Call) Return() *Fpdf_SetLineJoinStyle_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLineJoinStyle_Call) RunAndReturn(run func(string)) *Fpdf_SetLineJoinStyle_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetLineWidth provides a mock function with given fields: width
 }
 
-// SetLineWidth provides a mock function with given fields: width
 func (_m *Fpdf) SetLineWidth(width float64) {
-	_m.Called(width)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetLineWidth_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetLineWidth'
+	return
 }
 
-// Fpdf_SetLineWidth_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetLineWidth'
 type Fpdf_SetLineWidth_Call struct {
 	*mock.Call
 }
@@ -5241,30 +4216,28 @@ type Fpdf_SetLineWidth_Call struct {
 // SetLineWidth is a helper method to define mock.On call
 //   - width float64
 func (_e *Fpdf_Expecter) SetLineWidth(width interface{}) *Fpdf_SetLineWidth_Call {
-	return &Fpdf_SetLineWidth_Call{Call: _e.mock.On("SetLineWidth", width)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLineWidth_Call) Run(run func(width float64)) *Fpdf_SetLineWidth_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLineWidth_Call) Return() *Fpdf_SetLineWidth_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLineWidth_Call) RunAndReturn(run func(float64)) *Fpdf_SetLineWidth_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetLink provides a mock function with given fields: link, y, page
 }
 
-// SetLink provides a mock function with given fields: link, y, page
-func (_m *Fpdf) SetLink(link int, y float64, page int) {
-	_m.Called(link, y, page)
-}
+func (_m *Fpdf) SetLink(link int, y float64, page int) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetLink_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetLink'
 type Fpdf_SetLink_Call struct {
@@ -5276,29 +4249,27 @@ type Fpdf_SetLink_Call struct {
 //   - y float64
 //   - page int
 func (_e *Fpdf_Expecter) SetLink(link interface{}, y interface{}, page interface{}) *Fpdf_SetLink_Call {
-	return &Fpdf_SetLink_Call{Call: _e.mock.On("SetLink", link, y, page)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetLink_Call) Run(run func(link int, y float64, page int)) *Fpdf_SetLink_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(int), args[1].(float64), args[2].(int))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetLink_Call) Return() *Fpdf_SetLink_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetLink_Call) Return() *Fpdf_SetLink_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetLink_Call) RunAndReturn(run func(int, float64, int)) *Fpdf_SetLink_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetMargins provides a mock function with given fields: left, top, right
 }
 
-// SetMargins provides a mock function with given fields: left, top, right
 func (_m *Fpdf) SetMargins(left float64, top float64, right float64) {
-	_m.Called(left, top, right)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_SetMargins_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetMargins'
@@ -5311,32 +4282,34 @@ type Fpdf_SetMargins_Call struct {
 //   - top float64
 //   - right float64
 func (_e *Fpdf_Expecter) SetMargins(left interface{}, top interface{}, right interface{}) *Fpdf_SetMargins_Call {
-	return &Fpdf_SetMargins_Call{Call: _e.mock.On("SetMargins", left, top, right)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetMargins_Call) Run(run func(left float64, top float64, right float64)) *Fpdf_SetMargins_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetMargins_Call) Return() *Fpdf_SetMargins_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetMargins_Call) RunAndReturn(run func(float64, float64, float64)) *Fpdf_SetMargins_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetPage provides a mock function with given fields: pageNum
 }
 
-// SetPage provides a mock function with given fields: pageNum
 func (_m *Fpdf) SetPage(pageNum int) {
-	_m.Called(pageNum)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetPage_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetPage'
+	return
 }
 
-// Fpdf_SetPage_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetPage'
 type Fpdf_SetPage_Call struct {
 	*mock.Call
 }
@@ -5344,29 +4317,27 @@ type Fpdf_SetPage_Call struct {
 // SetPage is a helper method to define mock.On call
 //   - pageNum int
 func (_e *Fpdf_Expecter) SetPage(pageNum interface{}) *Fpdf_SetPage_Call {
-	return &Fpdf_SetPage_Call{Call: _e.mock.On("SetPage", pageNum)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetPage_Call) Run(run func(pageNum int)) *Fpdf_SetPage_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(int))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetPage_Call) Return() *Fpdf_SetPage_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetPage_Call) Return() *Fpdf_SetPage_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetPage_Call) RunAndReturn(run func(int)) *Fpdf_SetPage_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetPageBox provides a mock function with given fields: t, x, y, wd, ht
 }
 
-// SetPageBox provides a mock function with given fields: t, x, y, wd, ht
 func (_m *Fpdf) SetPageBox(t string, x float64, y float64, wd float64, ht float64) {
-	_m.Called(t, x, y, wd, ht)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_SetPageBox_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetPageBox'
@@ -5381,32 +4352,34 @@ type Fpdf_SetPageBox_Call struct {
 //   - wd float64
 //   - ht float64
 func (_e *Fpdf_Expecter) SetPageBox(t interface{}, x interface{}, y interface{}, wd interface{}, ht interface{}) *Fpdf_SetPageBox_Call {
-	return &Fpdf_SetPageBox_Call{Call: _e.mock.On("SetPageBox", t, x, y, wd, ht)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetPageBox_Call) Run(run func(t string, x float64, y float64, wd float64, ht float64)) *Fpdf_SetPageBox_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(float64), args[2].(float64), args[3].(float64), args[4].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetPageBox_Call) Return() *Fpdf_SetPageBox_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetPageBox_Call) RunAndReturn(run func(string, float64, float64, float64, float64)) *Fpdf_SetPageBox_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetPageBoxRec provides a mock function with given fields: t, pb
 }
 
-// SetPageBoxRec provides a mock function with given fields: t, pb
 func (_m *Fpdf) SetPageBoxRec(t string, pb gofpdf.PageBox) {
-	_m.Called(t, pb)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetPageBoxRec_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetPageBoxRec'
+	return
 }
 
-// Fpdf_SetPageBoxRec_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetPageBoxRec'
 type Fpdf_SetPageBoxRec_Call struct {
 	*mock.Call
 }
@@ -5415,29 +4388,30 @@ type Fpdf_SetPageBoxRec_Call struct {
 //   - t string
 //   - pb gofpdf.PageBox
 func (_e *Fpdf_Expecter) SetPageBoxRec(t interface{}, pb interface{}) *Fpdf_SetPageBoxRec_Call {
-	return &Fpdf_SetPageBoxRec_Call{Call: _e.mock.On("SetPageBoxRec", t, pb)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetPageBoxRec_Call) Run(run func(t string, pb gofpdf.PageBox)) *Fpdf_SetPageBoxRec_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(gofpdf.PageBox))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetPageBoxRec_Call) Return() *Fpdf_SetPageBoxRec_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetPageBoxRec_Call) RunAndReturn(run func(string, gofpdf.PageBox)) *Fpdf_SetPageBoxRec_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetProtection provides a mock function with given fields: actionFlag, userPassStr, ownerPassStr
 }
 
-// SetProtection provides a mock function with given fields: actionFlag, userPassStr, ownerPassStr
 func (_m *Fpdf) SetProtection(actionFlag byte, userPassStr string, ownerPassStr string) {
-	_m.Called(actionFlag, userPassStr, ownerPassStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_SetProtection_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetProtection'
@@ -5450,32 +4424,34 @@ type Fpdf_SetProtection_Call struct {
 //   - userPassStr string
 //   - ownerPassStr string
 func (_e *Fpdf_Expecter) SetProtection(actionFlag interface{}, userPassStr interface{}, ownerPassStr interface{}) *Fpdf_SetProtection_Call {
-	return &Fpdf_SetProtection_Call{Call: _e.mock.On("SetProtection", actionFlag, userPassStr, ownerPassStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetProtection_Call) Run(run func(actionFlag byte, userPassStr string, ownerPassStr string)) *Fpdf_SetProtection_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(byte), args[1].(string), args[2].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetProtection_Call) Return() *Fpdf_SetProtection_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetProtection_Call) RunAndReturn(run func(byte, string, string)) *Fpdf_SetProtection_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetRightMargin provides a mock function with given fields: margin
 }
 
-// SetRightMargin provides a mock function with given fields: margin
 func (_m *Fpdf) SetRightMargin(margin float64) {
-	_m.Called(margin)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetRightMargin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetRightMargin'
+	return
 }
 
-// Fpdf_SetRightMargin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetRightMargin'
 type Fpdf_SetRightMargin_Call struct {
 	*mock.Call
 }
@@ -5483,30 +4459,28 @@ type Fpdf_SetRightMargin_Call struct {
 // SetRightMargin is a helper method to define mock.On call
 //   - margin float64
 func (_e *Fpdf_Expecter) SetRightMargin(margin interface{}) *Fpdf_SetRightMargin_Call {
-	return &Fpdf_SetRightMargin_Call{Call: _e.mock.On("SetRightMargin", margin)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetRightMargin_Call) Run(run func(margin float64)) *Fpdf_SetRightMargin_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetRightMargin_Call) Return() *Fpdf_SetRightMargin_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetRightMargin_Call) RunAndReturn(run func(float64)) *Fpdf_SetRightMargin_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetSubject provides a mock function with given fields: subjectStr, isUTF8
 }
 
-// SetSubject provides a mock function with given fields: subjectStr, isUTF8
-func (_m *Fpdf) SetSubject(subjectStr string, isUTF8 bool) {
-	_m.Called(subjectStr, isUTF8)
-}
+func (_m *Fpdf) SetSubject(subjectStr string, isUTF8 bool) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetSubject_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetSubject'
 type Fpdf_SetSubject_Call struct {
@@ -5517,32 +4491,34 @@ type Fpdf_SetSubject_Call struct {
 //   - subjectStr string
 //   - isUTF8 bool
 func (_e *Fpdf_Expecter) SetSubject(subjectStr interface{}, isUTF8 interface{}) *Fpdf_SetSubject_Call {
-	return &Fpdf_SetSubject_Call{Call: _e.mock.On("SetSubject", subjectStr, isUTF8)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetSubject_Call) Run(run func(subjectStr string, isUTF8 bool)) *Fpdf_SetSubject_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetSubject_Call) Return() *Fpdf_SetSubject_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetSubject_Call) RunAndReturn(run func(string, bool)) *Fpdf_SetSubject_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetTextColor provides a mock function with given fields: r, g, b
 }
 
-// SetTextColor provides a mock function with given fields: r, g, b
 func (_m *Fpdf) SetTextColor(r int, g int, b int) {
-	_m.Called(r, g, b)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetTextColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetTextColor'
+	return
 }
 
-// Fpdf_SetTextColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetTextColor'
 type Fpdf_SetTextColor_Call struct {
 	*mock.Call
 }
@@ -5552,30 +4528,28 @@ type Fpdf_SetTextColor_Call struct {
 //   - g int
 //   - b int
 func (_e *Fpdf_Expecter) SetTextColor(r interface{}, g interface{}, b interface{}) *Fpdf_SetTextColor_Call {
-	return &Fpdf_SetTextColor_Call{Call: _e.mock.On("SetTextColor", r, g, b)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetTextColor_Call) Run(run func(r int, g int, b int)) *Fpdf_SetTextColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(int), args[1].(int), args[2].(int))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetTextColor_Call) Return() *Fpdf_SetTextColor_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetTextColor_Call) RunAndReturn(run func(int, int, int)) *Fpdf_SetTextColor_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetTextSpotColor provides a mock function with given fields: nameStr, tint
 }
 
-// SetTextSpotColor provides a mock function with given fields: nameStr, tint
-func (_m *Fpdf) SetTextSpotColor(nameStr string, tint byte) {
-	_m.Called(nameStr, tint)
-}
+func (_m *Fpdf) SetTextSpotColor(nameStr string, tint byte) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetTextSpotColor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetTextSpotColor'
 type Fpdf_SetTextSpotColor_Call struct {
@@ -5586,30 +4560,28 @@ type Fpdf_SetTextSpotColor_Call struct {
 //   - nameStr string
 //   - tint byte
 func (_e *Fpdf_Expecter) SetTextSpotColor(nameStr interface{}, tint interface{}) *Fpdf_SetTextSpotColor_Call {
-	return &Fpdf_SetTextSpotColor_Call{Call: _e.mock.On("SetTextSpotColor", nameStr, tint)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetTextSpotColor_Call) Run(run func(nameStr string, tint byte)) *Fpdf_SetTextSpotColor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(byte))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetTextSpotColor_Call) Return() *Fpdf_SetTextSpotColor_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetTextSpotColor_Call) RunAndReturn(run func(string, byte)) *Fpdf_SetTextSpotColor_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetTitle provides a mock function with given fields: titleStr, isUTF8
 }
 
-// SetTitle provides a mock function with given fields: titleStr, isUTF8
-func (_m *Fpdf) SetTitle(titleStr string, isUTF8 bool) {
-	_m.Called(titleStr, isUTF8)
-}
+func (_m *Fpdf) SetTitle(titleStr string, isUTF8 bool) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetTitle_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetTitle'
 type Fpdf_SetTitle_Call struct {
@@ -5620,32 +4592,31 @@ type Fpdf_SetTitle_Call struct {
 //   - titleStr string
 //   - isUTF8 bool
 func (_e *Fpdf_Expecter) SetTitle(titleStr interface{}, isUTF8 interface{}) *Fpdf_SetTitle_Call {
-	return &Fpdf_SetTitle_Call{Call: _e.mock.On("SetTitle", titleStr, isUTF8)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetTitle_Call) Run(run func(titleStr string, isUTF8 bool)) *Fpdf_SetTitle_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(bool))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetTitle_Call) Return() *Fpdf_SetTitle_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetTitle_Call) Return() *Fpdf_SetTitle_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetTitle_Call) RunAndReturn(run func(string, bool)) *Fpdf_SetTitle_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetTopMargin provides a mock function with given fields: margin
 }
 
-// SetTopMargin provides a mock function with given fields: margin
 func (_m *Fpdf) SetTopMargin(margin float64) {
-	_m.Called(margin)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetTopMargin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetTopMargin'
+	return
 }
 
-// Fpdf_SetTopMargin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetTopMargin'
 type Fpdf_SetTopMargin_Call struct {
 	*mock.Call
 }
@@ -5653,30 +4624,28 @@ type Fpdf_SetTopMargin_Call struct {
 // SetTopMargin is a helper method to define mock.On call
 //   - margin float64
 func (_e *Fpdf_Expecter) SetTopMargin(margin interface{}) *Fpdf_SetTopMargin_Call {
-	return &Fpdf_SetTopMargin_Call{Call: _e.mock.On("SetTopMargin", margin)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetTopMargin_Call) Run(run func(margin float64)) *Fpdf_SetTopMargin_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetTopMargin_Call) Return() *Fpdf_SetTopMargin_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetTopMargin_Call) RunAndReturn(run func(float64)) *Fpdf_SetTopMargin_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetUnderlineThickness provides a mock function with given fields: thickness
 }
 
-// SetUnderlineThickness provides a mock function with given fields: thickness
-func (_m *Fpdf) SetUnderlineThickness(thickness float64) {
-	_m.Called(thickness)
-}
+func (_m *Fpdf) SetUnderlineThickness(thickness float64) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetUnderlineThickness_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetUnderlineThickness'
 type Fpdf_SetUnderlineThickness_Call struct {
@@ -5686,65 +4655,63 @@ type Fpdf_SetUnderlineThickness_Call struct {
 // SetUnderlineThickness is a helper method to define mock.On call
 //   - thickness float64
 func (_e *Fpdf_Expecter) SetUnderlineThickness(thickness interface{}) *Fpdf_SetUnderlineThickness_Call {
-	return &Fpdf_SetUnderlineThickness_Call{Call: _e.mock.On("SetUnderlineThickness", thickness)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetUnderlineThickness_Call) Run(run func(thickness float64)) *Fpdf_SetUnderlineThickness_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetUnderlineThickness_Call) Return() *Fpdf_SetUnderlineThickness_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetUnderlineThickness_Call) RunAndReturn(run func(float64)) *Fpdf_SetUnderlineThickness_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetX provides a mock function with given fields: x
 }
 
-// SetX provides a mock function with given fields: x
 func (_m *Fpdf) SetX(x float64) {
-	_m.Called(x)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetX_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetX'
+	return
 }
 
-// Fpdf_SetX_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetX'
 type Fpdf_SetX_Call struct {
 	*mock.Call
 }
 
 // SetX is a helper method to define mock.On call
 //   - x float64
-func (_e *Fpdf_Expecter) SetX(x interface{}) *Fpdf_SetX_Call {
-	return &Fpdf_SetX_Call{Call: _e.mock.On("SetX", x)}
-}
+func (_e *Fpdf_Expecter) SetX(x interface{}) *Fpdf_SetX_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetX_Call) Run(run func(x float64)) *Fpdf_SetX_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetX_Call) Return() *Fpdf_SetX_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetX_Call) Return() *Fpdf_SetX_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetX_Call) RunAndReturn(run func(float64)) *Fpdf_SetX_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetXY provides a mock function with given fields: x, y
 }
 
-// SetXY provides a mock function with given fields: x, y
 func (_m *Fpdf) SetXY(x float64, y float64) {
-	_m.Called(x, y)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetXY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetXY'
+	return
 }
 
-// Fpdf_SetXY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetXY'
 type Fpdf_SetXY_Call struct {
 	*mock.Call
 }
@@ -5753,30 +4720,25 @@ type Fpdf_SetXY_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) SetXY(x interface{}, y interface{}) *Fpdf_SetXY_Call {
-	return &Fpdf_SetXY_Call{Call: _e.mock.On("SetXY", x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetXY_Call) Run(run func(x float64, y float64)) *Fpdf_SetXY_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetXY_Call) Return() *Fpdf_SetXY_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetXY_Call) Return() *Fpdf_SetXY_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetXY_Call) RunAndReturn(run func(float64, float64)) *Fpdf_SetXY_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetXmpMetadata provides a mock function with given fields: xmpStream
 }
 
-// SetXmpMetadata provides a mock function with given fields: xmpStream
-func (_m *Fpdf) SetXmpMetadata(xmpStream []byte) {
-	_m.Called(xmpStream)
-}
+func (_m *Fpdf) SetXmpMetadata(xmpStream []byte) { _ = "STUB: not implemented"; return }
 
 // Fpdf_SetXmpMetadata_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetXmpMetadata'
 type Fpdf_SetXmpMetadata_Call struct {
@@ -5786,78 +4748,57 @@ type Fpdf_SetXmpMetadata_Call struct {
 // SetXmpMetadata is a helper method to define mock.On call
 //   - xmpStream []byte
 func (_e *Fpdf_Expecter) SetXmpMetadata(xmpStream interface{}) *Fpdf_SetXmpMetadata_Call {
-	return &Fpdf_SetXmpMetadata_Call{Call: _e.mock.On("SetXmpMetadata", xmpStream)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetXmpMetadata_Call) Run(run func(xmpStream []byte)) *Fpdf_SetXmpMetadata_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].([]byte))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetXmpMetadata_Call) Return() *Fpdf_SetXmpMetadata_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SetXmpMetadata_Call) RunAndReturn(run func([]byte)) *Fpdf_SetXmpMetadata_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetY provides a mock function with given fields: y
 }
 
-// SetY provides a mock function with given fields: y
 func (_m *Fpdf) SetY(y float64) {
-	_m.Called(y)
+	_ = "STUB: not implemented"
+
+	// Fpdf_SetY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetY'
+	return
 }
 
-// Fpdf_SetY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetY'
 type Fpdf_SetY_Call struct {
 	*mock.Call
 }
 
 // SetY is a helper method to define mock.On call
 //   - y float64
-func (_e *Fpdf_Expecter) SetY(y interface{}) *Fpdf_SetY_Call {
-	return &Fpdf_SetY_Call{Call: _e.mock.On("SetY", y)}
-}
+func (_e *Fpdf_Expecter) SetY(y interface{}) *Fpdf_SetY_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetY_Call) Run(run func(y float64)) *Fpdf_SetY_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_SetY_Call) Return() *Fpdf_SetY_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_SetY_Call) Return() *Fpdf_SetY_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_SetY_Call) RunAndReturn(run func(float64)) *Fpdf_SetY_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SplitLines provides a mock function with given fields: txt, w
 }
 
-// SplitLines provides a mock function with given fields: txt, w
-func (_m *Fpdf) SplitLines(txt []byte, w float64) [][]byte {
-	ret := _m.Called(txt, w)
-
-	if len(ret) == 0 {
-		panic("no return value specified for SplitLines")
-	}
-
-	var r0 [][]byte
-	if rf, ok := ret.Get(0).(func([]byte, float64) [][]byte); ok {
-		r0 = rf(txt, w)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).([][]byte)
-		}
-	}
-
-	return r0
-}
+func (_m *Fpdf) SplitLines(txt []byte, w float64) [][]byte { _ = "STUB: not implemented"; return nil }
 
 // Fpdf_SplitLines_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SplitLines'
 type Fpdf_SplitLines_Call struct {
@@ -5868,43 +4809,27 @@ type Fpdf_SplitLines_Call struct {
 //   - txt []byte
 //   - w float64
 func (_e *Fpdf_Expecter) SplitLines(txt interface{}, w interface{}) *Fpdf_SplitLines_Call {
-	return &Fpdf_SplitLines_Call{Call: _e.mock.On("SplitLines", txt, w)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SplitLines_Call) Run(run func(txt []byte, w float64)) *Fpdf_SplitLines_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].([]byte), args[1].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SplitLines_Call) Return(_a0 [][]byte) *Fpdf_SplitLines_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_SplitLines_Call) RunAndReturn(run func([]byte, float64) [][]byte) *Fpdf_SplitLines_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // String provides a mock function with no fields
-func (_m *Fpdf) String() string {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for String")
-	}
-
-	var r0 string
-	if rf, ok := ret.Get(0).(func() string); ok {
-		r0 = rf()
-	} else {
-		r0 = ret.Get(0).(string)
-	}
-
-	return r0
-}
+func (_m *Fpdf) String() string { _ = "STUB: not implemented"; return "" }
 
 // Fpdf_String_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'String'
 type Fpdf_String_Call struct {
@@ -5912,31 +4837,25 @@ type Fpdf_String_Call struct {
 }
 
 // String is a helper method to define mock.On call
-func (_e *Fpdf_Expecter) String() *Fpdf_String_Call {
-	return &Fpdf_String_Call{Call: _e.mock.On("String")}
-}
+func (_e *Fpdf_Expecter) String() *Fpdf_String_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_String_Call) Run(run func()) *Fpdf_String_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_String_Call) Return(_a0 string) *Fpdf_String_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_String_Call) RunAndReturn(run func() string) *Fpdf_String_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Text provides a mock function with given fields: x, y, txtStr
-func (_m *Fpdf) Text(x float64, y float64, txtStr string) {
-	_m.Called(x, y, txtStr)
-}
+func (_m *Fpdf) Text(x float64, y float64, txtStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_Text_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Text'
 type Fpdf_Text_Call struct {
@@ -5948,32 +4867,31 @@ type Fpdf_Text_Call struct {
 //   - y float64
 //   - txtStr string
 func (_e *Fpdf_Expecter) Text(x interface{}, y interface{}, txtStr interface{}) *Fpdf_Text_Call {
-	return &Fpdf_Text_Call{Call: _e.mock.On("Text", x, y, txtStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Text_Call) Run(run func(x float64, y float64, txtStr string)) *Fpdf_Text_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Text_Call) Return() *Fpdf_Text_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Text_Call) Return() *Fpdf_Text_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Text_Call) RunAndReturn(run func(float64, float64, string)) *Fpdf_Text_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Transform provides a mock function with given fields: tm
 }
 
-// Transform provides a mock function with given fields: tm
 func (_m *Fpdf) Transform(tm gofpdf.TransformMatrix) {
-	_m.Called(tm)
+	_ = "STUB: not implemented"
+
+	// Fpdf_Transform_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Transform'
+	return
 }
 
-// Fpdf_Transform_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Transform'
 type Fpdf_Transform_Call struct {
 	*mock.Call
 }
@@ -5981,96 +4899,99 @@ type Fpdf_Transform_Call struct {
 // Transform is a helper method to define mock.On call
 //   - tm gofpdf.TransformMatrix
 func (_e *Fpdf_Expecter) Transform(tm interface{}) *Fpdf_Transform_Call {
-	return &Fpdf_Transform_Call{Call: _e.mock.On("Transform", tm)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Transform_Call) Run(run func(tm gofpdf.TransformMatrix)) *Fpdf_Transform_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(gofpdf.TransformMatrix))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Transform_Call) Return() *Fpdf_Transform_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Transform_Call) Return() *Fpdf_Transform_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Transform_Call) RunAndReturn(run func(gofpdf.TransformMatrix)) *Fpdf_Transform_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformBegin provides a mock function with no fields
 }
 
-// TransformBegin provides a mock function with no fields
 func (_m *Fpdf) TransformBegin() {
-	_m.Called()
+	_ = "STUB: not implemented"
+
+	// Fpdf_TransformBegin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformBegin'
+	return
 }
 
-// Fpdf_TransformBegin_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformBegin'
 type Fpdf_TransformBegin_Call struct {
 	*mock.Call
 }
 
 // TransformBegin is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) TransformBegin() *Fpdf_TransformBegin_Call {
-	return &Fpdf_TransformBegin_Call{Call: _e.mock.On("TransformBegin")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformBegin_Call) Run(run func()) *Fpdf_TransformBegin_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformBegin_Call) Return() *Fpdf_TransformBegin_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformBegin_Call) RunAndReturn(run func()) *Fpdf_TransformBegin_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformEnd provides a mock function with no fields
 }
 
-// TransformEnd provides a mock function with no fields
 func (_m *Fpdf) TransformEnd() {
-	_m.Called()
+	_ = "STUB: not implemented"
+
+	// Fpdf_TransformEnd_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformEnd'
+	return
 }
 
-// Fpdf_TransformEnd_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformEnd'
 type Fpdf_TransformEnd_Call struct {
 	*mock.Call
 }
 
 // TransformEnd is a helper method to define mock.On call
 func (_e *Fpdf_Expecter) TransformEnd() *Fpdf_TransformEnd_Call {
-	return &Fpdf_TransformEnd_Call{Call: _e.mock.On("TransformEnd")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformEnd_Call) Run(run func()) *Fpdf_TransformEnd_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformEnd_Call) Return() *Fpdf_TransformEnd_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformEnd_Call) RunAndReturn(run func()) *Fpdf_TransformEnd_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformMirrorHorizontal provides a mock function with given fields: x
 }
 
-// TransformMirrorHorizontal provides a mock function with given fields: x
 func (_m *Fpdf) TransformMirrorHorizontal(x float64) {
-	_m.Called(x)
+	_ = "STUB: not implemented"
+
+	// Fpdf_TransformMirrorHorizontal_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformMirrorHorizontal'
+	return
 }
 
-// Fpdf_TransformMirrorHorizontal_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformMirrorHorizontal'
 type Fpdf_TransformMirrorHorizontal_Call struct {
 	*mock.Call
 }
@@ -6078,32 +4999,34 @@ type Fpdf_TransformMirrorHorizontal_Call struct {
 // TransformMirrorHorizontal is a helper method to define mock.On call
 //   - x float64
 func (_e *Fpdf_Expecter) TransformMirrorHorizontal(x interface{}) *Fpdf_TransformMirrorHorizontal_Call {
-	return &Fpdf_TransformMirrorHorizontal_Call{Call: _e.mock.On("TransformMirrorHorizontal", x)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorHorizontal_Call) Run(run func(x float64)) *Fpdf_TransformMirrorHorizontal_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorHorizontal_Call) Return() *Fpdf_TransformMirrorHorizontal_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorHorizontal_Call) RunAndReturn(run func(float64)) *Fpdf_TransformMirrorHorizontal_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformMirrorLine provides a mock function with given fields: angle, x, y
 }
 
-// TransformMirrorLine provides a mock function with given fields: angle, x, y
 func (_m *Fpdf) TransformMirrorLine(angle float64, x float64, y float64) {
-	_m.Called(angle, x, y)
+	_ = "STUB: not implemented"
+	return
+
+	// Fpdf_TransformMirrorLine_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformMirrorLine'
 }
 
-// Fpdf_TransformMirrorLine_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformMirrorLine'
 type Fpdf_TransformMirrorLine_Call struct {
 	*mock.Call
 }
@@ -6113,32 +5036,34 @@ type Fpdf_TransformMirrorLine_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) TransformMirrorLine(angle interface{}, x interface{}, y interface{}) *Fpdf_TransformMirrorLine_Call {
-	return &Fpdf_TransformMirrorLine_Call{Call: _e.mock.On("TransformMirrorLine", angle, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorLine_Call) Run(run func(angle float64, x float64, y float64)) *Fpdf_TransformMirrorLine_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorLine_Call) Return() *Fpdf_TransformMirrorLine_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorLine_Call) RunAndReturn(run func(float64, float64, float64)) *Fpdf_TransformMirrorLine_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformMirrorPoint provides a mock function with given fields: x, y
 }
 
-// TransformMirrorPoint provides a mock function with given fields: x, y
 func (_m *Fpdf) TransformMirrorPoint(x float64, y float64) {
-	_m.Called(x, y)
+	_ = "STUB: not implemented"
+
+	// Fpdf_TransformMirrorPoint_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformMirrorPoint'
+	return
 }
 
-// Fpdf_TransformMirrorPoint_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformMirrorPoint'
 type Fpdf_TransformMirrorPoint_Call struct {
 	*mock.Call
 }
@@ -6147,32 +5072,34 @@ type Fpdf_TransformMirrorPoint_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) TransformMirrorPoint(x interface{}, y interface{}) *Fpdf_TransformMirrorPoint_Call {
-	return &Fpdf_TransformMirrorPoint_Call{Call: _e.mock.On("TransformMirrorPoint", x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorPoint_Call) Run(run func(x float64, y float64)) *Fpdf_TransformMirrorPoint_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorPoint_Call) Return() *Fpdf_TransformMirrorPoint_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorPoint_Call) RunAndReturn(run func(float64, float64)) *Fpdf_TransformMirrorPoint_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformMirrorVertical provides a mock function with given fields: y
 }
 
-// TransformMirrorVertical provides a mock function with given fields: y
 func (_m *Fpdf) TransformMirrorVertical(y float64) {
-	_m.Called(y)
+	_ = "STUB: not implemented"
+
+	// Fpdf_TransformMirrorVertical_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformMirrorVertical'
+	return
 }
 
-// Fpdf_TransformMirrorVertical_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformMirrorVertical'
 type Fpdf_TransformMirrorVertical_Call struct {
 	*mock.Call
 }
@@ -6180,32 +5107,34 @@ type Fpdf_TransformMirrorVertical_Call struct {
 // TransformMirrorVertical is a helper method to define mock.On call
 //   - y float64
 func (_e *Fpdf_Expecter) TransformMirrorVertical(y interface{}) *Fpdf_TransformMirrorVertical_Call {
-	return &Fpdf_TransformMirrorVertical_Call{Call: _e.mock.On("TransformMirrorVertical", y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorVertical_Call) Run(run func(y float64)) *Fpdf_TransformMirrorVertical_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorVertical_Call) Return() *Fpdf_TransformMirrorVertical_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformMirrorVertical_Call) RunAndReturn(run func(float64)) *Fpdf_TransformMirrorVertical_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformRotate provides a mock function with given fields: angle, x, y
 }
 
-// TransformRotate provides a mock function with given fields: angle, x, y
 func (_m *Fpdf) TransformRotate(angle float64, x float64, y float64) {
-	_m.Called(angle, x, y)
+	_ = "STUB: not implemented"
+	return
+
+	// Fpdf_TransformRotate_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformRotate'
 }
 
-// Fpdf_TransformRotate_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformRotate'
 type Fpdf_TransformRotate_Call struct {
 	*mock.Call
 }
@@ -6215,29 +5144,30 @@ type Fpdf_TransformRotate_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) TransformRotate(angle interface{}, x interface{}, y interface{}) *Fpdf_TransformRotate_Call {
-	return &Fpdf_TransformRotate_Call{Call: _e.mock.On("TransformRotate", angle, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformRotate_Call) Run(run func(angle float64, x float64, y float64)) *Fpdf_TransformRotate_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformRotate_Call) Return() *Fpdf_TransformRotate_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformRotate_Call) RunAndReturn(run func(float64, float64, float64)) *Fpdf_TransformRotate_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformScale provides a mock function with given fields: scaleWd, scaleHt, x, y
 }
 
-// TransformScale provides a mock function with given fields: scaleWd, scaleHt, x, y
 func (_m *Fpdf) TransformScale(scaleWd float64, scaleHt float64, x float64, y float64) {
-	_m.Called(scaleWd, scaleHt, x, y)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_TransformScale_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformScale'
@@ -6251,29 +5181,30 @@ type Fpdf_TransformScale_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) TransformScale(scaleWd interface{}, scaleHt interface{}, x interface{}, y interface{}) *Fpdf_TransformScale_Call {
-	return &Fpdf_TransformScale_Call{Call: _e.mock.On("TransformScale", scaleWd, scaleHt, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScale_Call) Run(run func(scaleWd float64, scaleHt float64, x float64, y float64)) *Fpdf_TransformScale_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScale_Call) Return() *Fpdf_TransformScale_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScale_Call) RunAndReturn(run func(float64, float64, float64, float64)) *Fpdf_TransformScale_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformScaleX provides a mock function with given fields: scaleWd, x, y
 }
 
-// TransformScaleX provides a mock function with given fields: scaleWd, x, y
 func (_m *Fpdf) TransformScaleX(scaleWd float64, x float64, y float64) {
-	_m.Called(scaleWd, x, y)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_TransformScaleX_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformScaleX'
@@ -6286,32 +5217,34 @@ type Fpdf_TransformScaleX_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) TransformScaleX(scaleWd interface{}, x interface{}, y interface{}) *Fpdf_TransformScaleX_Call {
-	return &Fpdf_TransformScaleX_Call{Call: _e.mock.On("TransformScaleX", scaleWd, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScaleX_Call) Run(run func(scaleWd float64, x float64, y float64)) *Fpdf_TransformScaleX_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScaleX_Call) Return() *Fpdf_TransformScaleX_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScaleX_Call) RunAndReturn(run func(float64, float64, float64)) *Fpdf_TransformScaleX_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformScaleXY provides a mock function with given fields: s, x, y
 }
 
-// TransformScaleXY provides a mock function with given fields: s, x, y
 func (_m *Fpdf) TransformScaleXY(s float64, x float64, y float64) {
-	_m.Called(s, x, y)
+	_ = "STUB: not implemented"
+	return
+
+	// Fpdf_TransformScaleXY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformScaleXY'
 }
 
-// Fpdf_TransformScaleXY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformScaleXY'
 type Fpdf_TransformScaleXY_Call struct {
 	*mock.Call
 }
@@ -6321,29 +5254,30 @@ type Fpdf_TransformScaleXY_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) TransformScaleXY(s interface{}, x interface{}, y interface{}) *Fpdf_TransformScaleXY_Call {
-	return &Fpdf_TransformScaleXY_Call{Call: _e.mock.On("TransformScaleXY", s, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScaleXY_Call) Run(run func(s float64, x float64, y float64)) *Fpdf_TransformScaleXY_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScaleXY_Call) Return() *Fpdf_TransformScaleXY_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScaleXY_Call) RunAndReturn(run func(float64, float64, float64)) *Fpdf_TransformScaleXY_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformScaleY provides a mock function with given fields: scaleHt, x, y
 }
 
-// TransformScaleY provides a mock function with given fields: scaleHt, x, y
 func (_m *Fpdf) TransformScaleY(scaleHt float64, x float64, y float64) {
-	_m.Called(scaleHt, x, y)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_TransformScaleY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformScaleY'
@@ -6356,29 +5290,30 @@ type Fpdf_TransformScaleY_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) TransformScaleY(scaleHt interface{}, x interface{}, y interface{}) *Fpdf_TransformScaleY_Call {
-	return &Fpdf_TransformScaleY_Call{Call: _e.mock.On("TransformScaleY", scaleHt, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScaleY_Call) Run(run func(scaleHt float64, x float64, y float64)) *Fpdf_TransformScaleY_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScaleY_Call) Return() *Fpdf_TransformScaleY_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformScaleY_Call) RunAndReturn(run func(float64, float64, float64)) *Fpdf_TransformScaleY_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformSkew provides a mock function with given fields: angleX, angleY, x, y
 }
 
-// TransformSkew provides a mock function with given fields: angleX, angleY, x, y
 func (_m *Fpdf) TransformSkew(angleX float64, angleY float64, x float64, y float64) {
-	_m.Called(angleX, angleY, x, y)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_TransformSkew_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformSkew'
@@ -6392,32 +5327,34 @@ type Fpdf_TransformSkew_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) TransformSkew(angleX interface{}, angleY interface{}, x interface{}, y interface{}) *Fpdf_TransformSkew_Call {
-	return &Fpdf_TransformSkew_Call{Call: _e.mock.On("TransformSkew", angleX, angleY, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformSkew_Call) Run(run func(angleX float64, angleY float64, x float64, y float64)) *Fpdf_TransformSkew_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64), args[3].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformSkew_Call) Return() *Fpdf_TransformSkew_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformSkew_Call) RunAndReturn(run func(float64, float64, float64, float64)) *Fpdf_TransformSkew_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformSkewX provides a mock function with given fields: angleX, x, y
 }
 
-// TransformSkewX provides a mock function with given fields: angleX, x, y
 func (_m *Fpdf) TransformSkewX(angleX float64, x float64, y float64) {
-	_m.Called(angleX, x, y)
+	_ = "STUB: not implemented"
+	return
+
+	// Fpdf_TransformSkewX_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformSkewX'
 }
 
-// Fpdf_TransformSkewX_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformSkewX'
 type Fpdf_TransformSkewX_Call struct {
 	*mock.Call
 }
@@ -6427,32 +5364,34 @@ type Fpdf_TransformSkewX_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) TransformSkewX(angleX interface{}, x interface{}, y interface{}) *Fpdf_TransformSkewX_Call {
-	return &Fpdf_TransformSkewX_Call{Call: _e.mock.On("TransformSkewX", angleX, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformSkewX_Call) Run(run func(angleX float64, x float64, y float64)) *Fpdf_TransformSkewX_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformSkewX_Call) Return() *Fpdf_TransformSkewX_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformSkewX_Call) RunAndReturn(run func(float64, float64, float64)) *Fpdf_TransformSkewX_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformSkewY provides a mock function with given fields: angleY, x, y
 }
 
-// TransformSkewY provides a mock function with given fields: angleY, x, y
 func (_m *Fpdf) TransformSkewY(angleY float64, x float64, y float64) {
-	_m.Called(angleY, x, y)
+	_ = "STUB: not implemented"
+	return
+
+	// Fpdf_TransformSkewY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformSkewY'
 }
 
-// Fpdf_TransformSkewY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformSkewY'
 type Fpdf_TransformSkewY_Call struct {
 	*mock.Call
 }
@@ -6462,32 +5401,34 @@ type Fpdf_TransformSkewY_Call struct {
 //   - x float64
 //   - y float64
 func (_e *Fpdf_Expecter) TransformSkewY(angleY interface{}, x interface{}, y interface{}) *Fpdf_TransformSkewY_Call {
-	return &Fpdf_TransformSkewY_Call{Call: _e.mock.On("TransformSkewY", angleY, x, y)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformSkewY_Call) Run(run func(angleY float64, x float64, y float64)) *Fpdf_TransformSkewY_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformSkewY_Call) Return() *Fpdf_TransformSkewY_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformSkewY_Call) RunAndReturn(run func(float64, float64, float64)) *Fpdf_TransformSkewY_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformTranslate provides a mock function with given fields: tx, ty
 }
 
-// TransformTranslate provides a mock function with given fields: tx, ty
 func (_m *Fpdf) TransformTranslate(tx float64, ty float64) {
-	_m.Called(tx, ty)
+	_ = "STUB: not implemented"
+
+	// Fpdf_TransformTranslate_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformTranslate'
+	return
 }
 
-// Fpdf_TransformTranslate_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformTranslate'
 type Fpdf_TransformTranslate_Call struct {
 	*mock.Call
 }
@@ -6496,32 +5437,34 @@ type Fpdf_TransformTranslate_Call struct {
 //   - tx float64
 //   - ty float64
 func (_e *Fpdf_Expecter) TransformTranslate(tx interface{}, ty interface{}) *Fpdf_TransformTranslate_Call {
-	return &Fpdf_TransformTranslate_Call{Call: _e.mock.On("TransformTranslate", tx, ty)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformTranslate_Call) Run(run func(tx float64, ty float64)) *Fpdf_TransformTranslate_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformTranslate_Call) Return() *Fpdf_TransformTranslate_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformTranslate_Call) RunAndReturn(run func(float64, float64)) *Fpdf_TransformTranslate_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformTranslateX provides a mock function with given fields: tx
 }
 
-// TransformTranslateX provides a mock function with given fields: tx
 func (_m *Fpdf) TransformTranslateX(tx float64) {
-	_m.Called(tx)
+	_ = "STUB: not implemented"
+
+	// Fpdf_TransformTranslateX_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformTranslateX'
+	return
 }
 
-// Fpdf_TransformTranslateX_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformTranslateX'
 type Fpdf_TransformTranslateX_Call struct {
 	*mock.Call
 }
@@ -6529,32 +5472,34 @@ type Fpdf_TransformTranslateX_Call struct {
 // TransformTranslateX is a helper method to define mock.On call
 //   - tx float64
 func (_e *Fpdf_Expecter) TransformTranslateX(tx interface{}) *Fpdf_TransformTranslateX_Call {
-	return &Fpdf_TransformTranslateX_Call{Call: _e.mock.On("TransformTranslateX", tx)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformTranslateX_Call) Run(run func(tx float64)) *Fpdf_TransformTranslateX_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformTranslateX_Call) Return() *Fpdf_TransformTranslateX_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformTranslateX_Call) RunAndReturn(run func(float64)) *Fpdf_TransformTranslateX_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// TransformTranslateY provides a mock function with given fields: ty
 }
 
-// TransformTranslateY provides a mock function with given fields: ty
 func (_m *Fpdf) TransformTranslateY(ty float64) {
-	_m.Called(ty)
+	_ = "STUB: not implemented"
+
+	// Fpdf_TransformTranslateY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformTranslateY'
+	return
 }
 
-// Fpdf_TransformTranslateY_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'TransformTranslateY'
 type Fpdf_TransformTranslateY_Call struct {
 	*mock.Call
 }
@@ -6562,44 +5507,30 @@ type Fpdf_TransformTranslateY_Call struct {
 // TransformTranslateY is a helper method to define mock.On call
 //   - ty float64
 func (_e *Fpdf_Expecter) TransformTranslateY(ty interface{}) *Fpdf_TransformTranslateY_Call {
-	return &Fpdf_TransformTranslateY_Call{Call: _e.mock.On("TransformTranslateY", ty)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformTranslateY_Call) Run(run func(ty float64)) *Fpdf_TransformTranslateY_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformTranslateY_Call) Return() *Fpdf_TransformTranslateY_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_TransformTranslateY_Call) RunAndReturn(run func(float64)) *Fpdf_TransformTranslateY_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// UnicodeTranslatorFromDescriptor provides a mock function with given fields: cpStr
 }
 
-// UnicodeTranslatorFromDescriptor provides a mock function with given fields: cpStr
 func (_m *Fpdf) UnicodeTranslatorFromDescriptor(cpStr string) func(string) string {
-	ret := _m.Called(cpStr)
-
-	if len(ret) == 0 {
-		panic("no return value specified for UnicodeTranslatorFromDescriptor")
-	}
-
-	var r0 func(string) string
-	if rf, ok := ret.Get(0).(func(string) func(string) string); ok {
-		r0 = rf(cpStr)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(func(string) string)
-		}
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Fpdf_UnicodeTranslatorFromDescriptor_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'UnicodeTranslatorFromDescriptor'
@@ -6610,43 +5541,27 @@ type Fpdf_UnicodeTranslatorFromDescriptor_Call struct {
 // UnicodeTranslatorFromDescriptor is a helper method to define mock.On call
 //   - cpStr string
 func (_e *Fpdf_Expecter) UnicodeTranslatorFromDescriptor(cpStr interface{}) *Fpdf_UnicodeTranslatorFromDescriptor_Call {
-	return &Fpdf_UnicodeTranslatorFromDescriptor_Call{Call: _e.mock.On("UnicodeTranslatorFromDescriptor", cpStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UnicodeTranslatorFromDescriptor_Call) Run(run func(cpStr string)) *Fpdf_UnicodeTranslatorFromDescriptor_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UnicodeTranslatorFromDescriptor_Call) Return(rep func(string) string) *Fpdf_UnicodeTranslatorFromDescriptor_Call {
-	_c.Call.Return(rep)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UnicodeTranslatorFromDescriptor_Call) RunAndReturn(run func(string) func(string) string) *Fpdf_UnicodeTranslatorFromDescriptor_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // UnitToPointConvert provides a mock function with given fields: u
-func (_m *Fpdf) UnitToPointConvert(u float64) float64 {
-	ret := _m.Called(u)
-
-	if len(ret) == 0 {
-		panic("no return value specified for UnitToPointConvert")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func(float64) float64); ok {
-		r0 = rf(u)
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
-}
+func (_m *Fpdf) UnitToPointConvert(u float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // Fpdf_UnitToPointConvert_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'UnitToPointConvert'
 type Fpdf_UnitToPointConvert_Call struct {
@@ -6656,32 +5571,33 @@ type Fpdf_UnitToPointConvert_Call struct {
 // UnitToPointConvert is a helper method to define mock.On call
 //   - u float64
 func (_e *Fpdf_Expecter) UnitToPointConvert(u interface{}) *Fpdf_UnitToPointConvert_Call {
-	return &Fpdf_UnitToPointConvert_Call{Call: _e.mock.On("UnitToPointConvert", u)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UnitToPointConvert_Call) Run(run func(u float64)) *Fpdf_UnitToPointConvert_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UnitToPointConvert_Call) Return(pt float64) *Fpdf_UnitToPointConvert_Call {
-	_c.Call.Return(pt)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UnitToPointConvert_Call) RunAndReturn(run func(float64) float64) *Fpdf_UnitToPointConvert_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // UseTemplate provides a mock function with given fields: t
 func (_m *Fpdf) UseTemplate(t gofpdf.Template) {
-	_m.Called(t)
+	_ = "STUB: not implemented"
+
+	// Fpdf_UseTemplate_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'UseTemplate'
+	return
 }
 
-// Fpdf_UseTemplate_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'UseTemplate'
 type Fpdf_UseTemplate_Call struct {
 	*mock.Call
 }
@@ -6689,29 +5605,30 @@ type Fpdf_UseTemplate_Call struct {
 // UseTemplate is a helper method to define mock.On call
 //   - t gofpdf.Template
 func (_e *Fpdf_Expecter) UseTemplate(t interface{}) *Fpdf_UseTemplate_Call {
-	return &Fpdf_UseTemplate_Call{Call: _e.mock.On("UseTemplate", t)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UseTemplate_Call) Run(run func(t gofpdf.Template)) *Fpdf_UseTemplate_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(gofpdf.Template))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UseTemplate_Call) Return() *Fpdf_UseTemplate_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UseTemplate_Call) RunAndReturn(run func(gofpdf.Template)) *Fpdf_UseTemplate_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// UseTemplateScaled provides a mock function with given fields: t, corner, size
 }
 
-// UseTemplateScaled provides a mock function with given fields: t, corner, size
 func (_m *Fpdf) UseTemplateScaled(t gofpdf.Template, corner gofpdf.PointType, size gofpdf.SizeType) {
-	_m.Called(t, corner, size)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_UseTemplateScaled_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'UseTemplateScaled'
@@ -6724,30 +5641,28 @@ type Fpdf_UseTemplateScaled_Call struct {
 //   - corner gofpdf.PointType
 //   - size gofpdf.SizeType
 func (_e *Fpdf_Expecter) UseTemplateScaled(t interface{}, corner interface{}, size interface{}) *Fpdf_UseTemplateScaled_Call {
-	return &Fpdf_UseTemplateScaled_Call{Call: _e.mock.On("UseTemplateScaled", t, corner, size)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UseTemplateScaled_Call) Run(run func(t gofpdf.Template, corner gofpdf.PointType, size gofpdf.SizeType)) *Fpdf_UseTemplateScaled_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(gofpdf.Template), args[1].(gofpdf.PointType), args[2].(gofpdf.SizeType))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UseTemplateScaled_Call) Return() *Fpdf_UseTemplateScaled_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_UseTemplateScaled_Call) RunAndReturn(run func(gofpdf.Template, gofpdf.PointType, gofpdf.SizeType)) *Fpdf_UseTemplateScaled_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Write provides a mock function with given fields: h, txtStr
 }
 
-// Write provides a mock function with given fields: h, txtStr
-func (_m *Fpdf) Write(h float64, txtStr string) {
-	_m.Called(h, txtStr)
-}
+func (_m *Fpdf) Write(h float64, txtStr string) { _ = "STUB: not implemented"; return }
 
 // Fpdf_Write_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Write'
 type Fpdf_Write_Call struct {
@@ -6758,29 +5673,27 @@ type Fpdf_Write_Call struct {
 //   - h float64
 //   - txtStr string
 func (_e *Fpdf_Expecter) Write(h interface{}, txtStr interface{}) *Fpdf_Write_Call {
-	return &Fpdf_Write_Call{Call: _e.mock.On("Write", h, txtStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Write_Call) Run(run func(h float64, txtStr string)) *Fpdf_Write_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Write_Call) Return() *Fpdf_Write_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Write_Call) Return() *Fpdf_Write_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Write_Call) RunAndReturn(run func(float64, string)) *Fpdf_Write_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// WriteAligned provides a mock function with given fields: width, lineHeight, textStr, alignStr
 }
 
-// WriteAligned provides a mock function with given fields: width, lineHeight, textStr, alignStr
 func (_m *Fpdf) WriteAligned(width float64, lineHeight float64, textStr string, alignStr string) {
-	_m.Called(width, lineHeight, textStr, alignStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_WriteAligned_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'WriteAligned'
@@ -6794,29 +5707,30 @@ type Fpdf_WriteAligned_Call struct {
 //   - textStr string
 //   - alignStr string
 func (_e *Fpdf_Expecter) WriteAligned(width interface{}, lineHeight interface{}, textStr interface{}, alignStr interface{}) *Fpdf_WriteAligned_Call {
-	return &Fpdf_WriteAligned_Call{Call: _e.mock.On("WriteAligned", width, lineHeight, textStr, alignStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_WriteAligned_Call) Run(run func(width float64, lineHeight float64, textStr string, alignStr string)) *Fpdf_WriteAligned_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(float64), args[2].(string), args[3].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_WriteAligned_Call) Return() *Fpdf_WriteAligned_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_WriteAligned_Call) RunAndReturn(run func(float64, float64, string, string)) *Fpdf_WriteAligned_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// WriteLinkID provides a mock function with given fields: h, displayStr, linkID
 }
 
-// WriteLinkID provides a mock function with given fields: h, displayStr, linkID
 func (_m *Fpdf) WriteLinkID(h float64, displayStr string, linkID int) {
-	_m.Called(h, displayStr, linkID)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_WriteLinkID_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'WriteLinkID'
@@ -6829,29 +5743,30 @@ type Fpdf_WriteLinkID_Call struct {
 //   - displayStr string
 //   - linkID int
 func (_e *Fpdf_Expecter) WriteLinkID(h interface{}, displayStr interface{}, linkID interface{}) *Fpdf_WriteLinkID_Call {
-	return &Fpdf_WriteLinkID_Call{Call: _e.mock.On("WriteLinkID", h, displayStr, linkID)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_WriteLinkID_Call) Run(run func(h float64, displayStr string, linkID int)) *Fpdf_WriteLinkID_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(string), args[2].(int))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_WriteLinkID_Call) Return() *Fpdf_WriteLinkID_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_WriteLinkID_Call) RunAndReturn(run func(float64, string, int)) *Fpdf_WriteLinkID_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// WriteLinkString provides a mock function with given fields: h, displayStr, targetStr
 }
 
-// WriteLinkString provides a mock function with given fields: h, displayStr, targetStr
 func (_m *Fpdf) WriteLinkString(h float64, displayStr string, targetStr string) {
-	_m.Called(h, displayStr, targetStr)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_WriteLinkString_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'WriteLinkString'
@@ -6864,32 +5779,30 @@ type Fpdf_WriteLinkString_Call struct {
 //   - displayStr string
 //   - targetStr string
 func (_e *Fpdf_Expecter) WriteLinkString(h interface{}, displayStr interface{}, targetStr interface{}) *Fpdf_WriteLinkString_Call {
-	return &Fpdf_WriteLinkString_Call{Call: _e.mock.On("WriteLinkString", h, displayStr, targetStr)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_WriteLinkString_Call) Run(run func(h float64, displayStr string, targetStr string)) *Fpdf_WriteLinkString_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(float64), args[1].(string), args[2].(string))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_WriteLinkString_Call) Return() *Fpdf_WriteLinkString_Call {
-	_c.Call.Return()
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_WriteLinkString_Call) RunAndReturn(run func(float64, string, string)) *Fpdf_WriteLinkString_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// Writef provides a mock function with given fields: h, fmtStr, args
 }
 
-// Writef provides a mock function with given fields: h, fmtStr, args
 func (_m *Fpdf) Writef(h float64, fmtStr string, args ...interface{}) {
-	var _ca []interface{}
-	_ca = append(_ca, h, fmtStr)
-	_ca = append(_ca, args...)
-	_m.Called(_ca...)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Fpdf_Writef_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Writef'
@@ -6902,44 +5815,30 @@ type Fpdf_Writef_Call struct {
 //   - fmtStr string
 //   - args ...interface{}
 func (_e *Fpdf_Expecter) Writef(h interface{}, fmtStr interface{}, args ...interface{}) *Fpdf_Writef_Call {
-	return &Fpdf_Writef_Call{Call: _e.mock.On("Writef",
-		append([]interface{}{h, fmtStr}, args...)...)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Fpdf_Writef_Call) Run(run func(h float64, fmtStr string, args ...interface{})) *Fpdf_Writef_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		variadicArgs := make([]interface{}, len(args)-2)
-		for i, a := range args[2:] {
-			if a != nil {
-				variadicArgs[i] = a.(interface{})
-			}
-		}
-		run(args[0].(float64), args[1].(string), variadicArgs...)
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Fpdf_Writef_Call) Return() *Fpdf_Writef_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Fpdf_Writef_Call) Return() *Fpdf_Writef_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Fpdf_Writef_Call) RunAndReturn(run func(float64, string, ...interface{})) *Fpdf_Writef_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// NewFpdf creates a new instance of Fpdf. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+	// The first argument is typically a *testing.T value.
 }
 
-// NewFpdf creates a new instance of Fpdf. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
-// The first argument is typically a *testing.T value.
 func NewFpdf(t interface {
 	mock.TestingT
 	Cleanup(func())
 },
 ) *Fpdf {
-	mock := &Fpdf{}
-	mock.Mock.Test(t)
-
-	t.Cleanup(func() { mock.AssertExpectations(t) })
-
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }

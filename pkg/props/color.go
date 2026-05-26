@@ -1,7 +1,5 @@
 package props
 
-import "fmt"
-
 var (
 	// WhiteColor is a Color with all values in 255.
 	WhiteColor = Color{Red: 255, Green: 255, Blue: 255}
@@ -28,10 +26,4 @@ type Color struct {
 }
 
 // ToString returns a string representation of the Color.
-func (c *Color) ToString() string {
-	if c == nil {
-		return ""
-	}
-
-	return fmt.Sprintf("RGB(%d, %d, %d)", c.Red, c.Green, c.Blue)
-}
+func (c *Color) ToString() string { _ = "STUB: not implemented"; return "" }

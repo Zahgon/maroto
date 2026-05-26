@@ -6,6 +6,4 @@ type Config struct {
 	TestPath     string `yaml:"test_path"`
 }
 
-func (c *Config) getAbsoluteFilePath(file string) string {
-	return c.AbsolutePath + c.TestPath + file
-}
+func (c *Config) getAbsoluteFilePath(file string) string { _ = "STUB: not implemented"; return "" }

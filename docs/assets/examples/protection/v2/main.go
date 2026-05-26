@@ -4,13 +4,6 @@ import (
 	"log"
 
 	"github.com/johnfercher/maroto/v2/pkg/core"
-
-	"github.com/johnfercher/maroto/v2"
-
-	"github.com/johnfercher/maroto/v2/pkg/components/text"
-	"github.com/johnfercher/maroto/v2/pkg/consts/protection"
-
-	"github.com/johnfercher/maroto/v2/pkg/config"
 )
 
 func main() {
@@ -31,17 +24,4 @@ func main() {
 	}
 }
 
-func GetMaroto() core.Maroto {
-	cfg := config.NewBuilder().
-		WithProtection(protection.None, "user", "owner").
-		Build()
-
-	mrt := maroto.New(cfg)
-	m := maroto.NewMetricsDecorator(mrt)
-
-	m.AddRows(
-		text.NewRow(30, "supersecret content"),
-	)
-
-	return m
-}
+func GetMaroto() core.Maroto { _ = "STUB: not implemented"; return *new(core.Maroto) }

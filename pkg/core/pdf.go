@@ -1,13 +1,8 @@
 package core
 
 import (
-	"encoding/base64"
 	"errors"
-	"fmt"
-	"os"
 
-	"github.com/johnfercher/maroto/v2/internal/time"
-	"github.com/johnfercher/maroto/v2/pkg/merge"
 	"github.com/johnfercher/maroto/v2/pkg/metrics"
 )
 
@@ -23,70 +18,31 @@ type Pdf struct {
 
 // NewPDF is responsible to create a new instance of PDF.
 func NewPDF(bytes []byte, report *metrics.Report) Document {
-	return &Pdf{
-		bytes:  bytes,
-		report: report,
-	}
+	_ = "STUB: not implemented"
+	return *new(Document)
 }
 
 // GetBytes returns the PDF bytes.
 func (p *Pdf) GetBytes() []byte {
-	return p.bytes
+	_ = "STUB: not implemented"
+
+	// GetBase64 returns the PDF bytes in base64.
+	return nil
 }
 
-// GetBase64 returns the PDF bytes in base64.
-func (p *Pdf) GetBase64() string {
-	return base64.StdEncoding.EncodeToString(p.bytes)
-}
+func (p *Pdf) GetBase64() string { _ = "STUB: not implemented"; return "" }
 
 // GetReport returns the metrics.Report.
 func (p *Pdf) GetReport() *metrics.Report {
-	return p.report
-}
+	_ = "STUB: not implemented"
 
-// Save saves the PDF in a file.
-func (p *Pdf) Save(file string) error {
-	err := os.WriteFile(file, p.bytes, os.ModePerm)
-	if err != nil {
-		return fmt.Errorf("%w: %w", ErrCannotWriteFile, err)
-	}
+	// Save saves the PDF in a file.
 	return nil
 }
+
+func (p *Pdf) Save(file string) error { _ = "STUB: not implemented"; return nil }
 
 // Merge merges the PDF with another PDF.
-func (p *Pdf) Merge(bytes []byte) error {
-	var mergedBytes []byte
-	var err error
+func (p *Pdf) Merge(bytes []byte) error { _ = "STUB: not implemented"; return nil }
 
-	timeSpent := time.GetTimeSpent(func() {
-		mergedBytes, err = merge.Bytes(p.bytes, bytes)
-	})
-	if err != nil {
-		return fmt.Errorf("%w: %w", ErrCannotMergeBytes, err)
-	}
-	p.bytes = mergedBytes
-	if p.report != nil {
-		p.appendMetric(timeSpent)
-	}
-
-	return nil
-}
-
-func (p *Pdf) appendMetric(timeSpent *metrics.Time) {
-	timeMetric := metrics.TimeMetric{
-		Key:   "merge_pdf",
-		Times: []*metrics.Time{timeSpent},
-		Avg:   timeSpent,
-	}
-	timeMetric.Normalize()
-	p.report.TimeMetrics = append(p.report.TimeMetrics, timeMetric)
-
-	p.report.SizeMetric = metrics.SizeMetric{
-		Key: "file_size",
-		Size: metrics.Size{
-			Value: float64(len(p.bytes)),
-			Scale: metrics.Byte,
-		},
-	}
-	p.report.Normalize()
-}
+func (p *Pdf) appendMetric(timeSpent *metrics.Time) { _ = "STUB: not implemented"; return }

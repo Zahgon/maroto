@@ -46,27 +46,6 @@ const (
 )
 
 // GetDimensions returns the width and height of the page size.
-func GetDimensions(pageSize Type) (float64, float64) {
-	switch pageSize {
-	case A1:
-		return 594.0, 841.0
-	case A2:
-		return 419.9, 594.0
-	case A4:
-		return 210.0, 297.0
-	case A3:
-		return 297.0, 419.9
-	case A5:
-		return 148.4, 210.0
-	case A6:
-		return 105.0, 148.5
-	case Letter:
-		return 215.9, 279.4
-	case Legal:
-		return 215.9, 355.6
-	case Tabloid:
-		return 279.4, 431.8
-	default: // A4
-		return 210.0, 297.0
-	}
-}
+func GetDimensions(pageSize Type) (float64, float64) { _ = "STUB: not implemented"; return 0, 0 }
+
+// A4

@@ -3,16 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/johnfercher/maroto/v2/pkg/components/code"
-	"github.com/johnfercher/maroto/v2/pkg/components/image"
-	"github.com/johnfercher/maroto/v2/pkg/components/text"
-	"github.com/johnfercher/maroto/v2/pkg/props"
-
 	"github.com/johnfercher/maroto/v2/pkg/core"
-
-	"github.com/johnfercher/maroto/v2"
-
-	"github.com/johnfercher/maroto/v2/pkg/config"
 )
 
 func main() {
@@ -33,52 +24,7 @@ func main() {
 	}
 }
 
-func GetMaroto() core.Maroto {
-	cfg := config.NewBuilder().
-		WithDebug(true).
-		Build()
-
-	mrt := maroto.New(cfg)
-	m := maroto.NewMetricsDecorator(mrt)
-
-	m.AddAutoRow(
-		image.NewFromFileCol(5, "docs/assets/images/biplane.jpg"),
-		text.NewCol(7, intro),
-	)
-
-	m.AddAutoRow(
-		image.NewFromFileCol(5, "docs/assets/images/biplane.jpg"),
-		text.NewCol(7, intro, props.Text{
-			Size: 13,
-		}),
-	)
-
-	m.AddAutoRow(
-		image.NewFromFileCol(5, "docs/assets/images/biplane.jpg"),
-		text.NewCol(7, intro, props.Text{
-			Size:   13,
-			Top:    8,
-			Bottom: 9,
-		}),
-	)
-
-	m.AddAutoRow(
-		code.NewBarCol(4, "code"),
-		text.NewCol(8, intro),
-	)
-
-	m.AddAutoRow(
-		code.NewMatrixCol(3, "code"),
-		text.NewCol(9, intro),
-	)
-
-	m.AddAutoRow(
-		code.NewQrCol(2, "code"),
-		text.NewCol(10, intro),
-	)
-
-	return m
-}
+func GetMaroto() core.Maroto { _ = "STUB: not implemented"; return *new(core.Maroto) }
 
 var intro = `Numa toca no chão vivia um hobbit. Não uma toca nojenta, suja, úmida, 
 cheia de pontas de minhocas e um cheiro de limo, nem tam pouco uma toca seca, vazia, arenosa, 

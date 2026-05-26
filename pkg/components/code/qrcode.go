@@ -5,8 +5,6 @@ package code
 import (
 	"github.com/johnfercher/go-tree/node"
 
-	"github.com/johnfercher/maroto/v2/pkg/components/col"
-	"github.com/johnfercher/maroto/v2/pkg/components/row"
 	"github.com/johnfercher/maroto/v2/pkg/core"
 	"github.com/johnfercher/maroto/v2/pkg/core/entity"
 	"github.com/johnfercher/maroto/v2/pkg/props"
@@ -20,68 +18,44 @@ type QrCode struct {
 
 // NewQr is responsible to create an instance of a QrCode.
 func NewQr(code string, barcodeProps ...props.Rect) core.Component {
-	prop := props.Rect{}
-	if len(barcodeProps) > 0 {
-		prop = barcodeProps[0]
-	}
-	prop.MakeValid()
-
-	return &QrCode{
-		code: code,
-		prop: prop,
-	}
+	_ = "STUB: not implemented"
+	return *new(core.Component)
 }
 
 // NewQrCol is responsible to create an instance of a QrCode wrapped in a Col.
 func NewQrCol(size int, code string, ps ...props.Rect) core.Col {
-	qrCode := NewQr(code, ps...)
-	return col.New(size).Add(qrCode)
+	_ = "STUB: not implemented"
+	return *new(core.Col)
 }
 
 // NewAutoMatrixRow is responsible to create an instance of a qrcode wrapped in a Row with automatic height.
 //   - code: The value that must be placed in the qrcode
 //   - ps: A set of settings that must be applied to the qrcode
 func NewAutoQrRow(code string, ps ...props.Rect) core.Row {
-	qrCode := NewQr(code, ps...)
-	c := col.New().Add(qrCode)
-	return row.New().Add(c)
+	_ = "STUB: not implemented"
+	return *new(core.Row)
 }
 
 // NewQrRow is responsible to create an instance of a QrCode wrapped in a Row.
 func NewQrRow(height float64, code string, ps ...props.Rect) core.Row {
-	qrCode := NewQr(code, ps...)
-	c := col.New().Add(qrCode)
-	return row.New(height).Add(c)
+	_ = "STUB: not implemented"
+	return *new(core.Row)
 }
 
 // Render renders a QrCode into a PDF context.
 func (q *QrCode) Render(provider core.Provider, cell *entity.Cell) {
-	provider.AddQrCode(q.code, cell, &q.prop)
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetStructure returns the Structure of a QrCode.
-func (q *QrCode) GetStructure() *node.Node[core.Structure] {
-	str := core.Structure{
-		Type:    "qrcode",
-		Value:   q.code,
-		Details: q.prop.ToMap(),
-	}
-
-	return node.New(str)
-}
+func (q *QrCode) GetStructure() *node.Node[core.Structure] { _ = "STUB: not implemented"; return nil }
 
 // GetHeight returns the height that the QrCode will have in the PDF
 func (q *QrCode) GetHeight(provider core.Provider, cell *entity.Cell) float64 {
-	dimensions, err := provider.GetDimensionsByQrCode(q.code)
-	if err != nil {
-		return 0
-	}
-	proportion := dimensions.Height / dimensions.Width
-	width := (q.prop.Percent / 100) * cell.Width
-	return proportion * width
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // SetConfig set the config for the component.
-func (q *QrCode) SetConfig(config *entity.Config) {
-	q.config = config
-}
+func (q *QrCode) SetConfig(config *entity.Config) { _ = "STUB: not implemented"; return }

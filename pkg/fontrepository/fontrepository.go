@@ -3,8 +3,6 @@ package fontrepository
 
 import (
 	"errors"
-	"fmt"
-	"os"
 
 	"github.com/johnfercher/maroto/v2/pkg/consts/fontstyle"
 	"github.com/johnfercher/maroto/v2/pkg/core/entity"
@@ -26,72 +24,26 @@ type FontRepository struct {
 
 // New creates a new Repository.
 func New() Repository {
-	return &FontRepository{}
+	_ = "STUB: not implemented"
+	return *
+
+	// AddUTF8Font adds a custom font to the repository.
+	new(Repository)
 }
 
-// AddUTF8Font adds a custom font to the repository.
 func (r *FontRepository) AddUTF8Font(family string, style fontstyle.Type, file string) Repository {
-	if family == "" {
-		return r
-	}
-
-	if !style.IsValid() {
-		return r
-	}
-
-	if file == "" {
-		return r
-	}
-
-	r.customFonts = append(r.customFonts, &customFont{
-		family: family,
-		style:  style,
-		file:   file,
-	})
-
-	return r
+	_ = "STUB: not implemented"
+	return *new(Repository)
 }
 
 // AddUTF8FontFromBytes adds a custom font to the repository from a byte slice.
 func (r *FontRepository) AddUTF8FontFromBytes(family string, style fontstyle.Type, bytes []byte) Repository {
-	if family == "" {
-		return r
-	}
-
-	if !style.IsValid() {
-		return r
-	}
-
-	if bytes == nil {
-		return r
-	}
-
-	r.customFonts = append(r.customFonts, &customFont{
-		family: family,
-		style:  style,
-		bytes:  bytes,
-	})
-
-	return r
+	_ = "STUB: not implemented"
+	return *new(Repository)
 }
 
 // Load loads all custom fonts, reading file contents from disk where needed.
 func (r *FontRepository) Load() ([]entity.CustomFont, error) {
-	for _, customFont := range r.customFonts {
-		if customFont.file == "" {
-			continue
-		}
-		bytes, err := os.ReadFile(customFont.file)
-		if err != nil {
-			return nil, fmt.Errorf("%w: %w", ErrCannotReadFile, err)
-		}
-		customFont.bytes = bytes
-	}
-
-	var customFonts []entity.CustomFont
-	for _, customFont := range r.customFonts {
-		customFonts = append(customFonts, customFont)
-	}
-
-	return customFonts, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }

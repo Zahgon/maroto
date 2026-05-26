@@ -18,13 +18,12 @@ type Checkbox_Expecter struct {
 	mock *mock.Mock
 }
 
-func (_m *Checkbox) EXPECT() *Checkbox_Expecter {
-	return &Checkbox_Expecter{mock: &_m.Mock}
-}
+func (_m *Checkbox) EXPECT() *Checkbox_Expecter { _ = "STUB: not implemented"; return nil }
 
 // Add provides a mock function with given fields: label, cell, prop
 func (_m *Checkbox) Add(label string, cell *entity.Cell, prop *props.Checkbox) {
-	_m.Called(label, cell, prop)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Checkbox_Add_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Add'
@@ -37,37 +36,30 @@ type Checkbox_Add_Call struct {
 //   - cell *entity.Cell
 //   - prop *props.Checkbox
 func (_e *Checkbox_Expecter) Add(label interface{}, cell interface{}, prop interface{}) *Checkbox_Add_Call {
-	return &Checkbox_Add_Call{Call: _e.mock.On("Add", label, cell, prop)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Checkbox_Add_Call) Run(run func(label string, cell *entity.Cell, prop *props.Checkbox)) *Checkbox_Add_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(*entity.Cell), args[2].(*props.Checkbox))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Checkbox_Add_Call) Return() *Checkbox_Add_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Checkbox_Add_Call) Return() *Checkbox_Add_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Checkbox_Add_Call) RunAndReturn(run func(string, *entity.Cell, *props.Checkbox)) *Checkbox_Add_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// NewCheckbox creates a new instance of Checkbox. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+	// The first argument is typically a *testing.T value.
 }
 
-// NewCheckbox creates a new instance of Checkbox. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
-// The first argument is typically a *testing.T value.
 func NewCheckbox(t interface {
 	mock.TestingT
 	Cleanup(func())
 },
 ) *Checkbox {
-	mock := &Checkbox{}
-	mock.Mock.Test(t)
-
-	t.Cleanup(func() { mock.AssertExpectations(t) })
-
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -13,27 +13,11 @@ type FillColorStyler struct {
 }
 
 func NewFillColorStyler(fpdf gofpdfwrapper.Fpdf) *FillColorStyler {
-	return &FillColorStyler{
-		stylerTemplate: stylerTemplate{
-			fpdf: fpdf,
-			name: "fillColorStyler",
-		},
-		defaultFillColor: &props.WhiteColor,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (f *FillColorStyler) Apply(width, height float64, config *entity.Config, prop *props.Cell) {
-	if prop == nil {
-		f.GoToNext(width, height, config, prop)
-		return
-	}
-
-	if prop.BackgroundColor == nil {
-		f.GoToNext(width, height, config, prop)
-		return
-	}
-
-	f.fpdf.SetFillColor(prop.BackgroundColor.Red, prop.BackgroundColor.Green, prop.BackgroundColor.Blue)
-	f.GoToNext(width, height, config, prop)
-	f.fpdf.SetFillColor(f.defaultFillColor.Red, f.defaultFillColor.Green, f.defaultFillColor.Blue)
+	_ = "STUB: not implemented"
+	return
 }

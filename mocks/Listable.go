@@ -17,29 +17,10 @@ type Listable_Expecter struct {
 	mock *mock.Mock
 }
 
-func (_m *Listable) EXPECT() *Listable_Expecter {
-	return &Listable_Expecter{mock: &_m.Mock}
-}
+func (_m *Listable) EXPECT() *Listable_Expecter { _ = "STUB: not implemented"; return nil }
 
 // GetContent provides a mock function with given fields: i
-func (_m *Listable) GetContent(i int) core.Row {
-	ret := _m.Called(i)
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetContent")
-	}
-
-	var r0 core.Row
-	if rf, ok := ret.Get(0).(func(int) core.Row); ok {
-		r0 = rf(i)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(core.Row)
-		}
-	}
-
-	return r0
-}
+func (_m *Listable) GetContent(i int) core.Row { _ = "STUB: not implemented"; return *new(core.Row) }
 
 // Listable_GetContent_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetContent'
 type Listable_GetContent_Call struct {
@@ -49,45 +30,27 @@ type Listable_GetContent_Call struct {
 // GetContent is a helper method to define mock.On call
 //   - i int
 func (_e *Listable_Expecter) GetContent(i interface{}) *Listable_GetContent_Call {
-	return &Listable_GetContent_Call{Call: _e.mock.On("GetContent", i)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Listable_GetContent_Call) Run(run func(i int)) *Listable_GetContent_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(int))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Listable_GetContent_Call) Return(_a0 core.Row) *Listable_GetContent_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Listable_GetContent_Call) RunAndReturn(run func(int) core.Row) *Listable_GetContent_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetHeader provides a mock function with no fields
-func (_m *Listable) GetHeader() core.Row {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetHeader")
-	}
-
-	var r0 core.Row
-	if rf, ok := ret.Get(0).(func() core.Row); ok {
-		r0 = rf()
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(core.Row)
-		}
-	}
-
-	return r0
-}
+func (_m *Listable) GetHeader() core.Row { _ = "STUB: not implemented"; return *new(core.Row) }
 
 // Listable_GetHeader_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetHeader'
 type Listable_GetHeader_Call struct {
@@ -96,24 +59,23 @@ type Listable_GetHeader_Call struct {
 
 // GetHeader is a helper method to define mock.On call
 func (_e *Listable_Expecter) GetHeader() *Listable_GetHeader_Call {
-	return &Listable_GetHeader_Call{Call: _e.mock.On("GetHeader")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Listable_GetHeader_Call) Run(run func()) *Listable_GetHeader_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Listable_GetHeader_Call) Return(_a0 core.Row) *Listable_GetHeader_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Listable_GetHeader_Call) RunAndReturn(run func() core.Row) *Listable_GetHeader_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewListable creates a new instance of Listable. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
@@ -123,10 +85,6 @@ func NewListable(t interface {
 	Cleanup(func())
 },
 ) *Listable {
-	mock := &Listable{}
-	mock.Mock.Test(t)
-
-	t.Cleanup(func() { mock.AssertExpectations(t) })
-
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }

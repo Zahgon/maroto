@@ -3,9 +3,6 @@ package metrics
 
 import (
 	"errors"
-	"fmt"
-	"os"
-	"strings"
 )
 
 var (
@@ -44,26 +41,10 @@ type Time struct {
 }
 
 // Normalize normalizes the time scale.
-func (t *Time) Normalize() bool {
-	if t.Scale == Nano {
-		t.Scale = Micro
-		t.Value /= 1000.0
-		return true
-	}
-
-	if t.Scale == Micro {
-		t.Scale = Milli
-		t.Value /= 1000.0
-		return true
-	}
-
-	return false
-}
+func (t *Time) Normalize() bool { _ = "STUB: not implemented"; return false }
 
 // String returns the time formatted.
-func (t *Time) String() string {
-	return fmt.Sprintf("%.2f%s", t.Value, t.Scale)
-}
+func (t *Time) String() string { _ = "STUB: not implemented"; return "" }
 
 // Size scales.
 type Size struct {
@@ -72,32 +53,10 @@ type Size struct {
 }
 
 // Normalize normalizes the size scale.
-func (t *Size) Normalize() bool {
-	if t.Scale == Byte {
-		t.Scale = KiloByte
-		t.Value /= 1000.0
-		return true
-	}
-
-	if t.Scale == KiloByte {
-		t.Scale = MegaByte
-		t.Value /= 1000.0
-		return true
-	}
-
-	if t.Scale == MegaByte {
-		t.Scale = GigaByte
-		t.Value /= 1000.0
-		return true
-	}
-
-	return false
-}
+func (t *Size) Normalize() bool { _ = "STUB: not implemented"; return false }
 
 // String returns the size formatted.
-func (t *Size) String() string {
-	return fmt.Sprintf("%.2f%s", t.Value, t.Scale)
-}
+func (t *Size) String() string { _ = "STUB: not implemented"; return "" }
 
 // TimeMetric is a time metric.
 type TimeMetric struct {
@@ -107,43 +66,13 @@ type TimeMetric struct {
 }
 
 // Normalize normalizes the time metric.
-func (m *TimeMetric) Normalize() {
-	greaterThan1000 := m.hasGreaterThan1000(m.Times)
-	if greaterThan1000 {
-		for _, time := range m.Times {
-			done := time.Normalize()
-			if !done {
-				return
-			}
-		}
-	}
-
-	if greaterThan1000 {
-		m.Normalize()
-	}
-}
+func (m *TimeMetric) Normalize() { _ = "STUB: not implemented"; return }
 
 // String returns the time metric formatted.
-func (m *TimeMetric) String() string {
-	var builder strings.Builder
-	builder.WriteString(m.Key + " -> avg: " + m.Avg.String() + ", executions: [")
-	for i, time := range m.Times {
-		builder.WriteString(time.String())
-		if i < len(m.Times)-1 {
-			builder.WriteString(", ")
-		}
-	}
-	builder.WriteString("]")
-	return builder.String()
-}
+func (m *TimeMetric) String() string { _ = "STUB: not implemented"; return "" }
 
 func (m *TimeMetric) hasGreaterThan1000(times []*Time) bool {
-	for _, time := range times {
-		if time.Value > 1000.0 {
-			return true
-		}
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
@@ -154,19 +83,10 @@ type SizeMetric struct {
 }
 
 // Normalize normalizes the size metric.
-func (s *SizeMetric) Normalize() {
-	if s.Size.Value < 1000.0 {
-		return
-	}
-
-	s.Size.Normalize()
-	s.Normalize()
-}
+func (s *SizeMetric) Normalize() { _ = "STUB: not implemented"; return }
 
 // String returns the size metric formatted.
-func (s *SizeMetric) String() string {
-	return s.Key + " -> " + s.Size.String()
-}
+func (s *SizeMetric) String() string { _ = "STUB: not implemented"; return "" }
 
 // Report is a metrics report.
 type Report struct {
@@ -175,46 +95,10 @@ type Report struct {
 }
 
 // Normalize normalizes the report.
-func (r *Report) Normalize() *Report {
-	for _, metric := range r.TimeMetrics {
-		metric.Normalize()
-	}
-
-	r.SizeMetric.Normalize()
-
-	return r
-}
+func (r *Report) Normalize() *Report { _ = "STUB: not implemented"; return nil }
 
 // String returns the report formatted.
-func (r *Report) String() string {
-	var builder strings.Builder
-	for _, metric := range r.TimeMetrics {
-		builder.WriteString(metric.String())
-	}
-	return builder.String()
-}
+func (r *Report) String() string { _ = "STUB: not implemented"; return "" }
 
 // Save saves the report in a file.
-func (r *Report) Save(file string) error {
-	var builder strings.Builder
-
-	for _, s := range r.TimeMetrics {
-		builder.WriteString(s.String() + "\n")
-	}
-	builder.WriteString(r.SizeMetric.String() + "\n")
-
-	f, err := os.Create(file)
-	if err != nil {
-		return fmt.Errorf("%w: %w", ErrCannotCreateFile, err)
-	}
-	defer func() {
-		_ = f.Close()
-	}()
-
-	_, err = f.WriteString(builder.String())
-	if err != nil {
-		return fmt.Errorf("%w: %w", ErrCannotWriteStringFile, err)
-	}
-
-	return nil
-}
+func (r *Report) Save(file string) error { _ = "STUB: not implemented"; return nil }

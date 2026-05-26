@@ -20,19 +20,4 @@ const (
 )
 
 // IsValid checks if the style is valid.
-func (s Type) IsValid() bool {
-	for _, r := range s {
-		switch Type(r) {
-		case
-			Normal,
-			Italic,
-			Bold,
-			BoldItalic,
-			Underline,
-			Strikethrough:
-		default:
-			return false
-		}
-	}
-	return true
-}
+func (s Type) IsValid() bool { _ = "STUB: not implemented"; return false }

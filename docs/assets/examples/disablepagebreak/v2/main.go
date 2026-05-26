@@ -2,15 +2,7 @@ package main
 
 import (
 	"log"
-	"os"
 
-	"github.com/johnfercher/maroto/v2/pkg/consts/extension"
-
-	"github.com/johnfercher/maroto/v2"
-	"github.com/johnfercher/maroto/v2/pkg/config"
-	"github.com/johnfercher/maroto/v2/pkg/consts/orientation"
-
-	"github.com/johnfercher/maroto/v2/pkg/components/page"
 	"github.com/johnfercher/maroto/v2/pkg/core"
 )
 
@@ -33,27 +25,4 @@ func main() {
 	}
 }
 
-func GetMaroto(image string) core.Maroto {
-	bytes, err := os.ReadFile(image)
-	if err != nil {
-		log.Fatal(err)
-	}
-	b := config.NewBuilder().
-		WithTopMargin(0).
-		WithRightMargin(0).
-		WithLeftMargin(0).
-		WithDimensions(361.8, 203.2).
-		WithDisableAutoPageBreak(true).
-		WithOrientation(orientation.Horizontal).
-		WithMaxGridSize(20).
-		WithBackgroundImage(bytes, extension.Png).
-		Build()
-
-	b.Margins.Bottom = 0
-
-	mrt := maroto.New(b)
-	m := maroto.NewMetricsDecorator(mrt)
-
-	m.AddPages(page.New())
-	return m
-}
+func GetMaroto(image string) core.Maroto { _ = "STUB: not implemented"; return *new(core.Maroto) }

@@ -22,82 +22,59 @@ type Font struct {
 
 // NewFont create a Font.
 func NewFont(pdf gofpdfwrapper.Fpdf, size float64, family string, style fontstyle.Type) *Font {
-	pdf.SetFont(family, string(style), size)
-
-	return &Font{
-		pdf:         pdf,
-		size:        size,
-		family:      family,
-		style:       style,
-		scaleFactor: gofpdfFontScale1 / gofpdfFontScale2, // Bytes defined inside gofpdf constructor,
-		fontColor:   &props.Color{Red: 0, Green: 0, Blue: 0},
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Bytes defined inside gofpdf constructor,
 
 // GetFamily return the currently Font family configured.
 func (s *Font) GetFamily() string {
-	return s.family
+	_ = "STUB: not implemented"
+
+	// GetStyle return the currently Font style configured.
+	return ""
 }
 
-// GetStyle return the currently Font style configured.
 func (s *Font) GetStyle() fontstyle.Type {
-	return s.style
+	_ = "STUB: not implemented"
+
+	// GetSize return the currently Font size configured.
+	return *new(fontstyle.Type)
 }
 
-// GetSize return the currently Font size configured.
 func (s *Font) GetSize() float64 {
-	return s.size
+	_ = "STUB: not implemented"
+
+	// GetFont return all the currently Font properties configured.
+	return 0
 }
 
-// GetFont return all the currently Font properties configured.
 func (s *Font) GetFont() (string, fontstyle.Type, float64) {
-	return s.family, s.style, s.size
+	_ = "STUB: not implemented"
+	return "", *new(fontstyle.Type), 0
 }
 
 func (s *Font) GetHeight(family string, style fontstyle.Type, size float64) float64 {
-	s.SetFont(family, style, size)
-	_, _, fontSize := s.GetFont()
-	return fontSize / s.scaleFactor
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // SetFamily defines a new Font family.
-func (s *Font) SetFamily(family string) {
-	s.family = family
-
-	s.pdf.SetFont(s.family, string(s.style), s.size)
-}
+func (s *Font) SetFamily(family string) { _ = "STUB: not implemented"; return }
 
 // SetStyle defines a new Font style.
-func (s *Font) SetStyle(style fontstyle.Type) {
-	s.style = style
-
-	s.pdf.SetFontStyle(string(s.style))
-}
+func (s *Font) SetStyle(style fontstyle.Type) { _ = "STUB: not implemented"; return }
 
 // SetSize defines a new Font size.
-func (s *Font) SetSize(size float64) {
-	s.size = size
-	s.pdf.SetFontSize(s.size)
-}
+func (s *Font) SetSize(size float64) { _ = "STUB: not implemented"; return }
 
 // SetFont defines all new Font properties.
 func (s *Font) SetFont(family string, style fontstyle.Type, size float64) {
-	s.family = family
-	s.style = style
-	s.size = size
-
-	s.pdf.SetFont(s.family, string(s.style), s.size)
+	_ = "STUB: not implemented"
+	return
 }
 
-func (s *Font) SetColor(color *props.Color) {
-	if color == nil {
-		return
-	}
+func (s *Font) SetColor(color *props.Color) { _ = "STUB: not implemented"; return }
 
-	s.fontColor = color
-	s.pdf.SetTextColor(color.Red, color.Green, color.Blue)
-}
-
-func (s *Font) GetColor() *props.Color {
-	return s.fontColor
-}
+func (s *Font) GetColor() *props.Color { _ = "STUB: not implemented"; return nil }

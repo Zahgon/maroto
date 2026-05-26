@@ -1,18 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
-	"github.com/johnfercher/maroto/v2"
-
-	"github.com/johnfercher/maroto/v2/pkg/components/list"
-	"github.com/johnfercher/maroto/v2/pkg/components/row"
-	"github.com/johnfercher/maroto/v2/pkg/consts/fontstyle"
 	"github.com/johnfercher/maroto/v2/pkg/core"
 	"github.com/johnfercher/maroto/v2/pkg/props"
-
-	"github.com/johnfercher/maroto/v2/pkg/components/text"
 )
 
 var background = &props.Color{
@@ -39,54 +31,15 @@ func main() {
 	}
 }
 
-func GetMaroto() core.Maroto {
-	mrt := maroto.New()
-	m := maroto.NewMetricsDecorator(mrt)
-
-	objects := getObjects(100)
-	rows, err := list.Build[Object](objects)
-	if err != nil {
-		log.Fatal(err.Error())
-	}
-
-	m.AddRows(rows...)
-	return m
-}
+func GetMaroto() core.Maroto { _ = "STUB: not implemented"; return *new(core.Maroto) }
 
 type Object struct {
 	Key   string
 	Value string
 }
 
-func (o Object) GetHeader() core.Row {
-	return row.New(10).Add(
-		text.NewCol(4, "Key", props.Text{Style: fontstyle.Bold}),
-		text.NewCol(8, "Bytes", props.Text{Style: fontstyle.Bold}),
-	)
-}
+func (o Object) GetHeader() core.Row { _ = "STUB: not implemented"; return *new(core.Row) }
 
-func (o Object) GetContent(i int) core.Row {
-	r := row.New(5).Add(
-		text.NewCol(4, o.Key),
-		text.NewCol(8, o.Value),
-	)
+func (o Object) GetContent(i int) core.Row { _ = "STUB: not implemented"; return *new(core.Row) }
 
-	if i%2 == 0 {
-		r.WithStyle(&props.Cell{
-			BackgroundColor: background,
-		})
-	}
-
-	return r
-}
-
-func getObjects(max int) []Object {
-	var objects []Object
-	for i := 0; i < max; i++ {
-		objects = append(objects, Object{
-			Key:   fmt.Sprintf("Key: %d", i),
-			Value: fmt.Sprintf("Bytes: %d", i),
-		})
-	}
-	return objects
-}
+func getObjects(max int) []Object { _ = "STUB: not implemented"; return nil }

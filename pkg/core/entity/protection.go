@@ -13,17 +13,6 @@ type Protection struct {
 
 // AppendMap adds the Protection fields to the map.
 func (p *Protection) AppendMap(m map[string]any) map[string]any {
-	if p.Type != 0 {
-		m["config_protection_type"] = p.Type
-	}
-
-	if p.UserPassword != "" {
-		m["config_user_password"] = p.UserPassword
-	}
-
-	if p.OwnerPassword != "" {
-		m["config_owner_password"] = p.OwnerPassword
-	}
-
-	return m
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -12,22 +12,13 @@ type stylerTemplate struct {
 	name string
 }
 
-func (s *stylerTemplate) SetNext(next CellWriter) {
-	s.next = next
-}
+func (s *stylerTemplate) SetNext(next CellWriter) { _ = "STUB: not implemented"; return }
 
-func (s *stylerTemplate) GetName() string {
-	return s.name
-}
+func (s *stylerTemplate) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (s *stylerTemplate) GetNext() CellWriter {
-	return s.next
-}
+func (s *stylerTemplate) GetNext() CellWriter { _ = "STUB: not implemented"; return *new(CellWriter) }
 
 func (s *stylerTemplate) GoToNext(width, height float64, config *entity.Config, prop *props.Cell) {
-	if s.next == nil {
-		return
-	}
-
-	s.next.Apply(width, height, config, prop)
+	_ = "STUB: not implemented"
+	return
 }

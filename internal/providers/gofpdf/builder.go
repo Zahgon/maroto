@@ -1,11 +1,7 @@
 package gofpdf
 
 import (
-	"github.com/phpdave11/gofpdf"
-
 	"github.com/johnfercher/maroto/v2/internal/cache"
-	"github.com/johnfercher/maroto/v2/internal/code"
-	"github.com/johnfercher/maroto/v2/internal/math"
 	"github.com/johnfercher/maroto/v2/internal/providers/gofpdf/cellwriter"
 	"github.com/johnfercher/maroto/v2/internal/providers/gofpdf/gofpdfwrapper"
 	"github.com/johnfercher/maroto/v2/pkg/core"
@@ -35,54 +31,13 @@ type builder struct{}
 
 // NewBuilder create a new Builder
 func NewBuilder() Builder {
-	return &builder{}
+	_ = "STUB: not implemented"
+
+	// Build create a new Dependencies.
+	return *new(Builder)
 }
 
-// Build create a new Dependencies.
 func (b *builder) Build(cfg *entity.Config, cache cache.Cache) *Dependencies {
-	fpdf := gofpdfwrapper.NewCustom(&gofpdf.InitType{
-		OrientationStr: "P",
-		UnitStr:        "mm",
-		FontDirStr:     "",
-		Size: gofpdf.SizeType{
-			Wd: cfg.Dimensions.Width,
-			Ht: cfg.Dimensions.Height,
-		},
-	})
-
-	for _, font := range cfg.CustomFonts {
-		fpdf.AddUTF8FontFromBytes(font.GetFamily(), string(font.GetStyle()), font.GetBytes())
-	}
-
-	if cfg.DisableAutoPageBreak {
-		fpdf.SetAutoPageBreak(false, 0)
-	} else {
-		fpdf.SetAutoPageBreak(true, cfg.Margins.Bottom)
-	}
-
-	fpdf.SetMargins(cfg.Margins.Left, cfg.Margins.Top, cfg.Margins.Right)
-	fpdf.AddPage()
-
-	font := NewFont(fpdf, cfg.DefaultFont.Size, cfg.DefaultFont.Family, cfg.DefaultFont.Style)
-	math := math.New()
-	code := code.New()
-	text := NewText(fpdf, math, font)
-	image := NewImage(fpdf, math)
-	line := NewLine(fpdf)
-	checkbox := NewCheckbox(fpdf, font)
-	cellWriter := cellwriter.NewBuilder().
-		Build(fpdf)
-
-	return &Dependencies{
-		Fpdf:       fpdf,
-		Font:       font,
-		Text:       text,
-		Code:       code,
-		Image:      image,
-		Line:       line,
-		Checkbox:   checkbox,
-		CellWriter: cellWriter,
-		Cfg:        cfg,
-		Cache:      cache,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }

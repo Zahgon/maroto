@@ -5,8 +5,6 @@ package code
 import (
 	"github.com/johnfercher/go-tree/node"
 
-	"github.com/johnfercher/maroto/v2/pkg/components/col"
-	"github.com/johnfercher/maroto/v2/pkg/components/row"
 	"github.com/johnfercher/maroto/v2/pkg/core"
 	"github.com/johnfercher/maroto/v2/pkg/core/entity"
 	"github.com/johnfercher/maroto/v2/pkg/props"
@@ -22,16 +20,8 @@ type Barcode struct {
 //   - code: The value that must be placed in the barcode
 //   - ps: A set of settings that must be applied to the barcode
 func NewBar(code string, ps ...props.Barcode) core.Component {
-	prop := props.Barcode{}
-	if len(ps) > 0 {
-		prop = ps[0]
-	}
-	prop.MakeValid()
-
-	return &Barcode{
-		code: code,
-		prop: prop,
-	}
+	_ = "STUB: not implemented"
+	return *new(core.Component)
 }
 
 // NewBarCol is responsible to create an instance of a Barcode wrapped in a Col.
@@ -39,8 +29,8 @@ func NewBar(code string, ps ...props.Barcode) core.Component {
 //   - code: The value that must be placed in the barcode
 //   - ps: A set of settings that must be applied to the barcode
 func NewBarCol(size int, code string, ps ...props.Barcode) core.Col {
-	bar := NewBar(code, ps...)
-	return col.New(size).Add(bar)
+	_ = "STUB: not implemented"
+	return *new(core.Col)
 }
 
 // NewBarRow is responsible to create an instance of a Barcode wrapped in a Row.
@@ -49,9 +39,8 @@ func NewBarCol(size int, code string, ps ...props.Barcode) core.Col {
 //   - code: The value that must be placed in the barcode
 //   - ps: A set of settings that must be applied to the barcode
 func NewBarRow(height float64, code string, ps ...props.Barcode) core.Row {
-	bar := NewBar(code, ps...)
-	c := col.New().Add(bar)
-	return row.New(height).Add(c)
+	_ = "STUB: not implemented"
+	return *new(core.Row)
 }
 
 // NewAutoBarRow is responsible to create an instance of a Barcode wrapped in a Row with automatic height.
@@ -59,9 +48,8 @@ func NewBarRow(height float64, code string, ps ...props.Barcode) core.Row {
 //   - code: The value that must be placed in the barcode
 //   - ps: A set of settings that must be applied to the barcode
 func NewAutoBarRow(code string, ps ...props.Barcode) core.Row {
-	bar := NewBar(code, ps...)
-	c := col.New().Add(bar)
-	return row.New().Add(c)
+	_ = "STUB: not implemented"
+	return *new(core.Row)
 }
 
 // Render renders a Barcode into a PDF context. The maroto cal this method in process to
@@ -69,28 +57,18 @@ func NewAutoBarRow(code string, ps ...props.Barcode) core.Row {
 //   - provider: Is the creator provider used to generate the pdf
 //   - cell: cell represents the space available to draw the component
 func (b *Barcode) Render(provider core.Provider, cell *entity.Cell) {
-	provider.AddBarCode(b.code, cell, &b.prop)
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetStructure returns the structure of a barcode. This method is typically used when creating tests
-func (b *Barcode) GetStructure() *node.Node[core.Structure] {
-	str := core.Structure{
-		Type:    "barcode",
-		Value:   b.code,
-		Details: b.prop.ToMap(),
-	}
-
-	return node.New(str)
-}
+func (b *Barcode) GetStructure() *node.Node[core.Structure] { _ = "STUB: not implemented"; return nil }
 
 // GetHeight returns the height that the barcode will have in the PDF
 func (b *Barcode) GetHeight(_ core.Provider, cell *entity.Cell) float64 {
-	proportion := b.prop.Proportion.Height / b.prop.Proportion.Width
-	width := (b.prop.Percent / 100) * cell.Width
-	return proportion * width
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // SetConfig sets the configuration of a Barcode.
-func (b *Barcode) SetConfig(config *entity.Config) {
-	b.config = config
-}
+func (b *Barcode) SetConfig(config *entity.Config) { _ = "STUB: not implemented"; return }

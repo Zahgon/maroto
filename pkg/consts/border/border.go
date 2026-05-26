@@ -21,45 +21,27 @@ const (
 )
 
 // IsValid checks if the border type is valid.
-func (t Type) IsValid() bool {
-	return t > None && t <= Full
-}
+func (t Type) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // HasLeft checks if the border type includes left border.
 func (t Type) HasLeft() bool {
-	return t&Left != 0
+	_ = "STUB: not implemented"
+
+	// HasTop checks if the border type includes top border.
+	return false
 }
 
-// HasTop checks if the border type includes top border.
 func (t Type) HasTop() bool {
-	return t&Top != 0
+	_ = "STUB: not implemented"
+
+	// HasRight checks if the border type includes right border.
+	return false
 }
 
-// HasRight checks if the border type includes right border.
-func (t Type) HasRight() bool {
-	return t&Right != 0
-}
+func (t Type) HasRight() bool { _ = "STUB: not implemented"; return false }
 
 // HasBottom checks if the border type includes bottom border.
-func (t Type) HasBottom() bool {
-	return t&Bottom != 0
-}
+func (t Type) HasBottom() bool { _ = "STUB: not implemented"; return false }
 
 // String returns the string representation of the border type.
-func (t Type) String() string {
-	result := ""
-	if t.HasLeft() {
-		result += "L"
-	}
-	if t.HasTop() {
-		result += "T"
-	}
-	if t.HasRight() {
-		result += "R"
-	}
-	if t.HasBottom() {
-		result += "B"
-	}
-
-	return result
-}
+func (t Type) String() string { _ = "STUB: not implemented"; return "" }

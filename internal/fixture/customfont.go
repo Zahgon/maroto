@@ -11,18 +11,10 @@ type TestFont struct {
 	Bytes  []byte
 }
 
-func (t TestFont) GetFamily() string {
-	return t.Family
-}
+func (t TestFont) GetFamily() string { _ = "STUB: not implemented"; return "" }
 
-func (t TestFont) GetStyle() fontstyle.Type {
-	return t.Style
-}
+func (t TestFont) GetStyle() fontstyle.Type { _ = "STUB: not implemented"; return *new(fontstyle.Type) }
 
-func (t TestFont) GetFile() string {
-	return t.File
-}
+func (t TestFont) GetFile() string { _ = "STUB: not implemented"; return "" }
 
-func (t TestFont) GetBytes() []byte {
-	return t.Bytes
-}
+func (t TestFont) GetBytes() []byte { _ = "STUB: not implemented"; return nil }

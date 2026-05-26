@@ -22,92 +22,11 @@ type Barcode struct {
 }
 
 // ToMap from Barcode will return a map representation from Barcode.
-func (b *Barcode) ToMap() map[string]any {
-	if b == nil {
-		return nil
-	}
-
-	m := make(map[string]any)
-
-	if b.Left != 0 {
-		m["prop_left"] = b.Left
-	}
-
-	if b.Top != 0 {
-		m["prop_top"] = b.Top
-	}
-
-	if b.Percent != 0 {
-		m["prop_percent"] = b.Percent
-	}
-
-	if b.Proportion.Width != 0 {
-		m["prop_proportion_width"] = b.Proportion.Width
-	}
-
-	if b.Proportion.Height != 0 {
-		m["prop_proportion_height"] = b.Proportion.Height
-	}
-
-	if b.Center {
-		m["prop_center"] = b.Center
-	}
-
-	return m
-}
+func (b *Barcode) ToMap() map[string]any { _ = "STUB: not implemented"; return nil }
 
 // ToRectProp from Barcode will return a Rect representation from Barcode.
-func (b *Barcode) ToRectProp() *Rect {
-	return &Rect{
-		Left:    b.Left,
-		Top:     b.Top,
-		Percent: b.Percent,
-		Center:  b.Center,
-	}
-}
+func (b *Barcode) ToRectProp() *Rect { _ = "STUB: not implemented"; return nil }
 
 // MakeValid from Barcode will make the properties from a barcode reliable to fit inside a cell
 // and define default values for a barcode.
-func (b *Barcode) MakeValid() {
-	minPercentage := 0.0
-	maxPercentage := 100.0
-	minValue := 0.0
-
-	if b.Percent <= minPercentage || b.Percent > maxPercentage {
-		b.Percent = maxPercentage
-	}
-
-	if b.Center {
-		b.Left = 0
-		b.Top = 0
-	}
-
-	if b.Left < minValue {
-		b.Left = minValue
-	}
-
-	if b.Top < minValue {
-		b.Top = minValue
-	}
-
-	if b.Proportion.Width <= 0 {
-		b.Proportion.Width = 1
-	}
-
-	if b.Proportion.Height <= 0 {
-		b.Proportion.Height = 1
-	}
-
-	maxHeightProportionBasedOnWidth := 0.20
-	minHeightProportionBasedOnWidth := 0.10
-
-	if b.Proportion.Height > b.Proportion.Width*maxHeightProportionBasedOnWidth {
-		b.Proportion.Height = b.Proportion.Width * maxHeightProportionBasedOnWidth
-	} else if b.Proportion.Height < b.Proportion.Width*minHeightProportionBasedOnWidth {
-		b.Proportion.Height = b.Proportion.Width * minHeightProportionBasedOnWidth
-	}
-
-	if b.Type == "" {
-		b.Type = barcode.Code128
-	}
-}
+func (b *Barcode) MakeValid() { _ = "STUB: not implemented"; return }

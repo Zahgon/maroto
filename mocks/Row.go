@@ -22,35 +22,10 @@ type Row_Expecter struct {
 	mock *mock.Mock
 }
 
-func (_m *Row) EXPECT() *Row_Expecter {
-	return &Row_Expecter{mock: &_m.Mock}
-}
+func (_m *Row) EXPECT() *Row_Expecter { _ = "STUB: not implemented"; return nil }
 
 // Add provides a mock function with given fields: cols
-func (_m *Row) Add(cols ...core.Col) core.Row {
-	_va := make([]interface{}, len(cols))
-	for _i := range cols {
-		_va[_i] = cols[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for Add")
-	}
-
-	var r0 core.Row
-	if rf, ok := ret.Get(0).(func(...core.Col) core.Row); ok {
-		r0 = rf(cols...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(core.Row)
-		}
-	}
-
-	return r0
-}
+func (_m *Row) Add(cols ...core.Col) core.Row { _ = "STUB: not implemented"; return *new(core.Row) }
 
 // Row_Add_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Add'
 type Row_Add_Call struct {
@@ -60,52 +35,24 @@ type Row_Add_Call struct {
 // Add is a helper method to define mock.On call
 //   - cols ...core.Col
 func (_e *Row_Expecter) Add(cols ...interface{}) *Row_Add_Call {
-	return &Row_Add_Call{Call: _e.mock.On("Add",
-		append([]interface{}{}, cols...)...)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_Add_Call) Run(run func(cols ...core.Col)) *Row_Add_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		variadicArgs := make([]core.Col, len(args)-0)
-		for i, a := range args[0:] {
-			if a != nil {
-				variadicArgs[i] = a.(core.Col)
-			}
-		}
-		run(variadicArgs...)
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Row_Add_Call) Return(_a0 core.Row) *Row_Add_Call {
-	_c.Call.Return(_a0)
-	return _c
-}
+func (_c *Row_Add_Call) Return(_a0 core.Row) *Row_Add_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Row_Add_Call) RunAndReturn(run func(...core.Col) core.Row) *Row_Add_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetColumns provides a mock function with no fields
-func (_m *Row) GetColumns() []core.Col {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetColumns")
-	}
-
-	var r0 []core.Col
-	if rf, ok := ret.Get(0).(func() []core.Col); ok {
-		r0 = rf()
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).([]core.Col)
-		}
-	}
-
-	return r0
-}
+func (_m *Row) GetColumns() []core.Col { _ = "STUB: not implemented"; return nil }
 
 // Row_GetColumns_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetColumns'
 type Row_GetColumns_Call struct {
@@ -113,43 +60,27 @@ type Row_GetColumns_Call struct {
 }
 
 // GetColumns is a helper method to define mock.On call
-func (_e *Row_Expecter) GetColumns() *Row_GetColumns_Call {
-	return &Row_GetColumns_Call{Call: _e.mock.On("GetColumns")}
-}
+func (_e *Row_Expecter) GetColumns() *Row_GetColumns_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Row_GetColumns_Call) Run(run func()) *Row_GetColumns_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_GetColumns_Call) Return(_a0 []core.Col) *Row_GetColumns_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_GetColumns_Call) RunAndReturn(run func() []core.Col) *Row_GetColumns_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetHeight provides a mock function with given fields: provider, cell
 func (_m *Row) GetHeight(provider core.Provider, cell *entity.Cell) float64 {
-	ret := _m.Called(provider, cell)
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetHeight")
-	}
-
-	var r0 float64
-	if rf, ok := ret.Get(0).(func(core.Provider, *entity.Cell) float64); ok {
-		r0 = rf(provider, cell)
-	} else {
-		r0 = ret.Get(0).(float64)
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // Row_GetHeight_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetHeight'
@@ -161,45 +92,27 @@ type Row_GetHeight_Call struct {
 //   - provider core.Provider
 //   - cell *entity.Cell
 func (_e *Row_Expecter) GetHeight(provider interface{}, cell interface{}) *Row_GetHeight_Call {
-	return &Row_GetHeight_Call{Call: _e.mock.On("GetHeight", provider, cell)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_GetHeight_Call) Run(run func(provider core.Provider, cell *entity.Cell)) *Row_GetHeight_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(core.Provider), args[1].(*entity.Cell))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_GetHeight_Call) Return(_a0 float64) *Row_GetHeight_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_GetHeight_Call) RunAndReturn(run func(core.Provider, *entity.Cell) float64) *Row_GetHeight_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetStructure provides a mock function with no fields
-func (_m *Row) GetStructure() *node.Node[core.Structure] {
-	ret := _m.Called()
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetStructure")
-	}
-
-	var r0 *node.Node[core.Structure]
-	if rf, ok := ret.Get(0).(func() *node.Node[core.Structure]); ok {
-		r0 = rf()
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*node.Node[core.Structure])
-		}
-	}
-
-	return r0
-}
+func (_m *Row) GetStructure() *node.Node[core.Structure] { _ = "STUB: not implemented"; return nil }
 
 // Row_GetStructure_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetStructure'
 type Row_GetStructure_Call struct {
@@ -208,30 +121,27 @@ type Row_GetStructure_Call struct {
 
 // GetStructure is a helper method to define mock.On call
 func (_e *Row_Expecter) GetStructure() *Row_GetStructure_Call {
-	return &Row_GetStructure_Call{Call: _e.mock.On("GetStructure")}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_GetStructure_Call) Run(run func()) *Row_GetStructure_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run()
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_GetStructure_Call) Return(_a0 *node.Node[core.Structure]) *Row_GetStructure_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_GetStructure_Call) RunAndReturn(run func() *node.Node[core.Structure]) *Row_GetStructure_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Render provides a mock function with given fields: provider, cell
-func (_m *Row) Render(provider core.Provider, cell entity.Cell) {
-	_m.Called(provider, cell)
-}
+func (_m *Row) Render(provider core.Provider, cell entity.Cell) { _ = "STUB: not implemented"; return }
 
 // Row_Render_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Render'
 type Row_Render_Call struct {
@@ -242,32 +152,31 @@ type Row_Render_Call struct {
 //   - provider core.Provider
 //   - cell entity.Cell
 func (_e *Row_Expecter) Render(provider interface{}, cell interface{}) *Row_Render_Call {
-	return &Row_Render_Call{Call: _e.mock.On("Render", provider, cell)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_Render_Call) Run(run func(provider core.Provider, cell entity.Cell)) *Row_Render_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(core.Provider), args[1].(entity.Cell))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Row_Render_Call) Return() *Row_Render_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Row_Render_Call) Return() *Row_Render_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Row_Render_Call) RunAndReturn(run func(core.Provider, entity.Cell)) *Row_Render_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetConfig provides a mock function with given fields: config
 }
 
-// SetConfig provides a mock function with given fields: config
 func (_m *Row) SetConfig(config *entity.Config) {
-	_m.Called(config)
+	_ = "STUB: not implemented"
+
+	// Row_SetConfig_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetConfig'
+	return
 }
 
-// Row_SetConfig_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'SetConfig'
 type Row_SetConfig_Call struct {
 	*mock.Call
 }
@@ -275,44 +184,27 @@ type Row_SetConfig_Call struct {
 // SetConfig is a helper method to define mock.On call
 //   - config *entity.Config
 func (_e *Row_Expecter) SetConfig(config interface{}) *Row_SetConfig_Call {
-	return &Row_SetConfig_Call{Call: _e.mock.On("SetConfig", config)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_SetConfig_Call) Run(run func(config *entity.Config)) *Row_SetConfig_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(*entity.Config))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Row_SetConfig_Call) Return() *Row_SetConfig_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Row_SetConfig_Call) Return() *Row_SetConfig_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Row_SetConfig_Call) RunAndReturn(run func(*entity.Config)) *Row_SetConfig_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// WithStyle provides a mock function with given fields: style
 }
 
-// WithStyle provides a mock function with given fields: style
 func (_m *Row) WithStyle(style *props.Cell) core.Row {
-	ret := _m.Called(style)
-
-	if len(ret) == 0 {
-		panic("no return value specified for WithStyle")
-	}
-
-	var r0 core.Row
-	if rf, ok := ret.Get(0).(func(*props.Cell) core.Row); ok {
-		r0 = rf(style)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(core.Row)
-		}
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return *new(core.Row)
 }
 
 // Row_WithStyle_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'WithStyle'
@@ -323,24 +215,23 @@ type Row_WithStyle_Call struct {
 // WithStyle is a helper method to define mock.On call
 //   - style *props.Cell
 func (_e *Row_Expecter) WithStyle(style interface{}) *Row_WithStyle_Call {
-	return &Row_WithStyle_Call{Call: _e.mock.On("WithStyle", style)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_WithStyle_Call) Run(run func(style *props.Cell)) *Row_WithStyle_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(*props.Cell))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_WithStyle_Call) Return(_a0 core.Row) *Row_WithStyle_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Row_WithStyle_Call) RunAndReturn(run func(*props.Cell) core.Row) *Row_WithStyle_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewRow creates a new instance of Row. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
@@ -350,10 +241,6 @@ func NewRow(t interface {
 	Cleanup(func())
 },
 ) *Row {
-	mock := &Row{}
-	mock.Mock.Test(t)
-
-	t.Cleanup(func() { mock.AssertExpectations(t) })
-
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }

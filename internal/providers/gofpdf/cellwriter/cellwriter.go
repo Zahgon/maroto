@@ -2,7 +2,6 @@ package cellwriter
 
 import (
 	"github.com/johnfercher/maroto/v2/internal/providers/gofpdf/gofpdfwrapper"
-	"github.com/johnfercher/maroto/v2/pkg/consts/border"
 	"github.com/johnfercher/maroto/v2/pkg/core/entity"
 	"github.com/johnfercher/maroto/v2/pkg/props"
 )
@@ -20,30 +19,11 @@ type cellWriter struct {
 }
 
 func NewCellWriter(fpdf gofpdfwrapper.Fpdf) CellWriter {
-	return &cellWriter{
-		stylerTemplate: stylerTemplate{
-			fpdf: fpdf,
-			name: "cellWriter",
-		},
-		defaultColor: &props.BlackColor,
-	}
+	_ = "STUB: not implemented"
+	return *new(CellWriter)
 }
 
 func (c *cellWriter) Apply(width, height float64, config *entity.Config, prop *props.Cell) {
-	if prop == nil {
-		bd := border.None
-		if config.Debug {
-			bd = border.Full
-		}
-
-		c.fpdf.CellFormat(width, height, "", bd.String(), 0, "C", false, 0, "")
-		return
-	}
-
-	bd := prop.BorderType
-	if config.Debug {
-		bd = border.Full
-	}
-
-	c.fpdf.CellFormat(width, height, "", bd.String(), 0, "C", prop.BackgroundColor != nil, 0, "")
+	_ = "STUB: not implemented"
+	return
 }

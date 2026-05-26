@@ -18,54 +18,13 @@ type Font struct {
 }
 
 // AppendMap appends the font fields to a map.
-func (f *Font) AppendMap(m map[string]any) map[string]any {
-	if f.Family != "" {
-		m["prop_font_family"] = f.Family
-	}
-
-	if f.Style != "" {
-		m["prop_font_style"] = f.Style
-	}
-
-	if f.Size != 0 {
-		m["prop_font_size"] = f.Size
-	}
-
-	if f.Color != nil {
-		m["prop_font_color"] = f.Color.ToString()
-	}
-
-	return m
-}
+func (f *Font) AppendMap(m map[string]any) map[string]any { _ = "STUB: not implemented"; return nil }
 
 // MakeValid from Font define default values for a Signature.
-func (f *Font) MakeValid(defaultFamily string) {
-	if f.Family == "" {
-		f.Family = defaultFamily
-	}
-
-	if f.Style == "" {
-		f.Style = fontstyle.Normal
-	}
-
-	if f.Size == 0.0 {
-		f.Size = 8.0
-	}
-}
+func (f *Font) MakeValid(defaultFamily string) { _ = "STUB: not implemented"; return }
 
 // ToTextProp from Font return a Text based on Font.
 func (f *Font) ToTextProp(align align.Type, top float64, verticalPadding float64) *Text {
-	textProp := &Text{
-		Family:          f.Family,
-		Style:           f.Style,
-		Size:            f.Size,
-		Align:           align,
-		Top:             top,
-		VerticalPadding: verticalPadding,
-		Color:           f.Color,
-	}
-
-	textProp.MakeValid(f)
-
-	return textProp
+	_ = "STUB: not implemented"
+	return nil
 }

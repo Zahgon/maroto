@@ -10,21 +10,6 @@ type Margins struct {
 
 // AppendMap appends the margins to a map.
 func (m *Margins) AppendMap(mp map[string]any) map[string]any {
-	if m.Left != 0 {
-		mp["config_margin_left"] = m.Left
-	}
-
-	if m.Top != 0 {
-		mp["config_margin_top"] = m.Top
-	}
-
-	if m.Right != 0 {
-		mp["config_margin_right"] = m.Right
-	}
-
-	if m.Bottom != 0 {
-		mp["config_margin_bottom"] = m.Bottom
-	}
-
-	return mp
+	_ = "STUB: not implemented"
+	return nil
 }

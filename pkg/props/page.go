@@ -1,11 +1,6 @@
 package props
 
 import (
-	"strconv"
-	"strings"
-
-	"github.com/johnfercher/maroto/v2/pkg/consts/align"
-	"github.com/johnfercher/maroto/v2/pkg/consts/breakline"
 	"github.com/johnfercher/maroto/v2/pkg/consts/fontstyle"
 )
 
@@ -28,10 +23,7 @@ const (
 )
 
 // IsValid checks if the place is valid.
-func (p Place) IsValid() bool {
-	return p == LeftTop || p == Top || p == RightTop ||
-		p == LeftBottom || p == Bottom || p == RightBottom
-}
+func (p Place) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // PageNumber have attributes of page number.
 type PageNumber struct {
@@ -51,80 +43,16 @@ type PageNumber struct {
 
 // GetNumberTextProp returns the Text properties of the page number.
 // nolint:staticcheck // builder
-func (p *PageNumber) GetNumberTextProp(height float64) *Text {
-	text := &Text{
-		Family: p.Family,
-		Style:  p.Style,
-		Size:   p.Size,
-		Color:  p.Color,
-		Align:  align.Center,
-	}
-
-	if p.Place == LeftBottom || p.Place == LeftTop {
-		text.Align = align.Left
-	} else if p.Place == RightBottom || p.Place == RightTop {
-		text.Align = align.Right
-	}
-
-	if p.Place == RightBottom || p.Place == Bottom || p.Place == LeftBottom {
-		text.Top = height
-	}
-
-	text.BreakLineStrategy = breakline.EmptySpaceStrategy
-
-	return text
-}
+func (p *PageNumber) GetNumberTextProp(height float64) *Text { _ = "STUB: not implemented"; return nil }
 
 // GetPageString returns the page string.
-func (p *PageNumber) GetPageString(current, total int) string {
-	pattern := strings.ReplaceAll(p.Pattern, "{current}", strconv.Itoa(current))
-	return strings.ReplaceAll(pattern, "{total}", strconv.Itoa(total))
-}
+func (p *PageNumber) GetPageString(current, total int) string { _ = "STUB: not implemented"; return "" }
 
 // WithFont apply font if not defined before.
-func (p *PageNumber) WithFont(font *Font) {
-	if p.Color == nil {
-		p.Color = font.Color
-	}
-
-	if p.Size == 0 {
-		p.Size = font.Size
-	}
-
-	if p.Style == "" {
-		p.Style = font.Style
-	}
-
-	if p.Family == "" {
-		p.Family = font.Family
-	}
-}
+func (p *PageNumber) WithFont(font *Font) { _ = "STUB: not implemented"; return }
 
 // AppendMap appends the font fields to a map.
 func (p *PageNumber) AppendMap(m map[string]any) map[string]any {
-	if p.Pattern != "" {
-		m["page_number_pattern"] = p.Pattern
-	}
-
-	if p.Place != "" {
-		m["page_number_place"] = p.Place
-	}
-
-	if p.Family != "" {
-		m["page_number_family"] = p.Family
-	}
-
-	if p.Style != "" {
-		m["page_number_style"] = p.Style
-	}
-
-	if p.Size != 0 {
-		m["page_number_size"] = p.Size
-	}
-
-	if p.Color != nil {
-		m["page_number_color"] = p.Color.ToString()
-	}
-
-	return m
+	_ = "STUB: not implemented"
+	return nil
 }

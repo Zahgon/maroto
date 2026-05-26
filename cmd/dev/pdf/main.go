@@ -1,21 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"log"
-	"os"
 
 	"github.com/johnfercher/maroto/v2"
 
-	"github.com/johnfercher/maroto/v2/pkg/components/code"
-	"github.com/johnfercher/maroto/v2/pkg/components/col"
-	"github.com/johnfercher/maroto/v2/pkg/components/image"
-	"github.com/johnfercher/maroto/v2/pkg/components/row"
-	"github.com/johnfercher/maroto/v2/pkg/components/signature"
 	"github.com/johnfercher/maroto/v2/pkg/components/text"
 
 	"github.com/johnfercher/maroto/v2/pkg/consts/align"
-	"github.com/johnfercher/maroto/v2/pkg/consts/extension"
 
 	"github.com/johnfercher/maroto/v2/pkg/config"
 	"github.com/johnfercher/maroto/v2/pkg/core"
@@ -73,82 +65,12 @@ func main() {
 	}
 }
 
-func buildCodesRow() []core.Row {
-	return []core.Row{
-		row.New(20).Add(
-			text.NewCol(4, "Barcode:", props.Text{Size: 15, Top: 6, Align: align.Center}),
-			code.NewBarCol(8, "barcode", props.Barcode{Center: true, Percent: 70}),
-		),
-		row.New(20).Add(
-			text.NewCol(4, "QrCode:", props.Text{Size: 15, Top: 6, Align: align.Center}),
-			code.NewQrCol(8, "qrcode", props.Rect{Center: true, Percent: 70}),
-		),
-		row.New(20).Add(
-			text.NewCol(4, "MatrixCode:", props.Text{Size: 15, Top: 6, Align: align.Center}),
-			code.NewMatrixCol(8, "matrixcode", props.Rect{Center: true, Percent: 70}),
-		),
-	}
-}
+func buildCodesRow() []core.Row { _ = "STUB: not implemented"; return nil }
 
-func buildImagesRow() []core.Row {
-	bytes, err := os.ReadFile("docs/assets/images/frontpage.png")
-	if err != nil {
-		fmt.Println("Got error while opening file:", err)
-		os.Exit(1)
-	}
+func buildImagesRow() []core.Row { _ = "STUB: not implemented"; return nil }
 
-	return []core.Row{
-		row.New(20).Add(
-			text.NewCol(4, "Image From File:", props.Text{Size: 15, Top: 6, Align: align.Center}),
-			image.NewFromFileCol(8, "docs/assets/images/biplane.jpg", props.Rect{Center: true, Percent: 90}),
-		),
-		row.New(20).Add(
-			text.NewCol(4, "Image From Bytes:", props.Text{Size: 15, Top: 6, Align: align.Center}),
-			image.NewFromBytesCol(8, bytes, extension.Png, props.Rect{Center: true, Percent: 90}),
-		),
-	}
-}
+func buildTextsRow() []core.Row { _ = "STUB: not implemented"; return nil }
 
-func buildTextsRow() []core.Row {
-	colText := "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac condimentum sem."
+func buildHeader() []core.Row { _ = "STUB: not implemented"; return nil }
 
-	return []core.Row{
-		row.New(20).Add(
-			text.NewCol(4, "Text:", props.Text{Size: 15, Top: 6, Align: align.Center}),
-			text.NewCol(8, colText, props.Text{Size: 12, Top: 5, Align: align.Center}),
-		),
-		row.New(40).Add(
-			text.NewCol(4, "Signature:", props.Text{Size: 15, Top: 17, Align: align.Center}),
-			signature.NewCol(8, "Name", props.Signature{FontSize: 10}),
-		),
-	}
-}
-
-func buildHeader() []core.Row {
-	r1 := row.New(30).Add(
-		col.New(12).Add(
-			text.New("Config V2", props.Text{
-				Top:   5,
-				Size:  15,
-				Align: align.Center,
-			}),
-			text.New("Grid system, fast generation, embedded metrics and testable.", props.Text{
-				Top:   13,
-				Size:  13,
-				Align: align.Center,
-			}),
-		),
-	)
-
-	return []core.Row{r1}
-}
-
-func buildFooter() []core.Row {
-	return []core.Row{
-		row.New(10).Add(
-			text.NewCol(2, "Site: https://maroto.io/"),
-			text.NewCol(5, "Discussions: https://github.com/johnfercher/maroto/issues/257"),
-			text.NewCol(5, "Branch: https://github.com/johnfercher/maroto/tree/v2"),
-		),
-	}
-}
+func buildFooter() []core.Row { _ = "STUB: not implemented"; return nil }

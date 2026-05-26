@@ -18,13 +18,12 @@ type Text_Expecter struct {
 	mock *mock.Mock
 }
 
-func (_m *Text) EXPECT() *Text_Expecter {
-	return &Text_Expecter{mock: &_m.Mock}
-}
+func (_m *Text) EXPECT() *Text_Expecter { _ = "STUB: not implemented"; return nil }
 
 // Add provides a mock function with given fields: text, cell, textProp
 func (_m *Text) Add(text string, cell *entity.Cell, textProp *props.Text) {
-	_m.Called(text, cell, textProp)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Text_Add_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Add'
@@ -37,42 +36,27 @@ type Text_Add_Call struct {
 //   - cell *entity.Cell
 //   - textProp *props.Text
 func (_e *Text_Expecter) Add(text interface{}, cell interface{}, textProp interface{}) *Text_Add_Call {
-	return &Text_Add_Call{Call: _e.mock.On("Add", text, cell, textProp)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Text_Add_Call) Run(run func(text string, cell *entity.Cell, textProp *props.Text)) *Text_Add_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(*entity.Cell), args[2].(*props.Text))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (_c *Text_Add_Call) Return() *Text_Add_Call {
-	_c.Call.Return()
-	return _c
-}
+func (_c *Text_Add_Call) Return() *Text_Add_Call { _ = "STUB: not implemented"; return nil }
 
 func (_c *Text_Add_Call) RunAndReturn(run func(string, *entity.Cell, *props.Text)) *Text_Add_Call {
-	_c.Run(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetLinesQuantity provides a mock function with given fields: text, textProp, colWidth
 }
 
-// GetLinesQuantity provides a mock function with given fields: text, textProp, colWidth
 func (_m *Text) GetLinesQuantity(text string, textProp *props.Text, colWidth float64) int {
-	ret := _m.Called(text, textProp, colWidth)
-
-	if len(ret) == 0 {
-		panic("no return value specified for GetLinesQuantity")
-	}
-
-	var r0 int
-	if rf, ok := ret.Get(0).(func(string, *props.Text, float64) int); ok {
-		r0 = rf(text, textProp, colWidth)
-	} else {
-		r0 = ret.Get(0).(int)
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // Text_GetLinesQuantity_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'GetLinesQuantity'
@@ -85,24 +69,23 @@ type Text_GetLinesQuantity_Call struct {
 //   - textProp *props.Text
 //   - colWidth float64
 func (_e *Text_Expecter) GetLinesQuantity(text interface{}, textProp interface{}, colWidth interface{}) *Text_GetLinesQuantity_Call {
-	return &Text_GetLinesQuantity_Call{Call: _e.mock.On("GetLinesQuantity", text, textProp, colWidth)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Text_GetLinesQuantity_Call) Run(run func(text string, textProp *props.Text, colWidth float64)) *Text_GetLinesQuantity_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(string), args[1].(*props.Text), args[2].(float64))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Text_GetLinesQuantity_Call) Return(_a0 int) *Text_GetLinesQuantity_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Text_GetLinesQuantity_Call) RunAndReturn(run func(string, *props.Text, float64) int) *Text_GetLinesQuantity_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewText creates a new instance of Text. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
@@ -112,10 +95,6 @@ func NewText(t interface {
 	Cleanup(func())
 },
 ) *Text {
-	mock := &Text{}
-	mock.Mock.Test(t)
-
-	t.Cleanup(func() { mock.AssertExpectations(t) })
-
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }

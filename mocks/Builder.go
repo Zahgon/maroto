@@ -20,28 +20,12 @@ type Builder_Expecter struct {
 	mock *mock.Mock
 }
 
-func (_m *Builder) EXPECT() *Builder_Expecter {
-	return &Builder_Expecter{mock: &_m.Mock}
-}
+func (_m *Builder) EXPECT() *Builder_Expecter { _ = "STUB: not implemented"; return nil }
 
 // Build provides a mock function with given fields: cfg, _a1
 func (_m *Builder) Build(cfg *entity.Config, _a1 cache.Cache) *gofpdf.Dependencies {
-	ret := _m.Called(cfg, _a1)
-
-	if len(ret) == 0 {
-		panic("no return value specified for Build")
-	}
-
-	var r0 *gofpdf.Dependencies
-	if rf, ok := ret.Get(0).(func(*entity.Config, cache.Cache) *gofpdf.Dependencies); ok {
-		r0 = rf(cfg, _a1)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*gofpdf.Dependencies)
-		}
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Builder_Build_Call is a *mock.Call that shadows Run/Return methods with type explicit version for method 'Build'
@@ -53,24 +37,23 @@ type Builder_Build_Call struct {
 //   - cfg *entity.Config
 //   - _a1 cache.Cache
 func (_e *Builder_Expecter) Build(cfg interface{}, _a1 interface{}) *Builder_Build_Call {
-	return &Builder_Build_Call{Call: _e.mock.On("Build", cfg, _a1)}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Builder_Build_Call) Run(run func(cfg *entity.Config, _a1 cache.Cache)) *Builder_Build_Call {
-	_c.Call.Run(func(args mock.Arguments) {
-		run(args[0].(*entity.Config), args[1].(cache.Cache))
-	})
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Builder_Build_Call) Return(_a0 *gofpdf.Dependencies) *Builder_Build_Call {
-	_c.Call.Return(_a0)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (_c *Builder_Build_Call) RunAndReturn(run func(*entity.Config, cache.Cache) *gofpdf.Dependencies) *Builder_Build_Call {
-	_c.Call.Return(run)
-	return _c
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewBuilder creates a new instance of Builder. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
@@ -80,10 +63,6 @@ func NewBuilder(t interface {
 	Cleanup(func())
 },
 ) *Builder {
-	mock := &Builder{}
-	mock.Mock.Test(t)
-
-	t.Cleanup(func() { mock.AssertExpectations(t) })
-
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }

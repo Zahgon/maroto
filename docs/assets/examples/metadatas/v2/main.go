@@ -2,14 +2,8 @@ package main
 
 import (
 	"log"
-	"time"
 
 	"github.com/johnfercher/maroto/v2/pkg/core"
-
-	"github.com/johnfercher/maroto/v2"
-
-	"github.com/johnfercher/maroto/v2/pkg/components/text"
-	"github.com/johnfercher/maroto/v2/pkg/config"
 )
 
 func main() {
@@ -30,22 +24,4 @@ func main() {
 	}
 }
 
-func GetMaroto() core.Maroto {
-	cfg := config.NewBuilder().
-		WithAuthor("author", false).
-		WithCreator("creator", false).
-		WithSubject("subject", false).
-		WithTitle("title", false).
-		WithKeywords("keyword", false).
-		WithCreationDate(time.Now()).
-		Build()
-
-	mrt := maroto.New(cfg)
-	m := maroto.NewMetricsDecorator(mrt)
-
-	m.AddRows(
-		text.NewRow(30, "metadatas"),
-	)
-
-	return m
-}
+func GetMaroto() core.Maroto { _ = "STUB: not implemented"; return *new(core.Maroto) }
